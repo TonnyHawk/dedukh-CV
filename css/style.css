@@ -1,0 +1,214 @@
+@font-face {
+  src: url("../fonts/druk_text_wide/DrukTextWide-Medium.ttf");
+  font-family: "Druk Text Wide";
+}
+@font-face {
+  src: url("../fonts/TTCommons-Regular.ttf");
+  font-family: TTCommons;
+}
+#topbar {
+  padding: 0 4.375rem;
+  padding-top: 2.75rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+h1.title {
+  font-family: "Druk Text Wide";
+  font-style: normal;
+  font-weight: 500;
+  color: #2A46FC;
+  display: flex;
+  align-items: center;
+}
+h1.title:after {
+  content: "";
+}
+
+.container-xl {
+  width: 100%;
+  padding: 0 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .container-xl {
+    max-width: 1550px;
+  }
+}
+
+header {
+  z-index: 1;
+}
+@media screen and (max-width: 876px) {
+  header {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 805px) {
+  header {
+    font-size: 13px;
+  }
+}
+header .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  header .col {
+    padding-left: 3em;
+    padding-right: 1em;
+  }
+}
+header .col:last-child {
+  justify-content: flex-start;
+  z-index: 1;
+}
+header a {
+  width: max-content;
+  font-size: 1.5em;
+}
+header .checkout {
+  width: max-content;
+  position: absolute;
+  top: 2em;
+}
+header .wrap {
+  position: relative;
+}
+header h1.title {
+  font-size: 5.75em;
+  margin-bottom: 0.75em;
+}
+header h1.title:after {
+  background: url("../img/head.svg") center center;
+  min-width: 2em;
+  min-height: 2em;
+}
+header p {
+  max-width: 800px;
+  font-size: 1.375em;
+}
+
+#chat {
+  height: 8.75rem;
+  position: relative;
+  margin-top: 6.25rem;
+  z-index: 2;
+}
+
+.chat-bar {
+  min-height: 100%;
+  width: 50%;
+  min-width: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #2A46FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+@media screen and (max-width: 985px) {
+  .chat-bar {
+    min-height: 75%;
+  }
+}
+.chat-bar:hover {
+  background: blue;
+}
+.chat-bar--active {
+  background: blue;
+}
+.chat-bar__content-wrap {
+  display: none;
+  padding: 2.5rem 2.5rem 3.9rem 5.31rem;
+}
+@media screen and (max-width: 800px) {
+  .chat-bar__content-wrap {
+    padding: 2.5rem 2.5rem 3rem 3.5rem;
+  }
+}
+.chat-bar__icon {
+  margin-left: 5.31rem;
+  width: max-content;
+}
+.chat-bar__icon-close {
+  align-self: flex-start;
+  margin-top: 4.3rem;
+}
+.chat-bar__top {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1100px) {
+  .chat-bar__top {
+    flex-direction: column;
+  }
+}
+.chat-bar__title {
+  font-family: "Druk Text Wide";
+  font-size: 1.5rem;
+  white-space: nowrap;
+  margin-right: 4rem;
+}
+.chat-bar__descr {
+  color: rgba(255, 255, 255, 0.5);
+}
+.chat-bar__input {
+  color: white;
+  border: none;
+  border-bottom: 2px solid #3C56FF;
+  line-height: 2.5rem;
+  background: transparent;
+  font-family: TTCommons;
+  width: 85%;
+  max-width: 555px;
+  padding-bottom: 0.6rem;
+  margin-top: 4.37rem;
+}
+.chat-bar__input:focus {
+  outline: none;
+}
+.chat-bar__input::placeholder {
+  color: white;
+}
+
+#portfolio .col {
+  display: flex;
+  justify-content: center;
+}
+#portfolio .proj {
+  display: block;
+  width: 525px;
+  height: 25.31rem;
+  background: center center;
+  background-size: cover;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+}
+
+#skills {
+  margin-top: 160px;
+  padding: 0 3rem;
+}
+#skills h1.title {
+  font-size: 4.5em;
+  margin-bottom: 0.75em;
+}
+#skills h1.title:after {
+  background: url("../img/skills-title-icon.svg") center center;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  margin-left: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
