@@ -29,9 +29,10 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 		</div>
 	</header>
 	<section id="chat" class="container-xl">
-		<div class="chat-bar chat-bar--active">
-			<div class="chat-bar__layer"></div>
-			<img src="img/chat-icon.svg" alt="" class="chat-bar__icon">
+		<div class="chat-bar">
+			<div class="chat-bar__open-btn">
+				<img src="img/chat-icon.svg" alt="" class="chat-bar__icon">
+			</div>
 			<div class="chat-bar__content-wrap">
 				<div class="chat-bar__top">
 					<p class="chat-bar__title">Get in touch</p>
@@ -60,15 +61,15 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	<script src="js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		  $("#chat .chat-bar").click(function(){
-		  	if($("#chat .chat-bar__content-wrap").css('display') == 'none'){
-			  	$(".chat-bar__icon").css('display', 'none');
+		  $("#chat .chat-bar__open-btn").click(function(){
+			  	$(this).hide();
+			  	$("#chat .chat-bar").addClass("chat-bar--active");
 			  	$("#chat .chat-bar__content-wrap").show();
-		  	}
+		  	});
 		  $("#chat .chat-bar__icon-close").click(function(){
 		  	$("#chat .chat-bar__content-wrap").hide();
-		  	$("#chat .chat-bar__icon").show();
-		  });
+		  	$("#chat .chat-bar").removeClass("chat-bar--active");
+		  	$("#chat .chat-bar__open-btn").show();
 		  });
 		});
 	</script>
