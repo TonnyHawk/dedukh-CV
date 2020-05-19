@@ -11,24 +11,28 @@
 </head>
 <body>
 	<nav id='topbar'>
-		<img src="img/logo.svg" alt="" class="logo">
-		<img src="img/menu-icon.svg" alt="">
+		<div class="container">
+			<div class="row justify-content-between no-gutters">
+				<div class="col-auto"><img src="img/logo.svg" alt="" class="logo"></div>
+				<div class="col-auto"><img src="img/menu-icon.svg" alt=""></div>
+			</div>
+		</div>
 	</nav>
-	<header class="container-xl">
+	<header class="container">
 		<div class="row">
-			<div class="col col-md-7">
+			<div class="col col-md-8">
 				<h1 class="title">Hello!</h1>
 				<p>I am inspired by digital technology, so i prefere projects in the field of UI/UX design. 
 in work i follow two principles: simplicity and convenience. Minimalism is my passion.</p>
 				<div class='wrap'><a href="">Behance</a>
 				<img src="img/checkout.svg" alt="" class="checkout"></div>
 			</div>
-			<div class="col col-md-5">
+			<div class="col col-xl-3 col-lg-4">
 				<img src="img/burger.svg" alt="">
 			</div>
 		</div>
 	</header>
-	<section id="chat" class="container-xl">
+	<section id="chat" class="container">
 		<div class="chat-bar">
 			<div class="chat-bar__open-btn">
 				<img src="img/chat-icon.svg" alt="" class="chat-bar__icon">
@@ -47,12 +51,24 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	</section>
 	<section id="portfolio" class='mt-5'>
 		<div class="container">
-			<div class="row no-gutters">
-				<div class="col">
-					<a href="" class="proj" style="background-image: url('img/proj-1.jpg')"></a>
+			<div class="row no-gutters justify-content-center">
+				<div class="col-md-5">
+					<div class="proj" style="background-image: url('img/proj-1.jpg')">
+						<div class="popup">
+							<p class="popup-title">LiteSoft Agency</p>
+							<p class="popup-descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
+							<a href="" class="popup-link">Lounch site</a>
+						</div>
+					</div>
 				</div>
-				<div class="col">
-					<a href="" class="proj" style="background-image: url('img/proj-2.jpg')"></a>
+				<div class="col-md-5">
+					<div class="proj" style="background-image: url('img/proj-2.jpg')">
+						<div class="popup popup--tdark">
+							<p class="popup-title">LiteSoft Agency</p>
+							<p class="popup-descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
+							<a href="" class="popup-link">Lounch site</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

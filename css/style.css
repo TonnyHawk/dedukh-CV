@@ -4,10 +4,9 @@
 }
 @font-face {
   src: url("../fonts/TTCommons-Regular.ttf");
-  font-family: TTCommons;
+  font-family: TTCommons-r;
 }
 #topbar {
-  padding: 0 4.375rem;
   padding-top: 2.75rem;
   display: flex;
   justify-content: space-between;
@@ -15,6 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 h1.title {
@@ -29,12 +29,11 @@ h1.title:after {
   content: "";
 }
 
-.container-xl {
-  width: 100%;
+.container {
   padding: 0 3rem;
 }
 @media screen and (min-width: 1200px) {
-  .container-xl {
+  .container {
     max-width: 1550px;
   }
 }
@@ -71,6 +70,8 @@ header .col:last-child {
 header a {
   width: max-content;
   font-size: 1.5em;
+  color: #2A46FC;
+  text-decoration: underline;
 }
 header .checkout {
   width: max-content;
@@ -81,8 +82,8 @@ header .wrap {
   position: relative;
 }
 header h1.title {
-  font-size: 5.75em;
-  margin-bottom: 0.75em;
+  font-size: 5.75rem;
+  margin-bottom: 2.93rem;
 }
 header h1.title:after {
   background: url("../img/head.svg") center center;
@@ -92,6 +93,8 @@ header h1.title:after {
 header p {
   max-width: 800px;
   font-size: 1.375em;
+  font-family: TTCommons-r;
+  line-height: 40px;
 }
 
 #chat {
@@ -123,10 +126,10 @@ header p {
   }
 }
 .chat-bar:hover {
-  background: blue;
+  background: #2A46FC;
 }
 .chat-bar--active {
-  background: blue;
+  background: #2A46FC;
 }
 .chat-bar__open-btn {
   width: 100%;
@@ -180,7 +183,7 @@ header p {
   border-bottom: 2px solid #3C56FF;
   line-height: 2.5rem;
   background: transparent;
-  font-family: TTCommons;
+  font-family: TTCommons-r;
   width: 85%;
   max-width: 555px;
   padding-bottom: 0.6rem;
@@ -190,7 +193,7 @@ header p {
   outline: none;
 }
 .chat-bar__input::placeholder {
-  color: white;
+  color: #f1f1f1;
 }
 
 #portfolio .col {
@@ -199,12 +202,64 @@ header p {
 }
 #portfolio .proj {
   display: block;
-  width: 525px;
-  height: 25.31rem;
+  width: 32.9rem;
+  height: 22.18rem;
   background: center center;
   background-size: cover;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
   border-radius: 3px;
+  position: relative;
+}
+#portfolio .proj:hover .popup {
+  opacity: 1;
+}
+#portfolio .proj .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  padding: 1.75rem 2.68rem;
+  font-family: TTCommons-r;
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+  opacity: 0;
+}
+#portfolio .proj .popup-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.6rem;
+  font-family: "Druk Text Wide";
+}
+#portfolio .proj .popup-text {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+#portfolio .proj .popup-link {
+  color: white;
+  width: max-content;
+  display: flex;
+  align-self: flex-end;
+  font-size: 1.2rem;
+}
+#portfolio .proj .popup-link:hover {
+  text-decoration: underline;
+}
+#portfolio .proj .popup-link::after {
+  content: "";
+  display: flex;
+  align-self: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  transform: translate(1rem);
+  background: url("../img/link-icon.svg");
+}
+#portfolio .proj .popup--tdark, #portfolio .proj .popup--tdark .popup-link {
+  color: #191D2F;
 }
 
 #skills {

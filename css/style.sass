@@ -3,16 +3,18 @@ $md: 768px
 $lg: 992px
 $xl: 1200px
 
+$blue: #2A46FC 
+$black: #191D2F
+
 @font-face
 	src: url('../fonts/druk_text_wide/DrukTextWide-Medium.ttf')
 	font-family: 'Druk Text Wide'
 
 @font-face
 	src: url('../fonts/TTCommons-Regular.ttf')
-	font-family: TTCommons
+	font-family: TTCommons-r
 
 #topbar
-	padding: 0 4.375rem
 	padding-top: 2.75rem
 	display: flex
 	justify-content: space-between
@@ -20,19 +22,19 @@ $xl: 1200px
 	top: 0
 	left: 0
 	width: 100%
+	z-index: 10
 
 h1.title
 	font-family: 'Druk Text Wide'
 	font-style: normal
 	font-weight: 500
-	color: #2A46FC
+	color: $blue
 	display: flex
 	align-items: center
 	&:after 
 		content: ''
 
-.container-xl
-	width: 100%
+.container
 	padding: 0 3rem
 	@media screen and (min-width: $xl)
 		max-width: 1550px
@@ -59,6 +61,8 @@ header
 	a 
 		width: max-content
 		font-size: 1.5em
+		color: $blue
+		text-decoration: underline
 
 	.checkout
 		width: max-content 
@@ -68,8 +72,8 @@ header
 		position: relative
 
 	h1.title
-		font-size: 5.75em
-		margin-bottom: 0.75em
+		font-size: 5.75rem
+		margin-bottom: 2.93rem
 		&:after 
 			background: url('../img/head.svg') center center
 			min-width: 2em
@@ -77,6 +81,8 @@ header
 	p 
 		max-width: 800px
 		font-size: 1.375em
+		font-family: TTCommons-r
+		line-height: 40px
 
 #chat
 	height: 8.75rem
@@ -93,7 +99,7 @@ header
 	position: absolute
 	bottom: 0
 	right: 0
-	background: #2A46FC
+	background: $blue
 	display: flex
 	flex-direction: column
 	justify-content: flex-start
@@ -102,9 +108,9 @@ header
 	color: white
 	z-index: 1
 	&:hover
-		background: blue
+		background: $blue
 	&--active
-		background: blue
+		background: $blue
 	&__open-btn
 		width: 100%
 		height: 100%
@@ -145,7 +151,7 @@ header
 		border-bottom: 2px solid #3C56FF
 		line-height: 2.5rem
 		background: transparent
-		font-family: TTCommons
+		font-family: TTCommons-r
 		width: 85%
 		max-width: 555px
 		padding-bottom: 0.6rem
@@ -153,7 +159,7 @@ header
 		&:focus
 			outline: none
 		&::placeholder 
-			color: white
+			color: #f1f1f1
 
 
 
@@ -163,12 +169,65 @@ header
 		justify-content: center
 	.proj
 		display: block
-		width: 525px
-		height: 25.31rem
+		width: 32.9rem
+		height: 22.18rem
 		background: center center
 		background-size: cover
 		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08)
 		border-radius: 3px
+		position: relative
+		&:hover .popup
+			opacity: 1
+
+		.popup
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			color: white
+			padding: 1.75rem 2.68rem
+			font-family: TTCommons-r
+			backdrop-filter: blur(10px)
+			transition: 0.4s
+			opacity: 0
+
+			&-title
+				font-size: 1.5rem
+				line-height: 2.5rem
+				margin-bottom: 1.6rem
+				font-family: 'Druk Text Wide'
+
+			&-text
+				font-size: 1.4rem
+				line-height: 2.5rem
+
+			&-link
+				color: white
+				width: max-content
+				display: flex
+				align-self: flex-end
+				font-size: 1.2rem
+
+				&:hover
+					text-decoration: underline
+				&::after
+					content: ''
+					display: flex
+					align-self: center
+					width: 1.625rem
+					height: 1.625rem
+					transform: translate(1rem)
+					background: url('../img/link-icon.svg')
+
+			&--tdark, &--tdark .popup-link
+				color: $black
+
+
+				
 
 #skills
 	margin-top: 160px
