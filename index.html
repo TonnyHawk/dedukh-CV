@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title></title>
+</head>
+<body>
+	<nav id='topbar'>
+		<div class="container">
+			<div class="row justify-content-between no-gutters">
+				<div class="col-auto"><img src="img/logo.svg" alt="" class="logo"></div>
+				<div class="col-auto"><img src="img/menu-icon.svg" alt=""></div>
+			</div>
+		</div>
+	</nav>
+	<header class="container">
+		<div class="row">
+			<div class="col col-md-8">
+				<h1 class="title">Hello!</h1>
+				<p>I am inspired by digital technology, so i prefere projects in the field of UI/UX design. 
+in work i follow two principles: simplicity and convenience. Minimalism is my passion.</p>
+				<div class='wrap'><a href="">Behance</a>
+				<img src="img/checkout.svg" alt="" class="checkout"></div>
+			</div>
+			<div class="col col-xl-3 col-lg-4">
+				<img src="img/burger.svg" alt="">
+			</div>
+		</div>
+	</header>
+	<section id="chat" class="container">
+		<div class="chat-bar">
+			<div class="chat-bar__open-btn">
+				<img src="img/chat-icon.svg" alt="" class="chat-bar__icon">
+			</div>
+			<div class="chat-bar__content-wrap">
+				<div class="chat-bar__top">
+					<p class="chat-bar__title">Get in touch</p>
+					<p class="chat-bar__descr">Enter some information and click Enter</p>
+				</div>
+				<form action="">
+					<input type="text" class="chat-bar__input" placeholder="Hi, i like your work, conta">
+				</form>
+				<img src="img/icon-ex.svg" alt="" class="chat-bar__icon-close">
+			</div>
+		</div>
+	</section>
+	<section id="portfolio" class='mt-5'>
+		<div class="container">
+			<div class="row no-gutters justify-content-center">
+				<div class="col-md-5">
+					<div class="proj" style="background-image: url('img/proj-1.jpg')">
+						<div class="popup">
+							<p class="popup-title">LiteSoft Agency</p>
+							<p class="popup-descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
+							<a href="" class="popup-link">Lounch site</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="proj" style="background-image: url('img/proj-2.jpg')">
+						<div class="popup popup--tdark">
+							<p class="popup-title">LiteSoft Agency</p>
+							<p class="popup-descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
+							<a href="" class="popup-link">Lounch site</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="mailing" class="container mx-auto">
+		<div class="row">
+			<div class="col-12">
+				<img src="img/mouse-icon.svg" alt="" class="mouse-icon">
+				<h1>I`m already reated <br>a Figma file for you!</h1>
+				<div class="email-wrap">
+					<p class="label">Email us to start:</p>
+					<p class="email">dimadedukh987@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $("#chat .chat-bar__open-btn").click(function(){
+			  	$(this).hide();
+			  	$("#chat .chat-bar").addClass("chat-bar--active");
+			  	$("#chat .chat-bar__content-wrap").show();
+		  	});
+		  $("#chat .chat-bar__icon-close").click(function(){
+		  	$("#chat .chat-bar__content-wrap").hide();
+		  	$("#chat .chat-bar").removeClass("chat-bar--active");
+		  	$("#chat .chat-bar__open-btn").show();
+		  });
+		});
+	</script>
+</body>
+</html>

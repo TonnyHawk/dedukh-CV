@@ -1,0 +1,457 @@
+@font-face {
+  src: url("../fonts/druk_text_wide/DrukTextWide-Medium.ttf");
+  font-family: 'Druk Text Wide';
+}
+
+@font-face {
+  src: url("../fonts/TTCommons-Regular.ttf");
+  font-family: 'TTCommons-r';
+}
+
+@font-face {
+  src: url("../fonts/TTCommons-Medium.ttf");
+  font-family: 'TTCommons-m';
+}
+
+/* line 11, ../Dima/src/sass/style.sass */
+#topbar {
+  padding-top: 2.75rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 21, ../Dima/src/sass/style.sass */
+h1.title {
+  font-family: 'Druk Text Wide';
+  font-style: normal;
+  font-weight: 500;
+  color: #2A46FC;
+  display: flex;
+  align-items: center;
+}
+
+/* line 28, ../Dima/src/sass/style.sass */
+h1.title:after {
+  content: '';
+}
+
+/* line 31, ../Dima/src/sass/style.sass */
+.container {
+  padding: 0 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 31, ../Dima/src/sass/style.sass */
+  .container {
+    max-width: 1550px;
+  }
+}
+
+/* line 36, ../Dima/src/sass/style.sass */
+header {
+  z-index: 1;
+}
+
+@media screen and (max-width: 876px) {
+  /* line 36, ../Dima/src/sass/style.sass */
+  header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  /* line 36, ../Dima/src/sass/style.sass */
+  header {
+    font-size: 13px;
+  }
+}
+
+/* line 43, ../Dima/src/sass/style.sass */
+header .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 43, ../Dima/src/sass/style.sass */
+  header .col {
+    padding-left: 3em;
+    padding-right: 1em;
+  }
+}
+
+/* line 52, ../Dima/src/sass/style.sass */
+header .col:last-child {
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+/* line 55, ../Dima/src/sass/style.sass */
+header a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1.5em;
+  color: #2A46FC;
+  text-decoration: underline;
+}
+
+/* line 61, ../Dima/src/sass/style.sass */
+header .checkout {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: 2em;
+}
+
+/* line 65, ../Dima/src/sass/style.sass */
+header .wrap {
+  position: relative;
+}
+
+/* line 68, ../Dima/src/sass/style.sass */
+header h1.title {
+  font-size: 5.75rem;
+  margin-bottom: 2.93rem;
+}
+
+/* line 71, ../Dima/src/sass/style.sass */
+header h1.title:after {
+  background: url("../img/head.svg") center center;
+  min-width: 2em;
+  min-height: 2em;
+}
+
+/* line 75, ../Dima/src/sass/style.sass */
+header p {
+  max-width: 800px;
+  font-size: 1.375em;
+  font-family: TTCommons-r;
+  line-height: 40px;
+}
+
+/* line 81, ../Dima/src/sass/style.sass */
+#chat {
+  height: 8.75rem;
+  position: relative;
+  margin-top: 6.25rem;
+  z-index: 2;
+}
+
+/* line 87, ../Dima/src/sass/style.sass */
+.chat-bar {
+  min-height: 100%;
+  width: 50%;
+  min-width: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #2A46FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  transition: 0.3s;
+  color: white;
+  z-index: 1;
+}
+
+@media screen and (max-width: 985px) {
+  /* line 87, ../Dima/src/sass/style.sass */
+  .chat-bar {
+    min-height: 75%;
+  }
+}
+
+/* line 104, ../Dima/src/sass/style.sass */
+.chat-bar:hover {
+  background: #2A46FC;
+}
+
+/* line 106, ../Dima/src/sass/style.sass */
+.chat-bar--active {
+  background: #2A46FC;
+}
+
+/* line 108, ../Dima/src/sass/style.sass */
+.chat-bar__open-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* line 116, ../Dima/src/sass/style.sass */
+.chat-bar__content-wrap {
+  display: none;
+  padding: 2.6rem 5.38rem 3.25rem 5.38rem;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 116, ../Dima/src/sass/style.sass */
+  .chat-bar__content-wrap {
+    padding: 2.5rem 2.5rem 3rem 3.5rem;
+  }
+}
+
+/* line 121, ../Dima/src/sass/style.sass */
+.chat-bar__icon {
+  margin-left: 5.31rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+
+/* line 125, ../Dima/src/sass/style.sass */
+.chat-bar__icon-close {
+  align-self: flex-start;
+  margin-top: 3.31rem;
+  cursor: pointer;
+}
+
+/* line 129, ../Dima/src/sass/style.sass */
+.chat-bar__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1100px) {
+  /* line 129, ../Dima/src/sass/style.sass */
+  .chat-bar__top {
+    flex-direction: column;
+  }
+}
+
+/* line 135, ../Dima/src/sass/style.sass */
+.chat-bar__title {
+  font-family: 'Druk Text Wide';
+  font-size: 1.5rem;
+  white-space: nowrap;
+  margin-right: 4rem;
+}
+
+/* line 140, ../Dima/src/sass/style.sass */
+.chat-bar__descr {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 142, ../Dima/src/sass/style.sass */
+.chat-bar__input {
+  color: white;
+  border: none;
+  border-bottom: 2px solid #3C56FF;
+  line-height: 2.5rem;
+  background: transparent;
+  font-family: TTCommons-r;
+  font-size: 1rem;
+  width: 85%;
+  max-width: 555px;
+  padding-bottom: 0.4rem;
+  margin-top: 4.05rem;
+}
+
+/* line 154, ../Dima/src/sass/style.sass */
+.chat-bar__input:focus {
+  outline: none;
+}
+
+/* line 156, ../Dima/src/sass/style.sass */
+.chat-bar__input::-webkit-input-placeholder {
+  color: #f1f1f1;
+}
+.chat-bar__input::-moz-placeholder {
+  color: #f1f1f1;
+}
+.chat-bar__input:-ms-input-placeholder {
+  color: #f1f1f1;
+}
+.chat-bar__input::-ms-input-placeholder {
+  color: #f1f1f1;
+}
+.chat-bar__input::placeholder {
+  color: #f1f1f1;
+}
+
+/* line 162, ../Dima/src/sass/style.sass */
+#portfolio .col {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 165, ../Dima/src/sass/style.sass */
+#portfolio .proj {
+  display: block;
+  width: 32.9rem;
+  height: 22.18rem;
+  background: center center;
+  background-size: cover;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  position: relative;
+}
+
+/* line 174, ../Dima/src/sass/style.sass */
+#portfolio .proj:hover .popup {
+  opacity: 1;
+}
+
+/* line 177, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  padding: 1.75rem 2.68rem;
+  font-family: TTCommons-r;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+/* line 193, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.6rem;
+  font-family: 'Druk Text Wide';
+}
+
+/* line 199, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup-text {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+/* line 203, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup-link {
+  color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-self: flex-end;
+  font-size: 1.2rem;
+}
+
+/* line 210, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup-link:hover {
+  text-decoration: underline;
+}
+
+/* line 212, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup-link::after {
+  content: '';
+  display: flex;
+  align-self: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  transform: translate(1rem);
+  background: url("../img/link-icon.svg");
+}
+
+/* line 221, ../Dima/src/sass/style.sass */
+#portfolio .proj .popup--tdark, #portfolio .proj .popup--tdark .popup-link {
+  color: #191D2F;
+}
+
+/* line 225, ../Dima/src/sass/style.sass */
+#mailing {
+  color: #2A46FC;
+  margin: 7rem 0;
+}
+
+/* line 228, ../Dima/src/sass/style.sass */
+#mailing .col-12 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1rem solid transparent;
+  -o-border-image: url("../img/square.svg") 30 round;
+     border-image: url("../img/square.svg") 30 round;
+  border-image-outset: 0.6rem;
+  box-shadow: 0 0 0 2px #2A46FC;
+  padding-top: 6.13rem;
+  padding-bottom: 6.13rem;
+}
+
+/* line 241, ../Dima/src/sass/style.sass */
+#mailing .col-12 h1 {
+  font-weight: 500;
+  font-family: TTCommons-m;
+  font-size: 3.13rem;
+  line-height: 4.38rem;
+  margin-bottom: 2.38rem;
+}
+
+/* line 247, ../Dima/src/sass/style.sass */
+#mailing .mouse-icon {
+  position: absolute;
+  top: -10%;
+  left: 0;
+}
+
+/* line 251, ../Dima/src/sass/style.sass */
+#mailing .email-wrap {
+  display: flex;
+}
+
+/* line 253, ../Dima/src/sass/style.sass */
+#mailing .email-wrap .label, #mailing .email-wrap .email {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: TTCommons-r;
+  padding: 0 1.75rem;
+  margin: 0;
+  height: 2.69rem;
+  display: flex;
+  align-items: center;
+}
+
+/* line 263, ../Dima/src/sass/style.sass */
+#mailing .email-wrap .label {
+  background: #2A46FC;
+  color: white;
+}
+
+/* line 266, ../Dima/src/sass/style.sass */
+#mailing .email-wrap .email {
+  background: #F2F2F2;
+  color: #2A46FC;
+  display: flex;
+  position: relative;
+  margin-left: 2.5rem;
+  padding-left: 3.3rem;
+}
+
+/* line 273, ../Dima/src/sass/style.sass */
+#mailing .email-wrap .email::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 2.69rem;
+  width: 2.69rem;
+  background: #2A46FC url("../img/linked-icon.svg");
+  background-position: center center;
+}
