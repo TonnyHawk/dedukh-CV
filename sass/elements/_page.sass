@@ -1,16 +1,24 @@
-.page 
-	display: none
+.page
 	position: fixed
 	top: 0
 	left: 0
 	width: 100%
 	height: 100%
-	background: white
 	z-index: 20
-	padding:
-		top: 11.56rem
-		left: 4.2rem
-		right: 4.2rem
+	//display: none
+	overflow: auto
+
+	&__section 
+		padding:
+			left: 4.2rem
+			right: 4.2rem
+		background: white
+
+		&-header
+			background: transparent
+			backdrop-filter: blur(50px)
+			padding-top: 11.56rem
+			height: 70rem
 
 	&__title
 		font-size: 4.2rem
@@ -41,9 +49,35 @@
 
 		&__item-text
 			font-size: 1.35rem
-			color: rgba(0, 0, 0, 0.5)
+			color: $gray-2
 			line-height: 2.5rem
 			text-transform: capitalize
 			margin: 0
-		&__item-text 
+		a.info__item-text
 			text-decoration: underline
+			text-transform: lowercase
+
+		&__link 
+			display: flex
+			align-items: center
+			justify-content: center
+			a.link-w-icon
+				color: $gray-2
+				font-size: 1.35rem
+				line-height: 2.5rem
+				text-transform: initial
+				&::after
+					background-image: url('../img/link-icon--black.svg')
+					margin-left: 0.75rem
+				&:hover
+					text-decoration: none
+		&__circled
+			width: auto
+			height: auto
+			display: flex
+			align-items: center
+			justify-content: center
+			.circled__circle-area
+				height: 4.19rem
+				width: 4.19rem
+				margin-left: -2rem

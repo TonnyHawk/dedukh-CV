@@ -7,6 +7,10 @@ $xl: 1200px
 
 @import "fonts"
 
+@import "elements/circled"
+
+@import "elements/page"
+
 .border
 	border: 1px solid black
 	&-r 
@@ -14,6 +18,16 @@ $xl: 1200px
 
 body
 	+regular
+
+a.link-w-icon
+	display: flex
+	&::after
+		content: ''
+		align-self: center
+		width: 1.625rem
+		height: 1.625rem
+		transform: translate(1rem)
+		background: url('../img/link-icon.svg')
 
 
 #topbar
@@ -195,28 +209,27 @@ header
 			transition: 0.4s
 			opacity: 0
 
-			&-title
+			&__title
 				font-size: 1.5rem
 				line-height: 2.5rem
 				margin-bottom: 1.6rem
 				+font-wide
 
-			&-text
+			&__text
 				font-size: 1.4rem
 				line-height: 2.5rem
 
-			&-link
+			&__link
 				color: white
 				width: max-content
-				display: flex
 				align-self: flex-end
 				font-size: 1.2rem
+				display: flex
 
 				&:hover
 					text-decoration: underline
 				&::after
 					content: ''
-					display: flex
 					align-self: center
 					width: 1.625rem
 					height: 1.625rem
@@ -284,5 +297,3 @@ header
 				width: 2.69rem
 				background: $blue url('../img/linked-icon.svg')
 				background-position: center center
-
-@import "elements/page"
