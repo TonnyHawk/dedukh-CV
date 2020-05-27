@@ -184,6 +184,20 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	<script>
 		$(document).ready(function(){
 
+			//TOPMENU--------
+			//open
+			$("#topbar .topbar__ic--menu").click(function(){
+				$("#topbar .topbar__ic--menu").hide();
+				$("#topbar .topbar__ic--close").show();
+				$("#topbar .topbar__menu").css('top', '0');
+			});
+			//close
+			$("#topbar .topbar__ic--close").click(function(){
+				$("#topbar .topbar__ic--close").hide();
+				$("#topbar .topbar__ic--menu").show();
+				$("#topbar .topbar__menu").css('top', '-500%');
+			});
+
 			//CHATBAR open-close--------
 		  $("#chat .chat-bar__open-btn").click(function(){
 			  	$(this).hide();
