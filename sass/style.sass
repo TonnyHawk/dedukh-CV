@@ -41,11 +41,34 @@ a.link-w-icon
 	top: 0
 	left: 0
 	width: 100%
-	z-index: 21
 	&__ic
 		cursor: pointer
 		&--close
 			display: none
+	&__icons
+		z-index: 2
+	&__menu
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		padding: 6rem 0rem 3.87rem 0rem
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: rgba(224, 224, 224, 0.1)
+		backdrop-filter: blur(11px)
+
+		&-item
+			+font-wide
+			color: $blue
+			text-transform: capitalize
+			font-size: 1.5rem
+			margin-bottom: 2.63rem
+			&:hover
+				text-decoration: none
+
 
 h1.title
 	+font-wide
