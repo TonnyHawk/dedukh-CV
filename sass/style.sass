@@ -31,8 +31,9 @@ a.link-w-icon
 		transform: translate(1rem)
 		background: url('../img/link-icon.svg')
 
-
 #topbar
+	z-index: 19
+.topbar
 	padding-top: 2.75rem
 	display: flex
 	justify-content: space-between
@@ -41,6 +42,10 @@ a.link-w-icon
 	left: 0
 	width: 100%
 	z-index: 21
+	&__ic
+		cursor: pointer
+		&--close
+			display: none
 
 h1.title
 	+font-wide

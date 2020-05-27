@@ -9,14 +9,19 @@
 	<title></title>
 </head>
 <body>
-	<nav id='topbar'>
+
+	<nav id='topbar' class="topbar">
 		<div class="container">
 			<div class="row justify-content-between no-gutters">
 				<div class="col-auto"><img src="img/logo.svg" alt="" class="logo"></div>
-				<div class="col-auto"><img src="img/menu-icon.svg" alt=""></div>
+				<div class="col-auto">
+					<img src="img/menu-icon.svg" alt="" class="topbar__ic topbar__ic--menu">
+					<img src="img/icon-close.svg" alt="" class="topbar__ic topbar__ic--close">
+				</div>
 			</div>
 		</div>
 	</nav>
+
 	<header class="container">
 		<div class="row">
 			<div class="col col-md-8">
@@ -31,6 +36,7 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 			</div>
 		</div>
 	</header>
+
 	<section id="chat" class="container">
 		<div class="chat-bar">
 			<div class="chat-bar__open-btn">
@@ -52,7 +58,7 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 		<div class="container">
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-5">
-					<div class="proj" style="background-image: url('img/proj-1.jpg')">
+					<div class="proj" id="proj-lifesoft" style="background-image: url('img/proj-1.jpg')">
 						<div class="popup">
 							<p class="popup__title">LiteSoft Agency</p>
 							<p class="popup__descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
@@ -61,7 +67,7 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="proj" style="background-image: url('img/proj-2.jpg')">
+					<div class="proj" id="proj-vw" style="background-image: url('img/proj-2.jpg')">
 						<div class="popup popup--tdark">
 							<p class="popup__title">LiteSoft Agency</p>
 							<p class="popup__descr">I decided to start working on another redesign. I chose the website of Volkswagen</p>
@@ -87,27 +93,18 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	</section>
 
 
-	<div class="page">
-		<section class="page__section page__section-next-proj next-proj">
-			<p class="next-proj__section-title">NEXT PROJECT</p>
-			<p class="next-proj__name">VW Redesign</p>
-			<p class="next-proj__descr">redesign landing</p>
-			<div class="next-proj__circled circled">
-				<div class="circled__circle-area circle-area">
-				    <div class="circle-area__main-circle">
-				        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.7 74">
-				            <path d="M1.9,20.7A34.94,34.94,0,1,1,2,53.4" fill="none" stroke="white" stroke-linecap="round" stroke-width="2"></path>
-				        </svg>
-				    </div> 
-				    <div class="circle-area__upper-circle">
-				        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.7 74">
-				            <path d="M1.9,20.7A34.94,34.94,0,1,1,2,53.4" fill="none" stroke="white" stroke-linecap="round" stroke-width="2.5"></path>
-				        </svg>
-				    </div>
-				    <div class="circle-area__inner-elem"><img src="img/icon-arrow-forward.svg" alt=""></div>
+	<div class="page" id="page-lifesoft">
+		<div class="page__topbar topbar">
+			<div class="container">
+				<div class="row justify-content-between no-gutters">
+					<div class="col-auto"><img src="img/logo.svg" alt="" class="logo"></div>
+					<div class="col-auto">
+						<img src="img/icon-close.svg" class="topbar__ic topbar__ic--close" alt="">
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+
 		<section class="page__section page__section-header">
 			<h1 class="page__title">LITESOFT Agency</h1>
 			<p class="page__descr">This is my new site rebranding for a digital agency. LiteSoft is a company that offers services in the field of IT, from business strategies to design and support. My task was to make it as clean as possible and concise design. The main accent was a deep blue color, which emphasizes the importance of IT in the company, and the main element of the site is an animated poly-design.</p>
@@ -181,6 +178,8 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	<script src="js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
+
+			//CHATBAR open-close--------
 		  $("#chat .chat-bar__open-btn").click(function(){
 			  	$(this).hide();
 			  	$("#chat .chat-bar").addClass("chat-bar--active");
@@ -190,6 +189,18 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 		  	$("#chat .chat-bar__content-wrap").hide();
 		  	$("#chat .chat-bar").removeClass("chat-bar--active");
 		  	$("#chat .chat-bar__open-btn").show();
+		  });
+
+
+		  //PAGE--------
+		  //opens a page
+		  $("#proj-lifesoft").click(function(){
+		  	//showing project page
+		  	$("#page-lifesoft").show();
+		  });
+		  //closes a page
+		  $(".page__topbar .topbar__ic--close").click(function(){
+		  	$(".page").hide();
 		  });
 		});
 	</script>
