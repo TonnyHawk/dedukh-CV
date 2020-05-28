@@ -122,21 +122,23 @@
 /* line 11, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__topbar {
   z-index: 21;
+  padding-left: 4.2rem;
+  padding-right: 4.2rem;
 }
 
-/* line 13, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 16, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__topbar .topbar__ic--close {
   display: block;
 }
 
-/* line 16, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 19, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section {
   padding-left: 4.2rem;
   padding-right: 4.2rem;
   background: white;
 }
 
-/* line 22, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 25, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section-header {
   background: transparent;
   backdrop-filter: blur(50px);
@@ -145,26 +147,25 @@
   z-index: 1;
 }
 
-/* line 29, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 32, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section-main {
   margin-top: -395px;
   z-index: 20;
   position: relative;
-  display: none;
 }
 
-/* line 33, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 36, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section-main img {
   width: 100%;
 }
 
-/* line 37, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 39, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section-next-proj {
   padding-top: 13rem;
   padding-bottom: 13rem;
 }
 
-/* line 42, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 44, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__title {
   font-size: 4.2rem;
   font-weight: 500;
@@ -174,19 +175,19 @@
   margin-bottom: 3.3rem;
 }
 
-/* line 50, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 52, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__descr {
   font-size: 1.35rem;
   line-height: 2.5rem;
 }
 
-/* line 54, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 56, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__info {
   margin-top: 5.75rem;
   padding: 0;
 }
 
-/* line 60, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 62, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__item-title {
   font-size: 1.5rem;
   font-family: 'Druk Text Wide';
@@ -197,7 +198,7 @@
   font-weight: 500;
 }
 
-/* line 69, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 71, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__item-text {
   font-size: 1.35rem;
   color: rgba(0, 0, 0, 0.5);
@@ -206,20 +207,20 @@
   margin: 0;
 }
 
-/* line 75, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 77, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info a.info__item-text {
   text-decoration: underline;
   text-transform: lowercase;
 }
 
-/* line 79, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 81, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-/* line 83, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 85, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__link a.link-w-icon {
   color: rgba(0, 0, 0, 0.5);
   font-size: 1.35rem;
@@ -227,18 +228,18 @@
   text-transform: initial;
 }
 
-/* line 88, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 90, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__link a.link-w-icon::after {
   background-image: url("../img/link-icon--black.svg");
   margin-left: 0.75rem;
 }
 
-/* line 91, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 93, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__link a.link-w-icon:hover {
   text-decoration: none;
 }
 
-/* line 93, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 95, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__circled {
   width: auto;
   height: auto;
@@ -247,7 +248,7 @@
   justify-content: center;
 }
 
-/* line 99, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
+/* line 101, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page .info__circled .circled__circle-area {
   height: 4.19rem;
   width: 4.19rem;
