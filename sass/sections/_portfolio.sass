@@ -1,0 +1,60 @@
+#portfolio
+	.col 
+		display: flex
+		justify-content: center
+	.proj
+		display: block
+		width: 32.9rem
+		height: 22.18rem
+		background: center center
+		background-size: cover
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08)
+		border-radius: 3px
+		position: relative
+		&:hover .popup
+			opacity: 1
+
+		.popup
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			color: white
+			padding: 1.75rem 2.68rem
+			backdrop-filter: blur(10px)
+			transition: 0.4s
+			opacity: 0
+
+			&__title
+				font-size: 1.5rem
+				line-height: 2.5rem
+				margin-bottom: 1.6rem
+				+font-wide
+
+			&__text
+				font-size: 1.4rem
+				line-height: 2.5rem
+
+			&__link
+				color: white
+				width: max-content
+				align-self: flex-end
+				font-size: 1.2rem
+				display: flex
+
+				&:hover
+					text-decoration: underline
+				&::after
+					content: ''
+					align-self: center
+					width: 1.625rem
+					height: 1.625rem
+					transform: translate(1rem)
+					background: url('../img/link-icon.svg')
+
+			&--tdark, &--tdark .popup-link
+				color: $black

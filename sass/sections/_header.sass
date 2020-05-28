@@ -1,0 +1,43 @@
+header
+	z-index: 1
+	@media screen and (max-width: 876px)
+		font-size: 14px
+	@media screen and (max-width: 805px)
+		font-size: 13px
+
+	.col //the one with the text
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		z-index: 2
+		@media screen and (max-width: $xl)
+			padding-left: 3em
+			padding-right: 1em
+
+		&:last-child // column with the burger image
+			justify-content: flex-start
+			z-index: 1
+	a 
+		width: max-content
+		font-size: 1.5em
+		color: $blue
+		text-decoration: underline
+
+	.checkout
+		width: max-content 
+		position: absolute
+		top: 2em
+	.wrap
+		position: relative
+
+	h1.title
+		font-size: 5.75rem
+		margin-bottom: 2.93rem
+		&:after 
+			background: url('../img/head.svg') center center
+			min-width: 2em
+			min-height: 2em
+	p 
+		max-width: 800px
+		font-size: 1.375em
+		line-height: 40px
