@@ -1,8 +1,10 @@
 #cv 
+	margin-bottom: 5rem
 	h1.title
 		font-size: 4.5rem
 		line-height: 4.5rem
 		margin-bottom: 2.93rem
+		color: $black-3
 		&:after 
 			background: url('../img/skills-head.svg') center center
 			min-width: 2em
@@ -10,7 +12,7 @@
 
 
 	.glide
-		height: 17rem
+		height: 18.75rem
 		display: flex
 		align-items: center
 		justify-content: center
@@ -19,8 +21,12 @@
 			height: 100%
 		&__slides
 			height: 100%
-		.col 
-			height: 100%
+		&__slide
+			.col, .row
+				height: 100%
+			.col 
+				display: flex
+				align-items: center
 		&__arrow
 			box-shadow: none
 			padding: 0
@@ -30,3 +36,17 @@
 					transform: rotate(180deg)
 			&--right
 				right: -2.5rem
+	
+	.slider
+		&__text-block
+			color: #000000
+			font-size: 1.37rem
+			line-height: 2.81rem
+		&__border-spec
+			border: .7rem solid transparent
+			border-image: url('../img/square.svg') 30 round
+			border-image-outset: 0.4rem
+		&__skill-tags
+			width: 100%
+			height: 90%
+			align-self: center

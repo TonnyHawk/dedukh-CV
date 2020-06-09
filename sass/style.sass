@@ -16,6 +16,7 @@ $xl: 1200px
 @import "elements/circled"
 @import "elements/topbar"
 @import "elements/cv"
+@import "elements/skill-tags"
 
 @import "elements/page/next-proj"
 
@@ -53,3 +54,20 @@ h1.title
 	padding: 0 3rem
 	@media screen and (min-width: $xl)
 		max-width: 1550px
+
+.border-spec
+	border: 1rem solid transparent
+	border-image: url('../img/square.svg') 30 round
+	border-image-outset: 0.6rem
+	box-shadow: 0 0 0 2px $blue
+	position: relative
+	&::before
+		content: ''
+		display: block
+		height: 1.37rem
+		width: 1.37rem
+		background: url("../img/mouse-icon.svg")
+		background-size: cover
+		position: absolute
+		top: -2.6rem
+		left: .43rem
