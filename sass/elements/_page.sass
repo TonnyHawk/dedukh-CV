@@ -10,27 +10,22 @@
 	overflow: auto
 	&__topbar
 		z-index: 21
-		padding:
-			left: 4.2rem
-			right: 4.2rem
+		padding: 0 7rem
 		.topbar__ic--close
 			display: block
 
 	&__section 
-		padding:
-			left: 4.2rem
-			right: 4.2rem
+		padding: 0 7rem
 		background: white
 
 		&-header
 			background: transparent
-			backdrop-filter: blur(50px)
-			padding-top: 11.56rem
-			height: 70rem
+			backdrop-filter: blur(5rem)
+			padding-top: 18.5rem
+			height: 72.4rem
 			z-index: 1
 
 		&-main
-			margin-top: -395px
 			padding: 0
 			z-index: 20
 			position: relative
@@ -43,36 +38,36 @@
 				bottom: 13rem
 
 	&__title
-		font-size: 4.2rem
+		font-size: 7.2rem
 		font-weight: 500
-		line-height: 4.2rem
+		line-height: 7.2rem
 		color: $blue 
 		+font-wide
-		margin-bottom: 3.3rem
+		margin-bottom: 5.2rem
 
 	&__descr
-		font-size: 1.35rem
-		line-height: 2.5rem
+		font-size: 2.2rem
+		line-height: 4rem
 
 	&__info
-		margin-top: 5.75rem
+		margin-top: 9.2rem
 		padding: 0
 
 	.info
 
 		&__item-title
-			font-size: 1.5rem
+			font-size: 2.4rem
 			+font-wide
 			color: $blue 
-			line-height: 2.5rem
-			margin-bottom: 0.5rem
+			line-height: 4rem
+			margin-bottom: .8rem
 			text-transform: uppercase
 			font-weight: 500
 
 		&__item-text
-			font-size: 1.35rem
+			font-size: 2.2rem
 			color: $gray-2
-			line-height: 2.5rem
+			line-height: 4rem
 			text-transform: capitalize
 			margin: 0
 		a.info__item-text
@@ -85,12 +80,14 @@
 			justify-content: flex-end
 			a.link-w-icon
 				color: $gray-2
-				font-size: 1.35rem
-				line-height: 2.5rem
-				text-transform: initial
+				font-size: 1.6rem
+				line-height: 4rem
+				text-transform: uppercase
+				letter-spacing: 0.05rem
+				font-variant: small-caps
 				&::after
 					background-image: url('../img/link-icon--black.svg')
-					margin-left: 0.75rem
+					margin-left: 1.4rem
 				&:hover
 					text-decoration: none
 		&__circled
@@ -100,6 +97,6 @@
 			align-items: center
 			justify-content: center
 			.circled__circle-area
-				height: 4.19rem
-				width: 4.19rem
+				height: 6.8rem
+				width: 6.8rem
 				margin-left: -2rem

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "cv.css",
+	"sources": [
+		"../../sass/sections/cv.sass"
+	],
+	"sourcesContent": [
+		"#cv {\n\tmargin-top: 12.1rem; }\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,GAAG,CAAC;EACH,UAAU,EAAE,OAAO;CAAG"
+}

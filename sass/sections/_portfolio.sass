@@ -1,15 +1,16 @@
 #portfolio
+	margin-top: 1.3rem
 	.col 
 		display: flex
 		justify-content: center
 	.proj
 		display: block
-		width: 32.9rem
-		height: 22.18rem
+		width: 52.4rem
+		height: 35.5rem
 		background: center center
 		background-size: cover
-		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08)
-		border-radius: 3px
+		box-shadow: 0px 0px 2.5px rgba(0, 0, 0, 0.08)
+		border-radius: 0.3px
 		position: relative
 		&:hover .popup
 			opacity: 1
@@ -22,38 +23,45 @@
 			height: 100%
 			display: flex
 			flex-direction: column
-			justify-content: flex-end
+			justify-content: flex-start
 			color: white
-			padding: 1.75rem 2.68rem
+			padding: 6.1rem 3.5rem 1.8rem
 			backdrop-filter: blur(10px)
 			transition: 0.4s
-			opacity: 0
+			//opacity: 0
 
 			&__title
-				font-size: 1.5rem
-				line-height: 2.5rem
+				font-size: 2.4rem
+				line-height: 4rem
 				margin-bottom: 1.6rem
 				+font-wide
+				flex: 1 0
 
-			&__text
-				font-size: 1.4rem
-				line-height: 2.5rem
+			&__descr
+				font-size: 2.2rem
+				line-height: 4rem
+				flex: 2 0
 
 			&__link
 				color: white
 				width: max-content
 				align-self: flex-end
-				font-size: 1.2rem
+				font-size: 2rem
+				line-height: 4rem
 				display: flex
+				align-items: center
+				text-transform: uppercase
+				+medium
+				font-weight: 500
+				flex: 1 0
 
 				&:hover
 					text-decoration: underline
 				&::after
 					content: ''
-					align-self: center
-					width: 1.625rem
-					height: 1.625rem
-					transform: translate(1rem)
+					width: 2.4rem
+					height: 2.4rem
+					transform: translate(1.6rem, -0.3rem)
 					background: url('../img/link-icon.svg')
 
 			&--tdark, &--tdark .popup-link

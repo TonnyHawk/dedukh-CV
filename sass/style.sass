@@ -10,15 +10,18 @@ $xl: 1200px
 @import "sections/chat"
 @import "sections/portfolio"
 @import "sections/mailing"
+@import "sections/cv"
 
 @import "elements/page"
 @import "elements/chat-bar"
 @import "elements/circled"
 @import "elements/topbar"
-@import "elements/cv"
 @import "elements/skill-tags"
 
 @import "elements/page/next-proj"
+
+html
+	font-size: 62.5%
 
 .border
 	border: 1px solid black
@@ -27,6 +30,7 @@ $xl: 1200px
 
 body
 	+regular
+	font-size: 1.6rem
 
 a.link-w-icon
 	display: flex
@@ -51,7 +55,7 @@ h1.title
 		content: ''
 
 .container
-	padding: 0 3rem
+	padding: 0 7rem
 	@media screen and (min-width: $xl)
 		max-width: 1550px
 
@@ -64,10 +68,10 @@ h1.title
 	&::before
 		content: ''
 		display: block
-		height: 1.37rem
-		width: 1.37rem
+		height: 2.2rem
+		width: 2.2rem
 		background: url("../img/mouse-icon.svg")
 		background-size: cover
 		position: absolute
-		top: -2.6rem
-		left: .43rem
+		top: -4rem
+		left: 0
