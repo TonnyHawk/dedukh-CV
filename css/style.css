@@ -327,7 +327,7 @@ header p {
 
 /* line 34, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .glide__arrow--left {
-  left: -2.5rem;
+  left: -5rem;
 }
 
 /* line 36, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
@@ -337,7 +337,7 @@ header p {
 
 /* line 38, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .glide__arrow--right {
-  right: -2.5rem;
+  right: -5rem;
 }
 
 /* line 42, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
@@ -360,8 +360,25 @@ header p {
 /* line 53, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .slider__skill-tags {
   width: 100%;
+  height: 85%;
   max-width: 53.6rem;
   align-self: center;
+}
+
+/* line 58, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
+#cv .slider__skill-bagdes {
+  width: 100%;
+  height: 100%;
+  padding: 0 2.5rem;
+  align-items: center;
+}
+
+/* line 63, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
+#cv .slider__skill-progres-bar {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* line 2, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
@@ -802,6 +819,11 @@ header p {
 }
 
 /* line 15, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+.skill-tags__item:last-child {
+  margin-bottom: 0;
+}
+
+/* line 17, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name {
   color: #000000;
   font-size: 2.4rem;
@@ -811,7 +833,7 @@ header p {
   flex-direction: row-reverse;
 }
 
-/* line 22, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 24, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name::before {
   content: '';
   display: block;
@@ -823,7 +845,7 @@ header p {
   order: 2;
 }
 
-/* line 32, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 34, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name--figma::after {
   content: '';
   display: block;
@@ -833,6 +855,144 @@ header p {
   align-self: center;
   order: 1;
   margin: -0.3rem 0.3rem 0 0;
+}
+
+/* line 1, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* line 5, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__info, .skill-badges__diagram {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+}
+
+/* line 9, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__item {
+  display: flex;
+  background: #F8F9FF;
+  padding: 1.7rem 1.6rem 1.6rem 4.2rem;
+  border-radius: .4rem;
+  margin-bottom: 2.5rem;
+}
+
+/* line 15, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__item:last-child {
+  margin-bottom: 0;
+}
+
+/* line 17, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__text {
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 23, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__text-main {
+  font-weight: 500;
+  font-size: 2.4rem;
+  font-family: 'TTCommons-m';
+  line-height: 3.4rem;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+/* line 31, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__icon {
+  align-self: flex-end;
+}
+
+/* line 34, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__diagram {
+  flex: 1 0;
+}
+
+/* line 36, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__diagram svg {
+  position: relative;
+  width: 5.8rem;
+  height: 5.8rem;
+}
+
+/* line 40, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__diagram svg circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 2;
+  fill: transparent;
+}
+
+/* line 46, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__diagram svg circle:first-child {
+  stroke: #DFE3FF;
+  z-index: 1;
+}
+
+/* line 49, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
+.skill-badges__diagram svg circle:last-child {
+  stroke: #435CFC;
+  z-index: 2;
+  stroke-dashoffset: 0;
+  stroke-dasharray: calc(45 * 169.56 / 100) 169.56;
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+
+/* line 1, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar {
+  margin-bottom: 5.8rem;
+  width: 100%;
+}
+
+/* line 4, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar:last-child {
+  margin-bottom: 0;
+}
+
+/* line 7, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar__diagram svg {
+  width: 100%;
+  height: 0.3rem;
+  position: relative;
+}
+
+/* line 11, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar__diagram svg line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 17, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar__diagram svg line:first-child {
+  stroke-width: 4;
+  stroke: rgba(42, 70, 252, 0.15);
+  z-index: 1;
+}
+
+/* line 21, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar__diagram svg line:last-child {
+  stroke-width: 4;
+  stroke: #2A46FC;
+  z-index: 2;
+}
+
+/* line 25, ../../Documents/GitHub/dedukh/sass/elements/_skill-progres-bar.sass */
+.skill-progres-bar__skill-name {
+  font-size: 2.4rem;
+  margin-top: 2.2rem;
+  color: #000000;
 }
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/elements/page/_next-proj.sass */
@@ -874,33 +1034,38 @@ header p {
   margin-bottom: 6.37rem;
 }
 
-/* line 23, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 25, ../../Documents/GitHub/dedukh/sass/style.sass */
 html {
   font-size: 62.5%;
 }
 
-/* line 26, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 28, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border {
   border: 1px solid black;
 }
 
-/* line 28, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 30, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-r {
   border: 1px solid red;
 }
 
-/* line 31, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 33, ../../Documents/GitHub/dedukh/sass/style.sass */
 body {
   font-family: 'TTCommons-r';
   font-size: 1.6rem;
 }
 
-/* line 35, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 37, ../../Documents/GitHub/dedukh/sass/style.sass */
+p {
+  margin: 0;
+}
+
+/* line 40, ../../Documents/GitHub/dedukh/sass/style.sass */
 a.link-w-icon {
   display: flex;
 }
 
-/* line 37, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 42, ../../Documents/GitHub/dedukh/sass/style.sass */
 a.link-w-icon::after {
   content: '';
   align-self: center;
@@ -910,7 +1075,7 @@ a.link-w-icon::after {
   background: url("../img/link-icon.svg");
 }
 
-/* line 47, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 52, ../../Documents/GitHub/dedukh/sass/style.sass */
 h1.title {
   font-family: 'Druk Text Wide';
   font-style: normal;
@@ -920,24 +1085,24 @@ h1.title {
   align-items: center;
 }
 
-/* line 54, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 59, ../../Documents/GitHub/dedukh/sass/style.sass */
 h1.title:after {
   content: '';
 }
 
-/* line 57, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 62, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container {
   padding: 0 7rem;
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 57, ../../Documents/GitHub/dedukh/sass/style.sass */
+  /* line 62, ../../Documents/GitHub/dedukh/sass/style.sass */
   .container {
     max-width: 1550px;
   }
 }
 
-/* line 62, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 67, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-spec {
   border: 1rem solid transparent;
   border-image: url("../img/square.svg") 30 round;
@@ -946,7 +1111,7 @@ h1.title:after {
   position: relative;
 }
 
-/* line 68, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 73, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-spec::before {
   content: '';
   display: block;

@@ -106,9 +106,9 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 		<div class="glide slider">
 			<div class="glide__track" data-glide-el="track">
 				<ul class="glide__slides">
-				 	<li class="glide__slide container-fluid border-r">
-						<div class="row border">
-							<div class="col border">
+				 	<li class="glide__slide container-fluid">
+						<div class="row">
+							<div class="col col-auto border">
 								<p class="slider__text-block" style='text-transform: lowercase'>I AM INSPIRED BY DIGITAL TECHNOLOGY, SO I PREFER PROJECTS IN THE FIELD OF UI/UX DESIGN. IN WORK I FOLLOW TWO PRINCIPLES: SIMPLICITY AND CONVENIENCE. MINIMALISM IS MY PASSION. I AM INSPIRED BY DIGITAL TECHNOLOGY, SO I PREFER PROJECTS IN THE FIELD OF UI/UX DESIGN. I AM INSPIRED BY DIGITAL TECHNOLOGY, SO I PREFER.</p>
 							</div>
 							<div class="col col-5 border">
@@ -120,10 +120,96 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 									<div class="skill-tags__item"><p class="skill-tags__skill-name">UX Research & Analytics Strategy</p></div>
 								</div>
 							</div>
-							<div class="col"></div>
+							<div class="col col-3 border">
+								<div class="slider__skill-badges skill-badges">
+									<div class="skill-badges__item">
+										<div class="skill-badges__info">
+											<p class="skill-badges__text">Education</p>
+											<p class="skill-badges__text-main">IT STEP ACADEMY</p>
+											<p class="skill-badges__text">2016-2020</p>
+											<img src="img/skill-badge-ic--file.svg" alt="" class="skill-badges__icon">
+										</div>
+									</div>
+									<div class="skill-badges__item">
+										<div class="skill-badges__diagram">
+											<svg>
+												<circle cx='29' cy='29' r='27'/>
+												<circle cx='29' cy='29' r='27'/>
+											</svg>
+										</div>
+										<div class="skill-badges__info">
+											<p class="skill-badges__text">English level</p>
+											<p class="skill-badges__text-main">BASIC</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 				 	</li>
-				 	<li class="glide__slide">1</li>
+				 	<li class="glide__slide">
+						<div class="row">
+							<div class="col slider__skill-progres-bar">
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='97%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Photoshop</p>
+								</div>
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='95%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Illustrator</p>
+								</div>
+							</div>
+							<div class="col slider__skill-progres-bar">
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='100%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Figma</p>
+								</div>
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='60%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Indesign</p>
+								</div>
+							</div>
+							<div class="col slider__skill-progres-bar">
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='90%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Sketch</p>
+								</div>
+								<div class="skill-progres-bar">
+									<div class="skill-progres-bar__diagram">
+										<svg>
+											<line x1='0' x2='500'/>
+											<line x1='0' x2='50%'/>
+										</svg>
+									</div>
+									<p class="skill-progres-bar__skill-name">Lightroom</p>
+								</div>
+							</div>
+						</div>
+				 	</li>
 				</ul>
 			</div>
 			<div class="glide__arrows" data-glide-el="controls">
@@ -231,7 +317,7 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	<script src="js/glide.min.js"></script>
 
 	<script>
-	  new Glide('.glide').mount()
+	  new Glide('.glide',{type: 'carousel', gap: 0}).mount()
 	</script>
 
 	<script>
