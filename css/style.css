@@ -361,12 +361,11 @@ header p {
 /* line 53, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .slider__skill-tags {
   width: 100%;
-  height: 85%;
-  max-width: 53.6rem;
+  max-width: 52.7rem;
   align-self: center;
 }
 
-/* line 58, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
+/* line 57, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .slider__skill-bagdes {
   width: 100%;
   height: 100%;
@@ -374,7 +373,7 @@ header p {
   align-items: center;
 }
 
-/* line 63, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
+/* line 62, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .slider__skill-progres-bar {
   padding: 0 1.5rem;
   display: flex;
@@ -871,9 +870,10 @@ header p {
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-/* line 4, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 5, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__item {
   height: 5.5rem;
   border: 0.2rem solid #2A46FC;
@@ -887,12 +887,7 @@ header p {
   margin: 1.2rem;
 }
 
-/* line 15, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
-.skill-tags__item:last-child {
-  margin-bottom: 0;
-}
-
-/* line 17, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 16, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name {
   color: #000000;
   font-size: 2.4rem;
@@ -902,7 +897,7 @@ header p {
   flex-direction: row-reverse;
 }
 
-/* line 24, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 23, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name::before {
   content: '';
   display: block;
@@ -914,7 +909,7 @@ header p {
   order: 2;
 }
 
-/* line 34, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
+/* line 33, ../../Documents/GitHub/dedukh/sass/elements/_skill-tags.sass */
 .skill-tags__skill-name--figma::after {
   content: '';
   display: block;
