@@ -101,6 +101,8 @@ header p {
   position: relative;
   margin-top: 9rem;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
@@ -124,30 +126,34 @@ header p {
   box-shadow: 0px 0px 2.5px rgba(0, 0, 0, 0.08);
   border-radius: 0.3px;
   position: relative;
-}
-
-/* line 15, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
-#portfolio .proj:hover .popup {
-  opacity: 1;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 /* line 18, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+#portfolio .proj:hover .popup {
+  left: 0;
+  opacity: 1;
+}
+
+/* line 22, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: -100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color: white;
   padding: 6.1rem 3.5rem 1.8rem;
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
+  background: #191919;
+  opacity: 0;
+  transition: left 0.4s, opacity 0.3s;
 }
 
-/* line 33, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 38, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__title {
   font-size: 2.4rem;
   line-height: 4rem;
@@ -156,14 +162,14 @@ header p {
   flex: 1 0;
 }
 
-/* line 40, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 45, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__descr {
   font-size: 2.2rem;
   line-height: 4rem;
   flex: 2 0;
 }
 
-/* line 45, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 50, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__link {
   color: white;
   width: max-content;
@@ -178,23 +184,18 @@ header p {
   flex: 1 0;
 }
 
-/* line 58, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 63, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__link:hover {
   text-decoration: underline;
 }
 
-/* line 60, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 65, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__link::after {
   content: '';
   width: 2.4rem;
   height: 2.4rem;
   transform: translate(1.6rem, -0.3rem);
   background: url("../img/link-icon.svg");
-}
-
-/* line 67, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
-#portfolio .proj .popup--tdark, #portfolio .proj .popup--tdark .popup-link {
-  color: #191D2F;
 }
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_mailing.sass */
@@ -379,6 +380,74 @@ header p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* line 1, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.footer {
+  background: #2A46FC;
+  color: white;
+  padding: 3.2rem 0 5.5rem;
+  height: 54rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 10, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.footer__title {
+  font-family: 'Druk Text Wide';
+  font-size: 6.5rem;
+  font-weight: 500;
+  margin-left: 9.9rem;
+  display: block;
+  position: absolute;
+  top: calc(50% - 4.5rem);
+}
+
+/* line 19, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.1rem;
+}
+
+/* line 24, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.footer__contact-me {
+  position: absolute;
+  right: 11.5rem;
+  bottom: 5.5rem;
+}
+
+/* line 29, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.social {
+  display: flex;
+}
+
+/* line 31, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.social__link {
+  margin: 0 2.6rem;
+}
+
+/* line 34, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.tip-target {
+  position: relative;
+}
+
+/* line 37, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.tip {
+  position: absolute;
+}
+
+/* line 39, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.tip--social {
+  top: 6rem;
+  right: -2rem;
+}
+
+/* line 42, ../../Documents/GitHub/dedukh/sass/sections/_footer.sass */
+.tip--contact-me {
+  bottom: 6rem;
+  right: 16rem;
 }
 
 /* line 2, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
@@ -854,7 +923,7 @@ header p {
   background: url("../../img/figma-ic.svg") center center;
   align-self: center;
   order: 1;
-  margin: -0.3rem 0.3rem 0 0;
+  margin: -0.3rem 0.7rem 0 0;
 }
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/elements/_skill-badges.sass */
@@ -1034,38 +1103,38 @@ header p {
   margin-bottom: 6.37rem;
 }
 
-/* line 25, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 26, ../../Documents/GitHub/dedukh/sass/style.sass */
 html {
   font-size: 62.5%;
 }
 
-/* line 28, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 29, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border {
   border: 1px solid black;
 }
 
-/* line 30, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 31, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-r {
   border: 1px solid red;
 }
 
-/* line 33, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 34, ../../Documents/GitHub/dedukh/sass/style.sass */
 body {
   font-family: 'TTCommons-r';
   font-size: 1.6rem;
 }
 
-/* line 37, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 38, ../../Documents/GitHub/dedukh/sass/style.sass */
 p {
   margin: 0;
 }
 
-/* line 40, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 41, ../../Documents/GitHub/dedukh/sass/style.sass */
 a.link-w-icon {
   display: flex;
 }
 
-/* line 42, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 43, ../../Documents/GitHub/dedukh/sass/style.sass */
 a.link-w-icon::after {
   content: '';
   align-self: center;
@@ -1075,7 +1144,7 @@ a.link-w-icon::after {
   background: url("../img/link-icon.svg");
 }
 
-/* line 52, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 53, ../../Documents/GitHub/dedukh/sass/style.sass */
 h1.title {
   font-family: 'Druk Text Wide';
   font-style: normal;
@@ -1085,24 +1154,24 @@ h1.title {
   align-items: center;
 }
 
-/* line 59, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 60, ../../Documents/GitHub/dedukh/sass/style.sass */
 h1.title:after {
   content: '';
 }
 
-/* line 62, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 63, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container {
   padding: 0 7rem;
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 62, ../../Documents/GitHub/dedukh/sass/style.sass */
+  /* line 63, ../../Documents/GitHub/dedukh/sass/style.sass */
   .container {
     max-width: 1550px;
   }
 }
 
-/* line 67, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 68, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-spec {
   border: 1rem solid transparent;
   border-image: url("../img/square.svg") 30 round;
@@ -1111,7 +1180,7 @@ h1.title:after {
   position: relative;
 }
 
-/* line 73, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 74, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-spec::before {
   content: '';
   display: block;

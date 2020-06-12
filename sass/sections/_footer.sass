@@ -1,0 +1,44 @@
+.footer
+	background: $blue
+	color: white
+	padding: 3.2rem 0 5.5rem
+	height: 54rem
+	display: flex
+	position: relative
+	overflow: hidden
+
+	&__title
+		+font-wide
+		font-size: 6.5rem
+		font-weight: 500
+		margin-left: 9.9rem
+		display: block
+		position: absolute
+		top: calc(50% - 4.5rem)
+
+	&__social
+		display: flex
+		justify-content: flex-end
+		padding-right: 2.1rem
+
+	&__contact-me
+		position: absolute
+		right: 11.5rem
+		bottom: 5.5rem
+
+.social 
+	display: flex
+	&__link
+		margin: 0 2.6rem 
+
+.tip-target
+	position: relative
+
+.tip
+	position: absolute
+	&--social
+		top: 6rem
+		right: -2rem
+	&--contact-me
+		bottom: 6rem
+		right: 16rem
