@@ -6,6 +6,21 @@
 	display: flex
 	position: relative
 	overflow: hidden
+	transition: 0.8s ease-in-out
+	&:hover
+		background: $black-3
+	&__wraper
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 8rem
+		padding: 0 7rem
+		@media screen and (min-width: $xl)
+			max-width: 1550px
+		&-child
+			position: relative
+			height: 100%
+			width: 100%
 
 	&__title
 		+font-wide
@@ -26,10 +41,20 @@
 		right: 11.5rem
 		bottom: 5.5rem
 
+a path
+	transition: 0.2s
+a:hover path
+	fill: $blue
+
 .social 
 	display: flex
 	&__link
 		margin: 0 2.6rem 
+		// &-icon path
+		// 	transition: 0.2s
+		// &-icon:hover path
+		// 	fill: $blue
+
 
 .tip-target
 	position: relative
