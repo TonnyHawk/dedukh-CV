@@ -56,6 +56,8 @@ header .col:last-child {
 
 /* line 20, ../../Documents/GitHub/dedukh/sass/sections/_header.sass */
 header a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 2.4rem;
   color: #2A46FC;
@@ -64,6 +66,8 @@ header a {
 
 /* line 26, ../../Documents/GitHub/dedukh/sass/sections/_header.sass */
 header .checkout {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   position: absolute;
   top: 2em;
@@ -245,6 +249,22 @@ header p {
 }
 
 /* line 96, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chatbar__text-field::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'TTCommons-r';
+}
+.chatbar__text-field::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'TTCommons-r';
+}
+.chatbar__text-field:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'TTCommons-r';
+}
+.chatbar__text-field::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'TTCommons-r';
+}
 .chatbar__text-field::placeholder {
   color: rgba(255, 255, 255, 0.5);
   font-family: 'TTCommons-r';
@@ -408,6 +428,8 @@ header p {
 /* line 50, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 #portfolio .proj .popup__link {
   color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   align-self: flex-end;
   font-size: 2rem;
@@ -591,7 +613,8 @@ header p {
 /* line 50, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv .slider__border-spec {
   border: 1.5rem solid transparent;
-  border-image: url("../img/square.svg") 30 round;
+  -o-border-image: url("../img/square.svg") 30 round;
+     border-image: url("../img/square.svg") 30 round;
   border-image-outset: 0.8rem;
 }
 
@@ -599,7 +622,8 @@ header p {
 #cv .slider__skill-tags {
   width: 100%;
   max-width: 52.7rem;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 }
 
 /* line 58, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
@@ -757,7 +781,8 @@ header p {
 /* line 21, ../../Documents/GitHub/dedukh/sass/elements/_page.sass */
 .page__section-header {
   background: transparent;
-  backdrop-filter: blur(5rem);
+  -webkit-backdrop-filter: blur(5rem);
+          backdrop-filter: blur(5rem);
   padding-top: 18.5rem;
   height: 72.4rem;
   z-index: 1;
@@ -875,7 +900,11 @@ header p {
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
 .circled {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   position: relative;
 }
@@ -1013,7 +1042,8 @@ header p {
   flex-direction: column;
   align-items: center;
   background: rgba(224, 224, 224, 0.1);
-  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+          backdrop-filter: blur(11px);
   transition: top 0.3s ease-out;
 }
 
@@ -1081,7 +1111,8 @@ header p {
   width: 1.4rem;
   height: 2.1rem;
   background: url("../../img/figma-ic.svg") center center;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   order: 1;
   margin: -0.3rem 0.7rem 0 0;
 }
@@ -1297,7 +1328,8 @@ a.link-w-icon {
 /* line 42, ../../Documents/GitHub/dedukh/sass/style.sass */
 a.link-w-icon::after {
   content: '';
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   width: 1.625rem;
   height: 1.625rem;
   transform: translate(1rem);
@@ -1334,7 +1366,8 @@ h1.title:after {
 /* line 67, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-spec {
   border: 1rem solid transparent;
-  border-image: url("../img/square.svg") 30 round;
+  -o-border-image: url("../img/square.svg") 30 round;
+     border-image: url("../img/square.svg") 30 round;
   border-image-outset: 0.6rem;
   box-shadow: 0 0 0 2px #2A46FC;
   position: relative;
@@ -1352,5 +1385,3 @@ h1.title:after {
   top: -4rem;
   left: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
