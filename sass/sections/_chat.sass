@@ -1,97 +1,116 @@
-#chat
+.chat 
 	height: 14.1rem
-	position: relative
 	margin-top: 9rem
-	z-index: 2
-	display: flex
-	align-items: center
-
-.chat__wraper
-	position: fixed
-	bottom: 0
-	left: 0
-	width: 100%
-	height: 14.1rem
-	display: flex
-	align-items: center
-	padding: 0 7rem
-	max-width: 155rem
-	@media screen and (min-width: $xl)
-		left: calc((100vw - 155rem)/2)
-
-	&--active
-
-
-
-.chat-bar
-	min-height: 100%
-	@media screen and (max-width: 985px)
-		min-height: 75%
-	width: 50%
-	min-width: 40rem
-	position: absolute
-	bottom: 0
-	right: 0
-	background: $blue
-	display: flex
-	flex-direction: column
-	justify-content: flex-start
-	align-content: flex-start
-	transition: 0.3s
-	color: white
-	z-index: 1
-	&:hover
-		background: $blue
-	&--active
-		background: $blue
-	&__open-btn
+	background: green
+	position: relative
+	&__icons-wrap, &__chatbar-wrap
+		position: fixed
+		bottom: 0
+		left: 0
 		width: 100%
-		height: 100%
-		position: absolute
-		display: flex
-		align-items: center
-		cursor: pointer
-		z-index: 2
-	&__content-wrap
-		display: none
-		padding: 4.2rem 8.6rem 5.2rem
-	&__icon
-		width: max-content
-		position: relative
-		margin-left: 7.8rem
-	&__icon-close
-		align-self: flex-start
-		margin-top: 5.3rem
-		cursor: pointer
-	&__top
+	&__icons-wrap
+		width: 100%
+		height: 14.1rem
 		display: flex
 		justify-content: space-between
+		align-items: center
+		padding: 0 7rem
+		z-index: 31
+		height: 14.1rem
 
+	&__icon
+		cursor: pointer
+
+	&__chatbar-wrap
+		display: flex
+		justify-content: flex-end
+		z-index: 30
+		transition: bottom 0.3s ease-in-out
+		bottom: -14.1rem
+		&.show
+			bottom: 0
+			z-index: 32
+	&__chatbar
+		width: 50%
+	// &__icons-wrap, &__chatbar-wrap
+	// 	display: none
+
+.chatbar
+	background: $blue
+	transition: height 0.5s ease-in-out
+	height: 14.1rem
+	color: white
+	overflow: hidden
+	position: relative
+	&.open
+		height: 31.8rem
+	&__title-section
+		display: flex
+		justify-content: space-between
+		align-items: center
 	&__title
 		+font-wide
+		font-style: normal
+		font-weight: 500
 		font-size: 2.4rem
-		white-space: nowrap
-		margin-right: 9.8rem
-		margin-bottom: 0
-	&__descr
-		color: rgba(255, 255, 255, 0.5)
+		line-height: 2.4rem
+	&__tip
+		+regular
+		font-style: normal
+		font-weight: normal
 		font-size: 1.6rem
-	&__input
-		color: white
+		line-height: 2rem
+		color: rgba(255, 255, 255, 0.5)
+	&__text-field
+		margin-top: 7rem
+		+regular
+		font-size: 1.6rem
+		padding: 1.2rem 0
 		border: none
 		border-bottom: 2px solid #3C56FF
-		line-height: 4rem
 		background: transparent
-		font-size: 1.6rem
-		width: 85%
-		max-width: 55.5rem
-		padding-bottom: 0.4rem
-		margin-top: 7rem
+		color: white
+		width: 100%
 		&:focus
 			outline: none
-		&::placeholder 
+		&::placeholder
 			color: rgba(255, 255, 255, 0.5)
-
-
-.music
+			+regular
+	&__close-btn
+		position: absolute
+		left: 8.6rem
+		bottom: 5.2rem
+		z-index: 2
+		cursor: pointer
 	
+	&__main-content, &__feedback-content
+		position: absolute
+		width: 100%
+		height: 100%
+		padding: 4.2rem 8.6rem 5.2rem
+		z-index: 1
+		transition: 0.7s
+	&__main-content
+		top: 100%
+		left: 0
+		&.show
+			top: 0
+	&__feedback-content
+		top: 0
+		right: -100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&.show
+			right: 0
+
+		.chatbar__title
+			margin-bottom: 1.7rem
+
+.chat.fixed
+	.chat
+		&__icons-wrap, &__chatbar-wrap
+			position: absolute
+		&__chatbar-wrap
+			bottom: 0

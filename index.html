@@ -47,25 +47,27 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	</header>
 
 <!-- CHAT SECTION -->
-	<section id="chat" class="container">
-
-		<div class="chat__wraper">
-			<div class="music">
-				<img src="img/chat__music-ic.svg" alt="" class="music__icon">
-			</div>
-			<div class="chat-bar">
-				<div class="chat-bar__open-btn">
-					<img src="img/chat-icon.svg" alt="" class="chat-bar__icon">
-				</div>
-				<div class="chat-bar__content-wrap">
-					<div class="chat-bar__top">
-						<p class="chat-bar__title">Get in touch</p>
-						<p class="chat-bar__descr">Enter some information and click Enter</p>
+	<section id="chat" class="container chat fixed">
+		<div class="chat__icons-wrap">
+			<img src="img/chat__music-ic.svg" alt="" class="chat__icon chat__icon-music">
+			<img src="img/chat-icon--blue.svg" alt="" class="chat__icon chat__icon--blue chat__open-btn">
+			<img src="img/chat-icon--white.svg" alt="" class="chat__icon chat__icon--white chat__open-btn">
+		</div>
+		<div class="chat__chatbar-wrap">
+			<div class="chat__chatbar chatbar">
+				<div class="chatbar__main-content">
+					<div class="chatbar__title-section">
+						<p class="chatbar__title">Get in touch</p>
+						<p class="chatbar__tip">Enter some information and click enter</p>
 					</div>
-					<form action="">
-						<input type="text" class="chat-bar__input" placeholder="Hi, i like your work, conta">
+					<form action="" onsubmit="chatbarSend(); return false;">
+						<input type="text" class="chatbar__text-field" placeholder="write here">
 					</form>
-					<img src="img/icon-ex.svg" alt="" class="chat-bar__icon-close">
+					<img src="img/icon-close--white.svg" alt="" class="chatbar__close-btn chat__close-btn">
+				</div>
+				<div class="chatbar__feedback-content">
+					<p class="chatbar__title">Get in touch</p>
+					<p class="chatbar__tip">We will contact you shortly!</p>
 				</div>
 			</div>
 		</div>
@@ -404,15 +406,30 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 			});
 
 			//CHATBAR open-close--------
-		  $("#chat .chat-bar__open-btn").click(function(){
+			//--open
+		  $("#chat .chat__open-btn").click(function(){
 			  	$(this).hide();
-			  	$("#chat .chat-bar").addClass("chat-bar--active");
-			  	$("#chat .chat-bar__content-wrap").show();
+			  	$("#chat .chat__chatbar-wrap").addClass("show");
+			  	$("#chat .chat__chatbar.chatbar").delay(400).queue(function() {
+
+					$(this).addClass("open");
+
+					$(this).dequeue();
+  				});;
+  				$("#chat .chat__chatbar .chatbar__main-content").delay(1000).queue(function() {$(this).addClass("show"); $(this).dequeue();});
+
 		  	});
-		  $("#chat .chat-bar__icon-close").click(function(){
-		  	$("#chat .chat-bar__content-wrap").hide();
-		  	$("#chat .chat-bar").removeClass("chat-bar--active");
-		  	$("#chat .chat-bar__open-btn").show();
+		  //--close
+		  $("#chat .chat__close-btn").click(function(){
+		  	$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+		  	$("#chat .chat__chatbar.chatbar").queue(function() {$(this).removeClass("open"); $(this).dequeue();});
+		  	$("#chat .chat__chatbar-wrap").delay(400).queue(function() {
+
+					$(this).removeClass("show");
+
+					$(this).dequeue();
+  			});;
+  			$("#chat .chat__open-btn").show();
 		  });
 
 
@@ -429,6 +446,29 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 		  	document.body.style.overflow = "";
 		  });
 		});
+	</script>
+
+	<script>
+		//chatbar form sending--------
+		function chatbarSend(){
+			$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+			$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
+		  	// setTimeout(function(){
+		  	// 	$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
+		  	// }, 510)
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar.chatbar").removeClass("open");
+		  	}, 2800);
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar-wrap").removeClass("show");
+		  		$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+		  	}, 3000);
+  			$("#chat .chat__open-btn").show();
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar .chatbar__feedback-content").removeClass("show");
+		  	}, 3600);
+
+		}
 	</script>
 </body>
 </html>
