@@ -47,11 +47,13 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 	</header>
 
 <!-- CHAT SECTION -->
-	<section id="chat" class="container chat fixed">
+	<section id="chat" class="container chat static">
 		<div class="chat__icons-wrap">
 			<img src="img/chat__music-ic.svg" alt="" class="chat__icon chat__icon-music">
-			<img src="img/chat-icon--blue.svg" alt="" class="chat__icon chat__icon--blue chat__open-btn">
-			<img src="img/chat-icon--white.svg" alt="" class="chat__icon chat__icon--white chat__open-btn">
+			<div class="chat__open-btn-wrap">
+				<img src="img/chat-icon--blue.svg" alt="" class="chat__icon chat__open-btn blue">
+				<img src="img/chat-icon--white.svg" alt="" class="chat__icon chat__open-btn white">
+			</div>
 		</div>
 		<div class="chat__chatbar-wrap">
 			<div class="chat__chatbar chatbar">
@@ -382,6 +384,46 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 
 	<script src="js/glide.min.js"></script>
 
+	<script>
+		window.addEventListener('scroll', function() {
+			//--CHAT
+			var chat = document.getElementById("chat").getBoundingClientRect();
+			var chatTouchPoint = $(window).height() - $("#chat").height();
+			var staticChat = true;
+			if(chat.top <= chatTouchPoint){
+				if($("#chat").hasClass('static')){
+					$("#chat").removeClass("static");
+				}
+			}
+			else if(chat.top > chatTouchPoint){
+				if($("#chat").hasClass('static')==false){
+					$("#chat").addClass('static');
+				}
+			}
+
+			//--FOOTER
+			var footer = document.getElementById("footer").getBoundingClientRect();
+			var footerTouchPoint = $(window).height() - $("#chat").height();
+			var footerOnView = false;
+			if(footer.top <= footerTouchPoint){
+				if($("#footer.footer").hasClass('onview')==false){
+					$("#footer.footer").addClass('onview');
+					footerOnView = true;
+					$("#chat").addClass('hide');				
+				}
+
+			}
+			else if(footer.top > footerTouchPoint){
+				if($("#footer.footer").hasClass('onview')){
+					$("#footer.footer").removeClass('onview');
+					footerOnView = false;
+					$("#chat").removeClass('hide');
+				}
+			}
+
+		});
+	</script>
+
 <!-- 	<script>
 	  new Glide('.glide',{
 	  		type: 'carousel',
@@ -407,8 +449,9 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 
 			//CHATBAR open-close--------
 			//--open
-		  $("#chat .chat__open-btn").click(function(){
-			  	$(this).hide();
+		  $("#chat .chat__open-btn-wrap").click(function(){
+			  	$(this).fadeOut();
+			  	$("#chat .chatbar__open-btn").fadeOut('fast');
 			  	$("#chat .chat__chatbar-wrap").addClass("show");
 			  	$("#chat .chat__chatbar.chatbar").delay(400).queue(function() {
 
@@ -429,7 +472,9 @@ in work i follow two principles: simplicity and convenience. Minimalism is my pa
 
 					$(this).dequeue();
   			});;
-  			$("#chat .chat__open-btn").show();
+  			setTimeout(function(){
+  				$("#chat .chat__open-btn-wrap").fadeIn('fast');
+  			}, 800);
 		  });
 
 

@@ -1,13 +1,32 @@
 .chat 
 	height: 14.1rem
 	margin-top: 9rem
-	background: green
 	position: relative
+	&__open-btn-wrap
+		height: 2.6rem
+		width: 2.6rem
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		transition: width 1.3s ease-in-out, height 1s
+		overflow: hidden
+	&__open-btn
+		position: absolute
+		left: 0
+		transition: left 0.9s ease-in
+		&.blue, &.white
+			transition: 0.9s
+		&.white
+			opacity: 0
+		&.blue 
+			opacity: 1
 	&__icons-wrap, &__chatbar-wrap
 		position: fixed
 		bottom: 0
 		left: 0
 		width: 100%
+		transition: bottom 0.4s ease-out
 	&__icons-wrap
 		width: 100%
 		height: 14.1rem
@@ -18,8 +37,9 @@
 		z-index: 31
 		height: 14.1rem
 
-	&__icon
+	&__icon, &__icon-music
 		cursor: pointer
+		transition: 0.7s
 
 	&__chatbar-wrap
 		display: flex
@@ -32,8 +52,6 @@
 			z-index: 32
 	&__chatbar
 		width: 50%
-	// &__icons-wrap, &__chatbar-wrap
-	// 	display: none
 
 .chatbar
 	background: $blue
@@ -42,6 +60,8 @@
 	color: white
 	overflow: hidden
 	position: relative
+	display: flex
+	align-items: center
 	&.open
 		height: 31.8rem
 	&__title-section
@@ -108,9 +128,27 @@
 		.chatbar__title
 			margin-bottom: 1.7rem
 
-.chat.fixed
+.chat.static
 	.chat
 		&__icons-wrap, &__chatbar-wrap
 			position: absolute
 		&__chatbar-wrap
 			bottom: 0
+		&__open-btn-wrap
+			height: 14.1rem
+			width: 50%
+			cursor: pointer
+			display: flex
+			align-items: center
+			position: relative
+		&__open-btn
+			position: absolute
+			left: 8.5rem
+			&.white
+				opacity: 1
+			&.blue 
+				opacity: 0
+.chat.hide
+	.chat
+		&__icons-wrap, &__chatbar-wrap
+			bottom: -100%
