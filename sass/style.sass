@@ -1,82 +1,35 @@
-$sm: 576px
-$md: 768px
-$lg: 992px
-$xl: 1200px
+@import 'colors'
+@import 'fonts'
 
-@import "colors"
-@import "fonts"
-
-@import "sections/header"
-@import "sections/chat"
-@import "sections/portfolio"
-@import "sections/mailing"
-@import "sections/cv"
-@import "sections/footer"
-
-@import "elements/page"
-@import "elements/circled"
-@import "elements/topbar"
-@import "elements/skill-tags"
-@import "elements/skill-badges"
-@import "elements/skill-progres-bar"
-
-@import "elements/page/next-proj"
+@import 'sections/principles'
 
 html
 	font-size: 62.5%
+body
+	+f-regular
+p, h1
+	margin: 0
+
+.section 
+	display: flex
+	flex-direction: column
+	width: 100%
+	max-width: 144rem
+	&__title
+		+f-bold
+		font-weight: bold
+		font-size: 6rem
+		line-height: 8rem
+		margin-bottom: 6rem
 
 .border
 	border: 1px solid black
-	&-r 
+	&-r
 		border: 1px solid red
 
-body
-	+regular
-	font-size: 1.6rem
-
-p
-	margin: 0
-
-a.link-w-icon
-	display: flex
-	&::after
-		content: ''
-		align-self: center
-		width: 1.625rem
-		height: 1.625rem
-		transform: translate(1rem)
-		background: url('../img/link-icon.svg')
-
-
-
-h1.title
-	+font-wide
-	font-style: normal
-	font-weight: 500
-	color: $blue
-	display: flex
-	align-items: center
-	&:after 
-		content: ''
-
 .container
-	padding: 0 7rem
-	@media screen and (min-width: $xl)
-		max-width: 1550px
+	max-width: 144rem
+	align-self: center
+	width: 100%
 
-.border-spec
-	border: 1rem solid transparent
-	border-image: url('../img/square.svg') 30 round
-	border-image-outset: 0.6rem
-	box-shadow: 0 0 0 2px $blue
-	position: relative
-	&::before
-		content: ''
-		display: block
-		height: 2.2rem
-		width: 2.2rem
-		background: url("../img/mouse-icon.svg")
-		background-size: cover
-		position: absolute
-		top: -4rem
-		left: 0
+
