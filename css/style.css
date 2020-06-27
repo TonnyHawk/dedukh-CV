@@ -25,92 +25,55 @@
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles {
-  padding: 0 3.2rem;
+  padding: 6.2rem 3.4rem;
 }
 
-/* line 4, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+/* line 3, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles .section__title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
   width: min-content;
 }
 
-@media screen and (min-width: 32.5em) {
-  /* line 4, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-  #principles .section__title {
-    width: max-content;
-  }
-}
-
-/* line 11, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+/* line 5, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles .section__title::after {
   content: '';
   display: block;
+  width: 7.4rem;
   height: 8.4rem;
-  width: 10.4rem;
   background: url("../../img/principles__title.png") center center;
   background-size: cover;
-  margin-left: -2.1rem;
+  position: absolute;
+  right: -8.5rem;
 }
 
-@media screen and (min-width: 32.5em) {
-  /* line 11, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-  #principles .section__title::after {
-    margin-left: 1.8rem;
-  }
-}
-
-/* line 21, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-#principles .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 60em) {
-  /* line 25, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-  #principles .container__row {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-/* line 29, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-#principles .container__item {
+/* line 15, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+.principle {
   margin-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
 }
 
-/* line 37, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-.principles__moto-tag {
-  color: rgba(0, 0, 0, 0.1);
+/* line 17, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+.principle__tag, .principle__moto {
   font-family: 'bold';
   font-weight: bold;
+}
+
+/* line 20, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+.principle__tag {
   font-size: 2.4rem;
-  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.3rem;
 }
 
-/* line 43, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-.principles__moto {
-  color: #000000;
-  font-family: 'bold';
-  font-weight: bold;
+/* line 24, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+.principle__moto {
   font-size: 5rem;
-  line-height: 8rem;
-  max-width: 44.1rem;
   margin-bottom: 1.2rem;
 }
 
-/* line 51, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
-.principles__moto-descr {
-  color: #000000;
-  font-size: 1.6rem;
-  line-height: 3.5rem;
-  letter-spacing: 0.03rem;
-  max-width: 41.3rem;
+/* line 27, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
+.principle__descr {
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.03em;
 }
 
 /* line 6, ../../Documents/GitHub/dedukh/sass/style.sass */
@@ -121,45 +84,44 @@ html {
 /* line 8, ../../Documents/GitHub/dedukh/sass/style.sass */
 body {
   font-family: regular;
+  color: #000000;
 }
 
-/* line 10, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 11, ../../Documents/GitHub/dedukh/sass/style.sass */
 p, h1 {
   margin: 0;
 }
 
-/* line 13, ../../Documents/GitHub/dedukh/sass/style.sass */
-.section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 144rem;
-}
-
-/* line 18, ../../Documents/GitHub/dedukh/sass/style.sass */
-.section__title {
+/* line 14, ../../Documents/GitHub/dedukh/sass/style.sass */
+h1 {
   font-family: 'bold';
-  font-weight: bold;
-  font-size: 6rem;
-  line-height: 8rem;
-  margin-bottom: 6rem;
 }
 
-/* line 25, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 17, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border {
   border: 1px solid black;
 }
 
-/* line 27, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 19, ../../Documents/GitHub/dedukh/sass/style.sass */
 .border-r {
   border: 1px solid red;
 }
 
-/* line 30, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 25, ../../Documents/GitHub/dedukh/sass/style.sass */
+.section__title {
+  font-size: 5.5rem;
+  line-height: 8rem;
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+/* line 33, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container {
-  max-width: 144rem;
-  align-self: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

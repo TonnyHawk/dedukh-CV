@@ -7,29 +7,33 @@ html
 	font-size: 62.5%
 body
 	+f-regular
+	color: $black
 p, h1
 	margin: 0
 
-.section 
-	display: flex
-	flex-direction: column
-	width: 100%
-	max-width: 144rem
-	&__title
-		+f-bold
-		font-weight: bold
-		font-size: 6rem
-		line-height: 8rem
-		margin-bottom: 6rem
+h1
+	+f-bold
 
 .border
 	border: 1px solid black
 	&-r
 		border: 1px solid red
 
+.glob-wrap
+
+.section
+	&__title
+		font-size: 5.5rem
+		line-height: 8rem
+		margin-bottom: 6rem
+		display: flex
+		align-items: flex-end
+		position: relative
+
 .container
-	max-width: 144rem
-	align-self: center
-	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+
 
 
