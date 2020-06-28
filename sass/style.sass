@@ -20,50 +20,33 @@ h1
 		border: 1px solid red
 
 .glob-wrap
-	@media screen and (min-width: 75.75em)
-		display: flex
-		flex-direction: column
-		align-items: center
-		border: 1px solid red
 
 .section
+	position: relative
+	padding: 6rem 3.4rem
 	&__title
+		+f-bold
+		color: $black
+		font-weight: bold
 		font-size: 6rem
 		line-height: 8rem
-		margin-bottom: 6rem
-		display: flex
-		align-items: flex-end
-		position: relative
-		@media screen and (min-width: 44.5em)
-			margin-bottom: 9rem
-			font-size: 7rem
-		@media screen and (min-width: 62.5em)
-			margin-bottom: 17rem
-			font-size: 7rem
-		@media screen and (min-width: 68.75em)
-			font-size: 9rem
-		@media screen and (min-width: 75.75em)
-			font-size: 12rem
-			line-height: 12rem
-			margin-bottom: 17.8rem
-		&::after
-			content: ''
-			display: block
-			width: 7.4rem
-			height: 8.4rem
-			position: absolute
-			right: -8.5rem
-			@media screen and (min-width: 31.25em)
-				right: -10.5rem
-			@media screen and (min-width: 75.75em)
-				height: 14.6rem
-				width: 13.2rem
-				right: -18.5rem
 
-.container
-	display: flex
-	flex-direction: column
-	align-items: center
+.spec-border
+	border: 1rem solid transparent
+	border-image: url('../img/square.svg') 30 round
+	border-image-outset: 0.6rem
+	box-shadow: 0 0 0 2px $blue
+	position: relative
+	&::before
+		content: ''
+		display: block
+		height: 2.2rem
+		width: 2.2rem
+		background: url("../img/mouse-icon.svg")
+		background-size: cover
+		position: absolute
+		top: -4rem
+		left: 0
 
 
 
