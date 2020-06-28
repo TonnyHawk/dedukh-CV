@@ -1,0 +1,73 @@
+#footer
+	padding: 4rem 0 7.2rem
+	@media screen and (min-width: 24.75em)
+		padding: 4rem 0 16.2rem
+	@media screen and (min-width: 43em)
+		padding: 6rem 0 16.2rem
+	@media screen and (min-width: 58.25em)
+		padding: 13.5rem 0
+.footer__links-wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	@media screen and (min-width: 58.25em)
+		flex-direction: row
+		justify-content: center
+
+.footer__link
+	+f-bold
+	font-size: 1.8rem
+	letter-spacing: 0.03em
+	color: $black
+	text-decoration: none
+	font-weight: bold
+	line-height: 2.2rem
+	transition: 0.1s
+	margin-bottom: 6.1rem
+	@media screen and (min-width: 43em)
+		margin-bottom: 7.1rem
+	@media screen and (min-width: 58.25em)
+		margin: 0 8rem
+	@media screen and (min-width: 75.87em)
+		font-size: 2.4rem
+		margin: 0 9rem
+	@media screen and (min-width: 89.5em)
+		margin: 0 10.1rem
+	&:first-child
+		margin-left: 0
+	&:nth-child(3)
+		margin-right: 0
+	&:hover
+		text-decoration: none
+		color: $yellow
+	&>a 
+		margin: 0
+
+.tip-target
+	position: relative
+
+.tip
+	position: absolute
+	bottom: -31rem
+	left: -14rem
+	@media screen and (min-width: 43em)
+		bottom: -34rem
+	@media screen and (min-width: 58.25em)
+		bottom: -12rem
+		left: -15rem
+	@media screen and (min-width: 85.25em)
+		bottom: -11rem
+		left: -31rem
+	&:nth-child(2)
+		display: none
+		@media screen and (min-width: 25.37em)
+			display: block
+		@media screen and (min-width: 85.25em)
+			display: none
+	&:last-child
+		display: none
+		@media screen and (min-width: 85.25em)
+			display: block
+	display: none
+	@media screen and (min-width: 24.75em)
+		display: block

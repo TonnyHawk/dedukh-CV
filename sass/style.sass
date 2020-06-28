@@ -1,8 +1,6 @@
 @import 'colors'
 @import 'fonts'
 
-@import 'sections/principles'
-
 html
 	font-size: 62.5%
 body
@@ -23,19 +21,23 @@ h1
 
 .section
 	position: relative
-	padding: 6rem 3.4rem
+	padding: 6rem 3.2rem
+	overflow: hidden
 	&__title
 		+f-bold
 		color: $black
 		font-weight: bold
 		font-size: 6rem
 		line-height: 8rem
+		width: min-content
+	&__chat-ic
+		position: absolute
 
 .spec-border
 	border: 1rem solid transparent
-	border-image: url('../img/square.svg') 30 round
+	border-image: url('../img/spec-border-square.svg') 30 round
 	border-image-outset: 0.6rem
-	box-shadow: 0 0 0 2px $blue
+	box-shadow: 0 0 0 2px $black
 	position: relative
 	&::before
 		content: ''
@@ -45,8 +47,12 @@ h1
 		background: url("../img/mouse-icon.svg")
 		background-size: cover
 		position: absolute
-		top: -4rem
-		left: 0
+		bottom: -3rem
+		right: -3rem
 
+
+@import 'sections/principles'
+@import 'sections/lets-talk'
+@import 'sections/footer'
 
 
