@@ -1,0 +1,44 @@
+#principles 
+	&.section
+		padding-bottom: 0
+	.section__title
+		margin-bottom: 6rem
+		&.ic::after
+			content: ''
+			display: block
+			width: 9.4rem
+			height: 8.4rem
+			background: url('../../img/principles__title.png') center no-repeat
+			background-size: cover
+			margin-left: -2rem
+.container
+	display: flex
+	justify-content: center
+	&__row
+		border: 1px solid red
+		width: max-content
+	&__item
+		border: 1px solid black
+		margin-bottom: 6rem
+		max-width: 26rem
+
+.principle
+	&__tag
+		color: $gray 
+		+f-bold
+		font-weight: bold
+		font-size: 2.4rem
+		line-height: 2.9rem
+		margin-bottom: .8rem
+
+	&__moto
+		+f-bold
+		font-weight: bold
+		font-size: 5rem
+		line-height: 8rem
+		margin-bottom: 1.2rem
+
+	&__descr
+		font-size: 1.6rem
+		line-height: 3.5rem
+		letter-spacing: 0.03rem
