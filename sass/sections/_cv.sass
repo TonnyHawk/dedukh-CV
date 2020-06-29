@@ -1,0 +1,186 @@
+#cv
+	background: $blue
+
+.section
+
+.container
+	&__row
+
+	&__item
+		margin-bottom: 6rem
+		&:nth-child(1)
+			z-index: 0
+		&:nth-child(2)
+			z-index: 1
+		&:nth-child(3)
+			z-index: 2
+
+.my-cv
+	background: white
+	max-width: 28.5rem
+	border: 2px solid $black
+	display: flex
+	flex-direction: column
+	&__header
+		border-bottom: 2px solid $black
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 0.3rem 0 2.5rem
+	&__heading
+		font-size: 1.8rem 
+		line-height: 2.2rem
+		+f-bold
+		font-weight: bold
+	&__close-ic
+
+	&__body
+		padding: 1.7rem 0 2.3rem
+		position: relative
+		overflow: hidden
+	&__text
+		font-size: 1.6rem
+		line-height: 3.2rem
+		position: relative
+		padding: 0 1.7rem
+		z-index: 2
+
+	.mark 
+		position: absolute
+		background: $yellow
+		width: 99.6%
+		height: 3.2rem
+		z-index: 1
+		left: 0.5px
+		&:nth-child(2)
+			top: 5rem
+		&:last-child
+			width: 16.5rem
+			top: 8rem
+			@media screen and (min-width: 20em)
+				width: 7.5rem
+
+
+.skill-tags
+	padding: 1.1rem -2.5rem 5.2rem
+	display: flex
+	flex-wrap: wrap
+	background: transparent
+	position: relative
+	transform: scale(1.06, 1.01)
+	&__tag
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 2px solid $black
+		background: white
+		margin: 0.8rem
+		flex: 1 0 auto
+		width: max-content
+		height: 3.6rem
+		&.rotated
+			transform: rotate(0.95deg)
+		&:last-child
+			margin-bottom: 2.2rem
+
+	&__tag-name
+		width: max-content
+		font-size: 1.2rem
+		line-height: 1.4rem
+		+f-bold
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		&:before, &.figma::after
+			content: ''
+			width: 1.393rem
+			height: 1.118rem
+			background: url('../../img/check-ic.svg') center
+			background-size: cover
+			display: block
+			margin-right: 1rem
+			order: 2
+
+		&.figma::after
+			width: 0.918rem
+			height: 1.376rem
+			background: url('../../img/figma-ic.svg') center
+			margin-right: 0.6rem
+			order: 1
+
+
+
+.spec-border-t1
+	&::before
+		height: 1.44rem
+		width: 1.44rem
+		background: url("../img/mouse-icon-1.svg")
+		top: -3rem
+		left: -0.5rem
+
+
+
+.skill-badges
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-top: -6.5rem
+
+.skill-badge
+	margin-bottom: 1.9rem
+	&:last-child
+		margin-bottom: 0
+	background: white
+	border: 2px solid $black
+	width: 25.5rem
+	padding: 1.8rem 2.9rem
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	&__main-sect
+	&__title, &__add-info
+		color: $gray-2
+		font-size: 1.2rem
+		line-height: 1.4rem
+		margin-bottom: 1.6rem
+	&__skill-name
+		+f-bold
+		font-weight: bold
+		font-size: 1.6rem
+		line-height: 1.9rem
+		text-transform: uppercase
+		margin-bottom: 0.8rem
+	&__add-info
+		margin-bottom: 0
+	&__diagram
+		margin-right: 2.4rem
+		svg 
+			height: 4.5rem
+			width: 4.5rem
+			position: relative
+			border: 1px solid black
+			circle 
+				position: absolute
+				top: 0
+				left: 0
+				stroke-width: 2
+				fill: transparent
+				&:first-child
+					stroke: #DFE3FF
+					z-index: 1
+				&:last-child
+					stroke: #435CFC
+					z-index: 2
+					stroke-dashoffset: 0
+					stroke-dasharray: calc(45 * 125.6 / 100) 169.56
+					transform-origin: center
+					transform: rotate(90deg)
+	&--language.skill-badge
+		padding: 1.6rem 0
+		justify-content: center
+		&__title
+			margin-bottom: 0.844rem
+		&__skill-name
+			margin-bottom: 0rem
+
+

@@ -1,6 +1,9 @@
 @import 'colors'
 @import 'fonts'
 
+*
+	box-sizing: border-box
+
 html
 	font-size: 62.5%
 body
@@ -36,7 +39,17 @@ h1, h2
 	&__chat-ic
 		position: absolute
 
-.spec-border
+.container
+	display: flex
+	justify-content: center
+	border: 1px solid red
+	&__row
+		width: max-content
+		border: 1px solid black
+
+
+
+.spec-border, .spec-border-t1
 	border: 1rem solid transparent
 	border-image: url('../img/spec-border-square.svg') 30 round
 	border-image-outset: 0.6rem
@@ -50,12 +63,19 @@ h1, h2
 		background: url("../img/mouse-icon.svg")
 		background-size: cover
 		position: absolute
+
+.spec-border
+	&::before
 		bottom: -3rem
 		right: -3rem
 
 
+@import 'sections/cv'
 @import 'sections/principles'
 @import 'sections/lets-talk'
 @import 'sections/footer'
+
+.mb-0
+	margin-bottom: 0
 
 
