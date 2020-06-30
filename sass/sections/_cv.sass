@@ -1,5 +1,8 @@
 #cv
 	background: $blue
+	&.section
+		@media screen and (min-width: 76.56em)
+			height: 53.9rem
 
 	.container
 		&__row
@@ -21,7 +24,9 @@
 					margin-right: 12rem
 					margin-bottom: 9rem
 				@media screen and (min-width: 76.56em)
-					margin: 0 2rem 0 0
+					margin: -0.5rem 4.2rem 0 0
+					//transform: translateY(-0.5rem)
+
 			&:nth-child(2)
 				@media screen and (min-width: 41.25em)
 					transform: translateX(-1rem)
@@ -31,14 +36,17 @@
 					transform: matrix(1.18, 0, 0, 1.18, 6, 6)
 					margin-bottom: 0
 				@media screen and (min-width: 76.56em)
-					transform: none
-					margin-right: 5rem
+					transform: translateY(7.4rem)
+					margin-right: -1rem
 			&:nth-child(3)
 				@media screen and (min-width: 41.25em)
 					transform: translateX(-1rem)
 					transform: scale(1.2)
 				@media screen and (min-width: 52em)
 					transform: translateX(-2rem)
+				@media screen and (min-width: 76.56em)
+					transform: none
+					transform: translateY(2rem) 
 
 			// &:nth-child(1), &:nth-child(2)
 			// 	@media screen and (min-width: 60em)
@@ -117,7 +125,24 @@
 	transform: scale(1.06, 1.01)
 	z-index: 2
 	max-width: 34.4rem
-	max-height: 19.1rem
+	height: 19.1rem
+	@media screen and (min-width: 76.56em)
+		max-width: 52.5rem
+		height: 28rem
+		padding: 0.2rem 0.5rem 1.5rem
+	&__lil-tip
+		display: none
+		@media screen and (min-width: 76.56em)
+			display: block
+			+f-bold
+			font-weight: bold
+			font-size: 1.6rem
+			line-height: 1.9rem
+			color: #28317F
+			position: absolute
+			bottom: -4rem
+			left: calc(50% - 2.5rem)
+
 	&__tag
 		display: flex
 		align-items: center
@@ -128,6 +153,9 @@
 		flex: 1 0 auto
 		width: max-content
 		height: 3.6rem
+		@media screen and (min-width: 76.56em)
+			height: 5.5rem
+			margin: 1.2rem
 		&.rotated
 			transform: rotate(0.95deg)
 
@@ -142,6 +170,9 @@
 		display: flex
 		flex-direction: row-reverse
 		align-items: center
+		@media screen and (min-width: 76.56em)
+			font-size: 1.8rem
+			line-height: 4rem
 		&:before, &.figma::after
 			content: ''
 			width: 1.393rem
@@ -150,13 +181,22 @@
 			background-size: cover
 			display: block
 			margin-right: 1rem
+			@media screen and (min-width: 76.56em)
+				width: 3rem
+				height: 3rem
+				margin-right: 1.2rem
 			order: 2
 
 		&.figma::after
 			width: 0.918rem
 			height: 1.376rem
 			background: url('../../img/figma-ic.svg') center
+			background-size: cover
 			margin-right: 0.6rem
+			@media screen and (min-width: 76.56em)
+				width: 1.4rem
+				height: 2.1rem
+				margin-right: .9rem
 			order: 1
 
 
@@ -166,8 +206,14 @@
 		height: 1.44rem
 		width: 1.44rem
 		background: url("../img/mouse-icon-1.svg")
+		background-size: cover
 		top: -3rem
 		left: -0.5rem
+		@media screen and (min-width: 76.56em)
+			width: 2.2rem
+			height: 2.2rem
+			top: -3.7rem
+			left: 0.7rem
 
 
 
@@ -192,13 +238,16 @@
 			margin-bottom: 0
 			margin-right: 3rem
 		@media screen and (min-width: 76.56em)
-			margin-bottom: 1.9rem
+			margin-bottom: 2.5rem
 			margin-right: 0
 
 	background: white
 	border: 2px solid $black
 	width: 25.5rem
 	padding: 1.8rem 2.9rem
+	@media screen and (min-width: 76.56em)
+		padding: 1.7rem 4.2rem 2.1rem
+		width: 30.3rem
 	display: flex
 	align-items: center
 	justify-content: flex-start
@@ -208,6 +257,10 @@
 		font-size: 1.2rem
 		line-height: 1.4rem
 		margin-bottom: 1.6rem
+		@media screen and (min-width: 76.56em)
+			font-size: 2rem
+			line-height: 2rem
+			margin-bottom: 1.6rem
 	&__skill-name
 		+f-bold
 		font-weight: bold
@@ -215,6 +268,10 @@
 		line-height: 1.9rem
 		text-transform: uppercase
 		margin-bottom: 0.8rem
+		@media screen and (min-width: 76.56em)
+			font-size: 2rem
+			line-height: 2rem
+			margin-bottom: 1.7rem
 	&__add-info
 		margin-bottom: 0
 	&__diagram
@@ -222,8 +279,11 @@
 		svg 
 			height: 4.5rem
 			width: 4.5rem
+			@media screen and (min-width: 76.56em)
+				width: 5.6rem
+				height: 5.6rem
 			position: relative
-			border: 1px solid black
+			border: 1px solid transparent
 			circle 
 				position: absolute
 				top: 0
@@ -239,13 +299,20 @@
 					stroke-dashoffset: 0
 					stroke-dasharray: calc(45 * 125.6 / 100) 169.56
 					transform-origin: center
-					transform: rotate(90deg)
+					//transform: rotate(90deg)
 	&--language.skill-badge
 		padding: 1.6rem 0
+		@media screen and (min-width: 76.56em)
+			padding: 2rem 0
 		justify-content: center
-		&__title
-			margin-bottom: 0.844rem
-		&__skill-name
-			margin-bottom: 0rem
+		.skill-badge
+			&__title
+				margin-bottom: 0.844rem
+				@media screen and (min-width: 76.56em)
+					margin-bottom: 1rem
+			&__skill-name
+				margin-bottom: 0rem
+				@media screen and (min-width: 76.56em)
+					font-size: 2.4rem
 
 
