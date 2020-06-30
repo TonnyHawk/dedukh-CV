@@ -1,19 +1,50 @@
 #cv
 	background: $blue
 
-.section
+	.container
+		&__row
+			@media screen and (min-width: 52em)
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				align-items: center
 
-.container
-	&__row
+		&__item
+			&:nth-child(1)
+				margin-bottom: 3rem
+				@media screen and (min-width: 41.25em)
+					margin-bottom: 8rem
+					transform: translateX(-1rem)
+					transform: scale(1.2)
+				@media screen and (min-width: 52em)
+					transform: none
+					margin-right: 12rem
+					margin-bottom: 9rem
+				@media screen and (min-width: 76.56em)
+					margin: 0 2rem 0 0
+			&:nth-child(2)
+				@media screen and (min-width: 41.25em)
+					transform: translateX(-1rem)
+					transform: scale(1.2)
+					margin-bottom: 2.5rem
+				@media screen and (min-width: 52em)
+					transform: matrix(1.18, 0, 0, 1.18, 6, 6)
+					margin-bottom: 0
+				@media screen and (min-width: 76.56em)
+					transform: none
+					margin-right: 5rem
+			&:nth-child(3)
+				@media screen and (min-width: 41.25em)
+					transform: translateX(-1rem)
+					transform: scale(1.2)
+				@media screen and (min-width: 52em)
+					transform: translateX(-2rem)
 
-	&__item
-		margin-bottom: 6rem
-		&:nth-child(1)
-			z-index: 0
-		&:nth-child(2)
-			z-index: 1
-		&:nth-child(3)
-			z-index: 2
+			// &:nth-child(1), &:nth-child(2)
+			// 	@media screen and (min-width: 60em)
+			// 		flex: 1 0
+			&:last-child
+				margin-bottom: 0
 
 .my-cv
 	background: white
@@ -21,6 +52,9 @@
 	border: 2px solid $black
 	display: flex
 	flex-direction: column
+	z-index: 1
+	@media screen and (min-width: 76.56em)
+		max-width: 42.3rem
 	&__header
 		border-bottom: 2px solid $black
 		display: flex
@@ -35,30 +69,43 @@
 	&__close-ic
 
 	&__body
-		padding: 1.7rem 0 2.3rem
+		padding: 1.7rem 1.7rem 2.3rem
 		position: relative
 		overflow: hidden
+		@media screen and (min-width: 76.56em)
+			padding: 2.4rem
 	&__text
 		font-size: 1.6rem
 		line-height: 3.2rem
 		position: relative
-		padding: 0 1.7rem
+		padding: 0
 		z-index: 2
+		@media screen and (min-width: 76.56em)
+			font-size: 2.4rem
+			line-height: 5rem
 
 	.mark 
 		position: absolute
 		background: $yellow
 		width: 99.6%
 		height: 3.2rem
+		@media screen and (min-width: 76.56em)
+			height: 3.2rem
+			height: 5rem
 		z-index: 1
 		left: 0.5px
 		&:nth-child(2)
 			top: 5rem
+			@media screen and (min-width: 76.56em)
+				top: 7.5rem
 		&:last-child
 			width: 16.5rem
 			top: 8rem
 			@media screen and (min-width: 20em)
 				width: 7.5rem
+			@media screen and (min-width: 76.56em)
+				width: 10.9rem
+				top: 12.4rem
 
 
 .skill-tags
@@ -68,6 +115,9 @@
 	background: transparent
 	position: relative
 	transform: scale(1.06, 1.01)
+	z-index: 2
+	max-width: 34.4rem
+	max-height: 19.1rem
 	&__tag
 		display: flex
 		align-items: center
@@ -80,6 +130,7 @@
 		height: 3.6rem
 		&.rotated
 			transform: rotate(0.95deg)
+
 		&:last-child
 			margin-bottom: 2.2rem
 
@@ -124,12 +175,26 @@
 	display: flex
 	flex-direction: column
 	align-items: center
-	margin-top: -6.5rem
+	z-index: 3
+	@media screen and (min-width: 52em)
+		flex-direction: row
+		align-items: center
+	@media screen and (min-width: 76.56em)
+		flex-direction: column
+		align-items: flex-start
 
 .skill-badge
 	margin-bottom: 1.9rem
 	&:last-child
 		margin-bottom: 0
+	&:first-child
+		@media screen and (min-width: 52em)
+			margin-bottom: 0
+			margin-right: 3rem
+		@media screen and (min-width: 76.56em)
+			margin-bottom: 1.9rem
+			margin-right: 0
+
 	background: white
 	border: 2px solid $black
 	width: 25.5rem
