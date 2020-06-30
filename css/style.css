@@ -74,6 +74,8 @@ h1, h2 {
   font-weight: bold;
   font-size: 6rem;
   line-height: 8rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   display: inline-flex;
   align-items: flex-end;
@@ -92,13 +94,16 @@ h1, h2 {
 
 /* line 46, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container__row {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
 /* line 52, ../../Documents/GitHub/dedukh/sass/style.sass */
 .spec-border, .spec-border-t1 {
   border: 1rem solid transparent;
-  border-image: url("../img/spec-border-square.svg") 30 round;
+  -o-border-image: url("../img/spec-border-square.svg") 30 round;
+     border-image: url("../img/spec-border-square.svg") 30 round;
   border-image-outset: 0.6rem;
   box-shadow: 0 0 0 2px #000000;
   position: relative;
@@ -393,6 +398,8 @@ h1, h2 {
   background: white;
   margin: 0.8rem;
   flex: 1 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   height: 3.6rem;
 }
@@ -417,6 +424,8 @@ h1, h2 {
 
 /* line 165, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 .skill-tags__tag-name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.2rem;
   line-height: 1.4rem;
@@ -729,6 +738,8 @@ h1, h2 {
 @media screen and (min-width: 34.5em) {
   /* line 19, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
   #principles .section__title {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -795,6 +806,8 @@ h1, h2 {
 
 /* line 52, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles .container__row {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -1216,5 +1229,3 @@ h1, h2 {
 .mb-0 {
   margin-bottom: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
