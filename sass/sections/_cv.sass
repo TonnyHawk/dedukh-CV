@@ -1,7 +1,7 @@
 #cv
 	background: $blue
 	&.section
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			height: 53.9rem
 
 	.container
@@ -13,8 +13,10 @@
 				align-items: center
 
 		&__item
+			position: relative
 			&:nth-child(1)
-				margin-bottom: 3rem
+				z-index: 1
+				margin-bottom: 3.5rem
 				@media screen and (min-width: 41.25em)
 					margin-bottom: 8rem
 					transform: translateX(-1rem)
@@ -23,29 +25,36 @@
 					transform: none
 					margin-right: 12rem
 					margin-bottom: 9rem
-				@media screen and (min-width: 76.56em)
+				@media screen and (min-width: 84.625em)
+					margin-right: 7rem
+				@media screen and (min-width: 87.5em)
 					margin: -0.5rem 4.2rem 0 0
 					//transform: translateY(-0.5rem)
 
 			&:nth-child(2)
+				z-index: 2
+				margin-bottom: -0.5rem
 				@media screen and (min-width: 41.25em)
-					transform: translateX(-1rem)
 					transform: scale(1.2)
 					margin-bottom: 2.5rem
 				@media screen and (min-width: 52em)
 					transform: matrix(1.18, 0, 0, 1.18, 6, 6)
 					margin-bottom: 0
-				@media screen and (min-width: 76.56em)
+				@media screen and (min-width: 84.625em)
+					margin-right: 3rem
+				@media screen and (min-width: 87.5em)
 					transform: translateY(7.4rem)
 					margin-right: -1rem
 			&:nth-child(3)
+				z-index: 3
 				@media screen and (min-width: 41.25em)
 					transform: translateX(-1rem)
 					transform: scale(1.2)
 				@media screen and (min-width: 52em)
 					transform: translateX(-2rem)
-				@media screen and (min-width: 76.56em)
+				@media screen and (min-width: 84.625em)
 					transform: none
+				@media screen and (min-width: 87.5em)
 					transform: translateY(2rem) 
 
 			// &:nth-child(1), &:nth-child(2)
@@ -61,7 +70,7 @@
 	display: flex
 	flex-direction: column
 	z-index: 1
-	@media screen and (min-width: 76.56em)
+	@media screen and (min-width: 87.5em)
 		max-width: 42.3rem
 	&__header
 		border-bottom: 2px solid $black
@@ -80,7 +89,7 @@
 		padding: 1.7rem 1.7rem 2.3rem
 		position: relative
 		overflow: hidden
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			padding: 2.4rem
 	&__text
 		font-size: 1.6rem
@@ -88,7 +97,7 @@
 		position: relative
 		padding: 0
 		z-index: 2
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			font-size: 2.4rem
 			line-height: 5rem
 
@@ -97,51 +106,60 @@
 		background: $yellow
 		width: 99.6%
 		height: 3.2rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			height: 3.2rem
 			height: 5rem
 		z-index: 1
 		left: 0.5px
 		&:nth-child(2)
 			top: 5rem
-			@media screen and (min-width: 76.56em)
+			@media screen and (min-width: 87.5em)
 				top: 7.5rem
 		&:last-child
 			width: 16.5rem
 			top: 8rem
 			@media screen and (min-width: 20em)
 				width: 7.5rem
-			@media screen and (min-width: 76.56em)
+			@media screen and (min-width: 87.5em)
 				width: 10.9rem
 				top: 12.4rem
 
 
 .skill-tags
 	padding: 1.1rem -2.5rem 5.2rem
-	display: flex
-	flex-wrap: wrap
 	background: transparent
 	position: relative
 	transform: scale(1.06, 1.01)
 	z-index: 2
 	max-width: 34.4rem
 	height: 19.1rem
-	@media screen and (min-width: 76.56em)
+	width: 104%
+	@media screen and (min-width: 23.75em)
+		width: auto
+	@media screen and (min-width: 87.5em)
 		max-width: 52.5rem
 		height: 28rem
 		padding: 0.2rem 0.5rem 1.5rem
+	&__body
+		display: flex
+		flex-wrap: wrap
+		margin: -1rem
+		@media screen and (min-width: 23.75em)
+			margin: 0
 	&__lil-tip
 		display: none
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 52em)
 			display: block
 			+f-bold
 			font-weight: bold
-			font-size: 1.6rem
+			font-size: 1.2rem
 			line-height: 1.9rem
 			color: #28317F
 			position: absolute
 			bottom: -4rem
 			left: calc(50% - 2.5rem)
+			@media screen and (min-width: 87.5em)
+				font-size: 1.6rem
 
 	&__tag
 		display: flex
@@ -153,7 +171,7 @@
 		flex: 1 0 auto
 		width: max-content
 		height: 3.6rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			height: 5.5rem
 			margin: 1.2rem
 		&.rotated
@@ -170,7 +188,7 @@
 		display: flex
 		flex-direction: row-reverse
 		align-items: center
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			font-size: 1.8rem
 			line-height: 4rem
 		&:before, &.figma::after
@@ -181,7 +199,7 @@
 			background-size: cover
 			display: block
 			margin-right: 1rem
-			@media screen and (min-width: 76.56em)
+			@media screen and (min-width: 87.5em)
 				width: 3rem
 				height: 3rem
 				margin-right: 1.2rem
@@ -193,7 +211,7 @@
 			background: url('../../img/figma-ic.svg') center
 			background-size: cover
 			margin-right: 0.6rem
-			@media screen and (min-width: 76.56em)
+			@media screen and (min-width: 87.5em)
 				width: 1.4rem
 				height: 2.1rem
 				margin-right: .9rem
@@ -209,7 +227,7 @@
 		background-size: cover
 		top: -3rem
 		left: -0.5rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			width: 2.2rem
 			height: 2.2rem
 			top: -3.7rem
@@ -225,7 +243,7 @@
 	@media screen and (min-width: 52em)
 		flex-direction: row
 		align-items: center
-	@media screen and (min-width: 76.56em)
+	@media screen and (min-width: 84.625em)
 		flex-direction: column
 		align-items: flex-start
 
@@ -237,7 +255,9 @@
 		@media screen and (min-width: 52em)
 			margin-bottom: 0
 			margin-right: 3rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 84.625em)
+			margin-bottom: 1.9rem
+		@media screen and (min-width: 87.5em)
 			margin-bottom: 2.5rem
 			margin-right: 0
 
@@ -245,7 +265,7 @@
 	border: 2px solid $black
 	width: 25.5rem
 	padding: 1.8rem 2.9rem
-	@media screen and (min-width: 76.56em)
+	@media screen and (min-width: 87.5em)
 		padding: 1.7rem 4.2rem 2.1rem
 		width: 30.3rem
 	display: flex
@@ -254,21 +274,21 @@
 	&__main-sect
 	&__title, &__add-info
 		color: $gray-2
-		font-size: 1.2rem
+		font-size: 1.4rem
 		line-height: 1.4rem
 		margin-bottom: 1.6rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			font-size: 2rem
 			line-height: 2rem
 			margin-bottom: 1.6rem
 	&__skill-name
 		+f-bold
 		font-weight: bold
-		font-size: 1.6rem
+		font-size: 1.8rem
 		line-height: 1.9rem
 		text-transform: uppercase
 		margin-bottom: 0.8rem
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			font-size: 2rem
 			line-height: 2rem
 			margin-bottom: 1.7rem
@@ -277,13 +297,21 @@
 	&__diagram
 		margin-right: 2.4rem
 		svg 
-			height: 4.5rem
-			width: 4.5rem
-			@media screen and (min-width: 76.56em)
-				width: 5.6rem
-				height: 5.6rem
+			height: 4.4rem
+			width: 4.4rem
+			@media screen and (min-width: 87.5em)
+				width: 5.9rem
+				height: 5.9rem
 			position: relative
-			border: 1px solid transparent
+			transform-origin: center
+			transform: rotate(123deg)
+			&.pc 
+				display: none
+				@media screen and (min-width: 87.5em)
+					display: block
+			&.ph 
+				@media screen and (min-width: 87.5em)
+					display: none
 			circle 
 				position: absolute
 				top: 0
@@ -291,28 +319,28 @@
 				stroke-width: 2
 				fill: transparent
 				&:first-child
-					stroke: #DFE3FF
+					stroke: #F3F3F3
 					z-index: 1
 				&:last-child
-					stroke: #435CFC
+					stroke: #000000
 					z-index: 2
 					stroke-dashoffset: 0
-					stroke-dasharray: calc(45 * 125.6 / 100) 169.56
-					transform-origin: center
-					//transform: rotate(90deg)
+					stroke-dasharray: calc(40 * 119.32 / 100) 119.32
+					@media screen and (min-width: 87.5em)
+						stroke-dasharray: calc(40 * 169.56 / 100) 169.56
 	&--language.skill-badge
 		padding: 1.6rem 0
-		@media screen and (min-width: 76.56em)
+		@media screen and (min-width: 87.5em)
 			padding: 2rem 0
 		justify-content: center
 		.skill-badge
 			&__title
 				margin-bottom: 0.844rem
-				@media screen and (min-width: 76.56em)
+				@media screen and (min-width: 87.5em)
 					margin-bottom: 1rem
 			&__skill-name
 				margin-bottom: 0rem
-				@media screen and (min-width: 76.56em)
+				@media screen and (min-width: 87.56em)
 					font-size: 2.4rem
 
 
