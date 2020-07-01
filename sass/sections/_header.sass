@@ -1,0 +1,82 @@
+#header
+	padding-top: 0
+	padding-bottom: 14.1rem
+
+	.container
+		&__row
+			display: flex
+		&__item
+			width: auto
+			&:first-child
+				flex: 3 0
+				@media screen and (min-width: 43.75em)
+					margin-right: 8rem
+			&:last-child
+				flex: 2 0
+
+	.header
+		&__title
+			+f-extra
+			font-weight: 800
+			font-size: 4rem
+			line-height: 4rem
+			text-decoration-line: underline
+			color: $blue
+			margin-bottom: 3.2rem
+			margin-top: 17.1rem
+			@media screen and (min-width: 28.125em)
+				font-size: 4.6rem
+				line-height: 4.6rem
+				margin-bottom: 3.68rem
+			@media screen and (min-width: ‭84em)
+				font-size: 8rem
+				line-height: 9.6rem
+				margin-bottom: 6.4rem
+
+		&__text
+			font-size: 1.6rem
+			line-height: 3.2rem
+			letter-spacing: 0.01rem
+			margin-bottom: 2.4rem
+			max-width: 31.1rem
+			@media screen and (min-width: 28.125em)
+				font-size: 1.84rem
+				line-height: 3.68rem
+				letter-spacing: 0.01rem
+				margin-bottom: 2.76rem
+				max-width: 35.765rem
+			@media screen and (min-width: ‭84.37em)	
+				font-size: 2.4rem
+				line-height: 4rem
+				margin-bottom: 2.6rem
+
+		&__link
+			color: $blue
+			font-size: 1.6rem
+			line-height: 1.9rem
+			text-decoration-line: underline
+			@media screen and (min-width: 28.125em)
+				font-size: 1.84rem
+				line-height: 2.185rem
+			@media screen and (min-width: ‭84.37em)	
+				font-size: 2.4rem
+				line-height: 4rem
+			
+		&__tip-target
+			display: block
+			.tip
+				top: 0rem
+				left: 8rem
+				@media screen and (min-width: 28.125em)
+					transform: scale(1.15)
+				@media screen and (min-width: ‭84.37em)
+					width: 19.1rem
+					height: 3.3rem
+
+		&__burger
+			display: none
+			@media screen and (min-width: 43.75em)
+				display: block
+			 img 
+			 	width: 100%
+
