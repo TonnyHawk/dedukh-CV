@@ -30,11 +30,16 @@ h1, h2
 	display: block
 
 .glob-wrap
+	display: flex
+	flex-direction: column
+	align-items: center
 
 .section
 	position: relative
 	padding: 6rem 3.2rem
 	overflow: hidden
+	width: 100%
+	max-width: 160rem
 	&__title
 		+f-bold
 		color: $black
