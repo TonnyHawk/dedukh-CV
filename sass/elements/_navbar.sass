@@ -1,0 +1,130 @@
+.navbar
+	position: fixed
+	width: 100%
+	height: 5.8rem
+	top: 0
+	left: 0
+	background: white
+	z-index: 100
+	@media screen and (min-width: 81.25em)
+		height: 6rem
+	&__wrap
+		position: relative
+		width: 100%
+		height: 100%
+
+	&__bar
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+		&--main
+			z-index: 2
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background: white
+
+		&--menu
+			z-index: 1
+			background: white
+			border-bottom: 2px solid black
+			height: 30rem
+			height: 6rem
+			transition: 0.3s
+			@media screen and (min-width: 53.125em)
+				height: 30.6rem
+				height: 6.2rem
+	&__logo
+		margin-left: 1.3rem
+		height: 4.4rem
+		width: 5.6rem
+		@media screen and (min-width: 56.25em)
+			margin-left: 2.3rem
+			height: 5.4rem
+			width: 6.6rem
+		@media screen and (min-width: 81.25em)
+			height: 6rem
+			width: 8rem
+			margin-left: 6rem
+
+	&__btn
+		position: absolute
+		cursor: pointer
+		&--menu-ic
+			opacity: 1
+		&--close-ic
+			opacity: 0
+
+		&--menu-ic, &--close-ic
+			transition: 0.2s
+			@media screen and (min-width: 53.125em)
+				display: none
+
+		&--back
+			display: none
+			color: #191D2F
+			@media screen and (min-width: 53.125em)
+				display: block
+				+f-bold
+				font-weight: bold
+				font-size: 1.9rem
+				line-height: 4rem
+			@media screen and (min-width: 81.25em)
+				font-size: 1.9rem
+				font-size: 2.4rem
+	&__btns
+		width: 8.5rem
+		border-left: 2px solid black
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: 0.2s
+		@media screen and (min-width: 53.125em)
+			width: 12.4rem
+		@media screen and (min-width: 81.25em)
+			width: 18.1rem
+
+
+
+	&__menu
+		display: flex
+		align-items: center
+		flex-direction: column
+
+	&__link
+		+f-bold
+		font-size: 1.8rem
+		line-height: 2.2rem
+		letter-spacing: 0.03rem
+		text-transform: uppercase
+		position: absolute
+		text-decoration: none
+		@media screen and (min-width: 53.125em)
+			font-size: 1.9rem
+		@media screen and (min-width: 81.25em)
+			font-size: 2.4rem
+			line-height: 4rem
+
+		color: $black
+		&:nth-child(1)
+			top: 7.8rem
+			@media screen and (min-width: 53.125em)
+				top: 8.9rem
+			@media screen and (min-width: 81.25em)
+				top: 5.8rem
+		&:nth-child(2)
+			top: 15rem
+			@media screen and (min-width: 53.125em)
+				top: 16rem
+			@media screen and (min-width: 81.25em)
+				top: 14.3rem
+		&:nth-child(3)
+			top: 22.2rem
+			@media screen and (min-width: 53.125em)
+				top: 23.2rem
+			@media screen and (min-width: 81.25em)
+				top: 22.8rem
+
