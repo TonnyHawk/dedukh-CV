@@ -63,18 +63,22 @@
 			@media screen and (min-width: 53.125em)
 				display: none
 
-		&--back
+		&--back, &--open
 			display: none
 			color: #191D2F
+			transition: 0.1s
 			@media screen and (min-width: 53.125em)
 				display: block
 				+f-bold
 				font-weight: bold
 				font-size: 1.9rem
 				line-height: 4rem
+				opacity: 0
 			@media screen and (min-width: 81.25em)
 				font-size: 1.9rem
 				font-size: 2.4rem
+		&--open
+			opacity: 1
 	&__btns
 		width: 8.5rem
 		border-left: 2px solid black

@@ -496,6 +496,37 @@ h1, h2 {
   border: 1px solid black;
 }
 
+/* line 14, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project {
+  position: relative;
+  width: 31rem;
+  height: 20.9rem;
+}
+
+/* line 18, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project__cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 25, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project__popup-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #5162FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 #cv {
   background: #5162FF;
@@ -1890,31 +1921,38 @@ h1, h2 {
 }
 
 /* line 66, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
-.navbar__btn--back {
+.navbar__btn--back, .navbar__btn--open {
   display: none;
   color: #191D2F;
+  transition: 0.1s;
 }
 
 @media screen and (min-width: 53.125em) {
   /* line 66, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
-  .navbar__btn--back {
+  .navbar__btn--back, .navbar__btn--open {
     display: block;
     font-family: 'bold';
     font-weight: bold;
     font-size: 1.9rem;
     line-height: 4rem;
+    opacity: 0;
   }
 }
 
 @media screen and (min-width: 81.25em) {
   /* line 66, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
-  .navbar__btn--back {
+  .navbar__btn--back, .navbar__btn--open {
     font-size: 1.9rem;
     font-size: 2.4rem;
   }
 }
 
-/* line 78, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 80, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+.navbar__btn--open {
+  opacity: 1;
+}
+
+/* line 82, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__btns {
   width: 8.5rem;
   border-left: 2px solid black;
@@ -1925,27 +1963,27 @@ h1, h2 {
 }
 
 @media screen and (min-width: 53.125em) {
-  /* line 78, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 82, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__btns {
     width: 12.4rem;
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 78, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 82, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__btns {
     width: 18.1rem;
   }
 }
 
-/* line 92, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 96, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__menu {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-/* line 97, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 101, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link {
   font-family: 'bold';
   font-size: 1.8rem;
@@ -1958,72 +1996,72 @@ h1, h2 {
 }
 
 @media screen and (min-width: 53.125em) {
-  /* line 97, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 101, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link {
     font-size: 1.9rem;
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 97, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 101, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link {
     font-size: 2.4rem;
     line-height: 4rem;
   }
 }
 
-/* line 112, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 116, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link:nth-child(1) {
   top: 7.8rem;
 }
 
 @media screen and (min-width: 53.125em) {
-  /* line 112, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 116, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(1) {
     top: 8.9rem;
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 112, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 116, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(1) {
     top: 5.8rem;
   }
 }
 
-/* line 118, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 122, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link:nth-child(2) {
   top: 15rem;
 }
 
 @media screen and (min-width: 53.125em) {
-  /* line 118, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 122, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(2) {
     top: 16rem;
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 118, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 122, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(2) {
     top: 14.3rem;
   }
 }
 
-/* line 124, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+/* line 128, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link:nth-child(3) {
   top: 22.2rem;
 }
 
 @media screen and (min-width: 53.125em) {
-  /* line 124, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 128, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(3) {
     top: 23.2rem;
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 124, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
+  /* line 128, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
   .navbar__link:nth-child(3) {
     top: 22.8rem;
   }
