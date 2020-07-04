@@ -47,6 +47,35 @@
 		</div>
 	</section>
 
+<!-- CHAT SECTION -->
+	<section id="chat" class="container chat static">
+		<div class="chat__icons-wrap">
+			<img src="img/chatbar/chat__music-ic.svg" alt="" class="chat__icon chat__icon-music">
+			<div class="chat__open-btn-wrap">
+				<img src="img/chatbar/chat-icon--blue.svg" alt="" class="chat__icon chat__open-btn blue">
+				<img src="img/chatbar/chat-icon--white.svg" alt="" class="chat__icon chat__open-btn white">
+			</div>
+		</div>
+		<div class="chat__chatbar-wrap">
+			<div class="chat__chatbar chatbar">
+				<div class="chatbar__main-content">
+					<div class="chatbar__title-section">
+						<p class="chatbar__title">Get in touch</p>
+						<p class="chatbar__tip">Enter some information and click enter</p>
+					</div>
+					<form action="" onsubmit="chatbarSend(); return false;">
+						<input type="text" class="chatbar__text-field" placeholder="write here">
+					</form>
+					<img src="img/chatbar/icon-close--white.svg" alt="" class="chatbar__close-btn chat__close-btn">
+				</div>
+				<div class="chatbar__feedback-content">
+					<p class="chatbar__title">Get in touch</p>
+					<p class="chatbar__tip">We will contact you shortly!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 <!-- 	<section id="portfolio" class="section">
 		<div class="container">
 			<div class="container__row">
@@ -184,33 +213,136 @@
 		</div>
 	</section>
 </div>
-<div id="rem"></div>
 
-<script src="js/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-		var navbMenuState = 'close';
-	  $(".navbar__btns").click(function(){
-	  	if(navbMenuState == 'close'){
-	  		$('.navbar__btns').css('border-left', '0.2rem solid transparent');
-	  		$('.navbar__bar--menu').css('height', '30rem');
-	  		$('.navbar__btn--menu-ic').css('opacity', 0);
-	  		$('.navbar__btn--close-ic').css('opacity', 1);
-	  		$('.navbar__btn--open').css('opacity', 0);
-	  		$('.navbar__btn--back').css('opacity', 1);
-	  		navbMenuState = 'open';
-	  	}
-	  	else{
-	  		$('.navbar__btns').css('border-left', '0.2rem solid black');
-	  		$('.navbar__btn--menu-ic').css('opacity', 1);
-	  		$('.navbar__btn--close-ic').css('opacity', 0);
-	  		$('.navbar__btn--open').css('opacity', 1);
-	  		$('.navbar__btn--back').css('opacity', 0);
-	  		$('.navbar__bar--menu').css('height', '6.2rem');
-	  		navbMenuState = 'close';
-	  	}
-	  });
-	});
-</script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		window.addEventListener('scroll', function() {
+			//--CHAT
+			var chat = document.getElementById("chat").getBoundingClientRect();
+			var chatTouchPoint = $(window).height() - $("#chat").height();
+			var staticChat = true;
+			if(chat.top <= chatTouchPoint){
+				if($("#chat").hasClass('static')){
+					$("#chat").removeClass("static");
+				}
+			}
+			else if(chat.top > chatTouchPoint){
+				if($("#chat").hasClass('static')==false){
+					$("#chat").addClass('static');
+				}
+			}
+
+			//--FOOTER
+			var footer = document.getElementById("footer").getBoundingClientRect();
+			var footerTouchPoint = $(window).height() - $("#chat").height();
+			var footerOnView = false;
+			if(footer.top <= footerTouchPoint){
+				if($("#footer.footer").hasClass('onview')==false){
+					$("#footer.footer").addClass('onview');
+					footerOnView = true;
+					$("#chat").addClass('hide');				
+				}
+
+			}
+			else if(footer.top > footerTouchPoint){
+				if($("#footer.footer").hasClass('onview')){
+					$("#footer.footer").removeClass('onview');
+					footerOnView = false;
+					$("#chat").removeClass('hide');
+				}
+			}
+
+		});
+	</script>
+
+	<script>
+		//NAVMENU open/close--------
+		$(document).ready(function(){
+			var navbMenuState = 'close';
+		  $(".navbar__btns").click(function(){
+		  	if(navbMenuState == 'close'){
+		  		$('.navbar__btns').css('border-left', '0.2rem solid transparent');
+		  		$('.navbar__bar--menu').css('height', '30rem');
+		  		$('.navbar__btn--menu-ic').css('opacity', 0);
+		  		$('.navbar__btn--close-ic').css('opacity', 1);
+		  		$('.navbar__btn--open').css('opacity', 0);
+		  		$('.navbar__btn--back').css('opacity', 1);
+		  		$('.navbar__link').removeClass('close-anim');
+		  		$('.navbar__link').addClass('open-anim');
+		  		navbMenuState = 'open';
+		  	}
+		  	else{
+		  		$('.navbar__btns').css('border-left', '0.2rem solid black');
+		  		$('.navbar__btn--menu-ic').css('opacity', 1);
+		  		$('.navbar__btn--close-ic').css('opacity', 0);
+		  		$('.navbar__btn--open').css('opacity', 1);
+		  		$('.navbar__btn--back').css('opacity', 0);
+		  		$('.navbar__link').removeClass('open-anim');
+		  		$('.navbar__link').addClass('close-anim');
+			  	setTimeout(function(){
+			  		$('.navbar__bar--menu').css('height', '6.2rem');
+			  	}, 200);
+		  		navbMenuState = 'close';
+		  	}
+		  });
+
+
+			//CHATBAR open-close--------
+			//--open
+		  $("#chat .chat__open-btn-wrap").click(function(){
+			  	$(this).fadeOut();
+			  	$("#chat .chatbar__open-btn").fadeOut('fast');
+			  	$("#chat .chat__chatbar-wrap").addClass("show");
+			  	$("#chat .chat__chatbar.chatbar").delay(400).queue(function() {
+
+					$(this).addClass("open");
+
+					$(this).dequeue();
+  				});;
+  				$("#chat .chat__chatbar .chatbar__main-content").delay(1000).queue(function() {$(this).addClass("show"); $(this).dequeue();});
+
+		  	});
+		  //--close
+		  $("#chat .chat__close-btn").click(function(){
+		  	$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+		  	$("#chat .chat__chatbar.chatbar").queue(function() {$(this).removeClass("open"); $(this).dequeue();});
+		  	$("#chat .chat__chatbar-wrap").delay(400).queue(function() {
+
+					$(this).removeClass("show");
+
+					$(this).dequeue();
+  			});;
+  			setTimeout(function(){
+  				$("#chat .chat__open-btn-wrap").fadeIn('fast');
+  			}, 800);
+		  });
+
+
+		});
+	</script>
+
+	<script>
+		//chatbar form sending--------
+		function chatbarSend(){
+			$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+			$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
+		  	// setTimeout(function(){
+		  	// 	$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
+		  	// }, 510)
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar.chatbar").removeClass("open");
+		  	}, 2800);
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar-wrap").removeClass("show");
+		  		$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
+		  	}, 3000);
+  			$("#chat .chat__open-btn").show();
+		  	setTimeout(function(){
+		  		$("#chat .chat__chatbar .chatbar__feedback-content").removeClass("show");
+		  	}, 3600);
+
+		}
+	</script>
 </body>
 </html>
