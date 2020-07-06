@@ -102,6 +102,8 @@ h1, h2 {
   font-weight: bold;
   font-size: 6rem;
   line-height: 8rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   display: inline-flex;
   align-items: flex-end;
@@ -120,13 +122,16 @@ h1, h2 {
 
 /* line 64, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container__row {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
 /* line 70, ../../Documents/GitHub/dedukh/sass/style.sass */
 .spec-border, .spec-border-t1 {
   border: 1rem solid transparent;
-  border-image: url("../img/spec-border-square.svg") 30 round;
+  -o-border-image: url("../img/spec-border-square.svg") 30 round;
+     border-image: url("../img/spec-border-square.svg") 30 round;
   border-image-outset: 0.6rem;
   box-shadow: 0 0 0 2px #000000;
   position: relative;
@@ -303,7 +308,8 @@ h1, h2 {
   font-weight: 73.120;
   font-size: 4rem;
   line-height: 4rem;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   color: #5162FF;
   margin-bottom: 3.2rem;
   margin-top: 17.1rem;
@@ -401,7 +407,8 @@ h1, h2 {
   color: #5162FF;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 @media screen and (min-width: 28.125em) {
@@ -493,6 +500,8 @@ h1, h2 {
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec {
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   position: fixed;
   bottom: 0;
@@ -645,7 +654,11 @@ h1, h2 {
 
 /* line 67, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   position: relative;
   display: flex;
@@ -1117,6 +1130,8 @@ h1, h2 {
   background: white;
   margin: 0.8rem;
   flex: 1 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   height: 3.6rem;
 }
@@ -1141,6 +1156,8 @@ h1, h2 {
 
 /* line 183, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 .skill-tags__tag-name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.2rem;
   line-height: 1.4rem;
@@ -1486,6 +1503,8 @@ h1, h2 {
 @media screen and (min-width: 34.5em) {
   /* line 19, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
   #principles .section__title {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -1552,6 +1571,8 @@ h1, h2 {
 
 /* line 52, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles .container__row {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -1964,7 +1985,11 @@ h1, h2 {
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
 .circled {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   position: relative;
   display: flex;
@@ -2328,45 +2353,68 @@ h1, h2 {
 
 /* line 136, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim {
-  animation: dropdown 1s;
-  animation-fill-mode: forwards;
+  -webkit-animation: dropdown 1s;
+          animation: dropdown 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 /* line 140, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(1) {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 /* line 142, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(2) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 /* line 144, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(3) {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 /* line 147, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim {
-  animation: dropup 0.3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: dropup 0.3s;
+          animation: dropup 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 1;
 }
 
 /* line 151, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(1) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 /* line 153, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(2) {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 /* line 155, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(3) {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes dropdown {
+  0% {
+    transform: translateY(-700px);
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 @keyframes dropdown {
@@ -2379,6 +2427,16 @@ h1, h2 {
   100% {
     transform: none;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes dropup {
+  50% {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 }
 
@@ -2401,5 +2459,3 @@ h1, h2 {
 #rem {
   width: 1rem;
 }
-
-/*# sourceMappingURL=style.css.map */
