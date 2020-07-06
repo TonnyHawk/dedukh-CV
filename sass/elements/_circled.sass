@@ -2,6 +2,9 @@
 	width: max-content
 	height: max-content
 	position: relative
+	display: flex
+	align-items: center
+	color: white
 	&:hover .circle-area__upper-circle svg path
 		stroke-dasharray: 185.514
 		transition: 1s cubic-bezier(.075,.82,.165,1)
@@ -35,21 +38,21 @@
 		&__main-circle
 			z-index: 1
 			svg path
-				stroke: $blue
+				stroke: #7875FF
 		&__upper-circle
 			z-index: 2
 			& svg path 
+				stroke: #FFFFFF
 			    stroke-dasharray: 371.028
 
 	&__side-elem
 		a 
+			+f-bold
+			font-weight: bold
 			font-size: 1.6rem
-			color: $gray-2
-			line-height: 4rem
-			margin-right: 1.4rem
-			text-transform: uppercase
-			letter-spacing: 0.05rem
-			font-variant: small-caps
+			line-height: 1.9rem
+			text-decoration: none
+			color: white
 			&:hover
 				text-decoration: none
 			&::after

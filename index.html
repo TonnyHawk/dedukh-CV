@@ -48,35 +48,34 @@
 	</section>
 
 <!-- CHAT SECTION -->
-	<section id="chat" class="container chat static">
-		<div class="chat__icons-wrap">
-			<img src="img/chatbar/chat__music-ic.svg" alt="" class="chat__icon chat__icon-music">
-			<div class="chat__open-btn-wrap">
-				<img src="img/chatbar/chat-icon--blue.svg" alt="" class="chat__icon chat__open-btn blue">
-				<img src="img/chatbar/chat-icon--white.svg" alt="" class="chat__icon chat__open-btn white">
-			</div>
-		</div>
-		<div class="chat__chatbar-wrap">
-			<div class="chat__chatbar chatbar">
-				<div class="chatbar__main-content">
-					<div class="chatbar__title-section">
-						<p class="chatbar__title">Get in touch</p>
-						<p class="chatbar__tip">Enter some information and click enter</p>
-					</div>
-					<form action="" onsubmit="chatbarSend(); return false;">
-						<input type="text" class="chatbar__text-field" placeholder="write here">
-					</form>
-					<img src="img/chatbar/icon-close--white.svg" alt="" class="chatbar__close-btn chat__close-btn">
+	<section id="chat" class="chat-sec">
+		<div class="wrap">
+			<div class="chat-sec__icons-bar">
+				<div class="chat-sec__open-btn">
+					<img src="img/chatbar/chat-icon--white.svg" alt="" class="chat-sec__chat-ic chat-sec__chat-ic--white">
+					<img src="img/chatbar/chat-icon--blue.svg" alt="" class="chat-sec__chat-ic chat-sec__chat-ic--blue">
 				</div>
-				<div class="chatbar__feedback-content">
-					<p class="chatbar__title">Get in touch</p>
-					<p class="chatbar__tip">We will contact you shortly!</p>
+			</div>
+			<div class="chat-sec__chat-bar">
+				<div class="wrap">
+					<div class="chat-sec__empt-chat"></div>
+					<div class="chat-sec__chat chat">
+						<div class="chat__header">
+							<p class="chat__title"></p>
+							<p class="chat__tip"></p>
+						</div>
+						<form action="" onsubmit="chatbarSend(); return false;">
+							<input type="text" class="chat__text-field">
+						</form>
+						<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-<!-- 	<section id="portfolio" class="section">
+
+	<section id="portfolio" class="section">
 		<div class="container">
 			<div class="container__row">
 				<div class="container__item project">
@@ -126,7 +125,7 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<section id="cv" class="section">
 		<div class="container">
