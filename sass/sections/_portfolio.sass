@@ -31,6 +31,7 @@
 
 .project
 	position: relative
+	overflow: hidden
 	width: 31rem
 	height: 20.9rem
 	@media screen and (min-width: 42.5em)
@@ -43,6 +44,9 @@
 		width: 52.4rem
 		height: 35.5rem
 
+	&:hover &__popup-layer
+		right: 0
+
 	&__cover
 		position: absolute
 		left: 0
@@ -53,15 +57,15 @@
 	&__popup-layer
 		position: absolute
 		top: 0
-		left: 0
+		right: -100%
 		height: 100%
 		width: 100%
 		background: $blue 
 		display: flex
 		justify-content: center
 		align-items: center
+		transition: 0.5s
 		z-index: 2
-		display: none
 
 
 	.circled
@@ -73,8 +77,11 @@
 		color: white
 		&:hover .circle-area__upper-circle svg path
 			stroke-dasharray: 185.514
-			transition: 1s cubic-bezier(.075,.82,.165,1)
+			stroke-dashoffset: 371.028
 			stroke: #f9253b
+		&:hover .circle-area__middle-circle svg path
+			stroke-dasharray: 185.514
+			stroke-dashoffset: 371.028
 
 		.circle-area
 			position: relative
@@ -92,16 +99,16 @@
 				transform: none
 
 			& svg path
-			    stroke-dasharray: 185.514
-			    stroke-dashoffset: 371.028
-			    transform: translateZ(0)
-			    transition: 1s cubic-bezier(.6,.04,.98,.335)
+				stroke-dasharray: 213.52
+				stroke-dashoffset: 371.028
+				transform: translateZ(0)
+				transition: 0.7s linear
 			&__inner-elem img
 				@media screen and (min-width: 81.25em)
 					width: 1.8rem
 
 
-			&__main-circle, &__upper-circle
+			&__main-circle, &__middle-circle, &__upper-circle
 				position: absolute
 				width: 100%
 				height: 100%
@@ -115,11 +122,19 @@
 				z-index: 1
 				svg path
 					stroke: #7875FF
-			&__upper-circle
+					stroke-dashoffset: 435.028
+			&__middle-circle
 				z-index: 2
+				transition: 0.1s linear
+				svg path
+					stroke: white
+					stroke-dashoffset: 376.028
+			&__upper-circle
+				z-index: 3
 				& svg path 
-					stroke: #FFFFFF
-				    stroke-dasharray: 371.028
+					stroke: red
+					stroke-dasharray: 186.028
+					stroke-dashoffset: 186.028
 
 		&__side-elem
 			a 
@@ -145,7 +160,7 @@
 					height: 6.8rem
 					top: 0
 					right: 0
-					z-index: 3
+					z-index: 4
 
 		
 

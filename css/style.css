@@ -102,8 +102,6 @@ h1, h2 {
   font-weight: bold;
   font-size: 6rem;
   line-height: 8rem;
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
   display: inline-flex;
   align-items: flex-end;
@@ -122,16 +120,13 @@ h1, h2 {
 
 /* line 64, ../../Documents/GitHub/dedukh/sass/style.sass */
 .container__row {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
 /* line 70, ../../Documents/GitHub/dedukh/sass/style.sass */
 .spec-border, .spec-border-t1 {
   border: 1rem solid transparent;
-  -o-border-image: url("../img/spec-border-square.svg") 30 round;
-     border-image: url("../img/spec-border-square.svg") 30 round;
+  border-image: url("../img/spec-border-square.svg") 30 round;
   border-image-outset: 0.6rem;
   box-shadow: 0 0 0 2px #000000;
   position: relative;
@@ -308,8 +303,7 @@ h1, h2 {
   font-weight: 73.120;
   font-size: 4rem;
   line-height: 4rem;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #5162FF;
   margin-bottom: 3.2rem;
   margin-top: 17.1rem;
@@ -407,8 +401,7 @@ h1, h2 {
   color: #5162FF;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 @media screen and (min-width: 28.125em) {
@@ -500,8 +493,6 @@ h1, h2 {
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   position: fixed;
   bottom: 0;
@@ -599,6 +590,7 @@ h1, h2 {
 /* line 32, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project {
   position: relative;
+  overflow: hidden;
   width: 31rem;
   height: 20.9rem;
 }
@@ -627,7 +619,12 @@ h1, h2 {
   }
 }
 
-/* line 46, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 47, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project:hover .project__popup-layer {
+  right: 0;
+}
+
+/* line 50, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project__cover {
   position: absolute;
   left: 0;
@@ -637,28 +634,24 @@ h1, h2 {
   z-index: 1;
 }
 
-/* line 53, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 57, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project__popup-layer {
   position: absolute;
   top: 0;
-  left: 0;
+  right: -100%;
   height: 100%;
   width: 100%;
   background: #5162FF;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
   z-index: 2;
-  display: none;
 }
 
-/* line 67, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 71, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   position: relative;
   display: flex;
@@ -666,14 +659,20 @@ h1, h2 {
   color: white;
 }
 
-/* line 74, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 78, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled:hover .circle-area__upper-circle svg path {
   stroke-dasharray: 185.514;
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  stroke-dashoffset: 371.028;
   stroke: #f9253b;
 }
 
-/* line 79, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 82, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled:hover .circle-area__middle-circle svg path {
+  stroke-dasharray: 185.514;
+  stroke-dashoffset: 371.028;
+}
+
+/* line 86, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled .circle-area {
   position: relative;
   background: transparent;
@@ -687,36 +686,36 @@ h1, h2 {
 }
 
 @media screen and (min-width: 73.12em) {
-  /* line 79, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+  /* line 86, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
   .project .circled .circle-area {
     transform: scale(0.94);
   }
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 79, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+  /* line 86, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
   .project .circled .circle-area {
     transform: none;
   }
 }
 
-/* line 94, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 101, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled .circle-area svg path {
-  stroke-dasharray: 185.514;
+  stroke-dasharray: 213.52;
   stroke-dashoffset: 371.028;
   transform: translateZ(0);
-  transition: 1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: 0.7s linear;
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 99, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+  /* line 106, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
   .project .circled .circle-area__inner-elem img {
     width: 1.8rem;
   }
 }
 
-/* line 104, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
-.project .circled .circle-area__main-circle, .project .circled .circle-area__upper-circle {
+/* line 111, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled .circle-area__main-circle, .project .circled .circle-area__middle-circle, .project .circled .circle-area__upper-circle {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -725,34 +724,48 @@ h1, h2 {
   align-items: center;
 }
 
-/* line 111, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
-.project .circled .circle-area__main-circle svg, .project .circled .circle-area__upper-circle svg {
+/* line 118, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled .circle-area__main-circle svg, .project .circled .circle-area__middle-circle svg, .project .circled .circle-area__upper-circle svg {
   height: 100%;
   width: 100%;
 }
 
-/* line 114, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 121, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled .circle-area__main-circle {
   z-index: 1;
 }
 
-/* line 116, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 123, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled .circle-area__main-circle svg path {
   stroke: #7875FF;
+  stroke-dashoffset: 435.028;
 }
 
-/* line 118, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
-.project .circled .circle-area__upper-circle {
+/* line 126, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled .circle-area__middle-circle {
   z-index: 2;
+  transition: 0.1s linear;
 }
 
-/* line 120, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 129, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled .circle-area__middle-circle svg path {
+  stroke: white;
+  stroke-dashoffset: 376.028;
+}
+
+/* line 132, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+.project .circled .circle-area__upper-circle {
+  z-index: 3;
+}
+
+/* line 134, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled .circle-area__upper-circle svg path {
-  stroke: #FFFFFF;
-  stroke-stroke-dasharray: 371.028;
+  stroke: red;
+  stroke-dasharray: 186.028;
+  stroke-dashoffset: 186.028;
 }
 
-/* line 125, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 140, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled__side-elem a {
   font-family: 'bold';
   font-weight: bold;
@@ -763,7 +776,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 73.12em) {
-  /* line 125, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+  /* line 140, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
   .project .circled__side-elem a {
     font-size: 1.92rem;
     line-height: 22.8rem;
@@ -771,19 +784,19 @@ h1, h2 {
 }
 
 @media screen and (min-width: 81.25em) {
-  /* line 125, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+  /* line 140, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
   .project .circled__side-elem a {
     font-size: 2.4rem;
     line-height: 2.9rem;
   }
 }
 
-/* line 138, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 153, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled__side-elem a:hover {
   text-decoration: none;
 }
 
-/* line 140, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
+/* line 155, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
 .project .circled__side-elem a::after {
   content: '';
   display: block;
@@ -792,7 +805,7 @@ h1, h2 {
   height: 6.8rem;
   top: 0;
   right: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 /* line 1, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
@@ -1130,8 +1143,6 @@ h1, h2 {
   background: white;
   margin: 0.8rem;
   flex: 1 0 auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   height: 3.6rem;
 }
@@ -1156,8 +1167,6 @@ h1, h2 {
 
 /* line 183, ../../Documents/GitHub/dedukh/sass/sections/_cv.sass */
 .skill-tags__tag-name {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-size: 1.2rem;
   line-height: 1.4rem;
@@ -1503,8 +1512,6 @@ h1, h2 {
 @media screen and (min-width: 34.5em) {
   /* line 19, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
   #principles .section__title {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -1571,8 +1578,6 @@ h1, h2 {
 
 /* line 52, ../../Documents/GitHub/dedukh/sass/sections/_principles.sass */
 #principles .container__row {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -1983,110 +1988,6 @@ h1, h2 {
   }
 }
 
-/* line 1, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-/* line 8, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled:hover .circle-area__upper-circle svg path {
-  stroke-dasharray: 185.514;
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  stroke: #f9253b;
-}
-
-/* line 13, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area {
-  position: relative;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6.8rem;
-  height: 6.8rem;
-}
-
-/* line 21, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area svg path {
-  stroke-dasharray: 185.514;
-  stroke-dashoffset: 371.028;
-  transform: translateZ(0);
-  transition: 1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-}
-
-/* line 28, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__main-circle, .circled .circle-area__upper-circle {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* line 35, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__main-circle svg, .circled .circle-area__upper-circle svg {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 38, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__main-circle {
-  z-index: 1;
-}
-
-/* line 40, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__main-circle svg path {
-  stroke: #7875FF;
-}
-
-/* line 42, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__upper-circle {
-  z-index: 2;
-}
-
-/* line 44, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled .circle-area__upper-circle svg path {
-  stroke: #FFFFFF;
-  stroke-stroke-dasharray: 371.028;
-}
-
-/* line 49, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled__side-elem a {
-  font-family: 'bold';
-  font-weight: bold;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  text-decoration: none;
-  color: white;
-}
-
-/* line 56, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled__side-elem a:hover {
-  text-decoration: none;
-}
-
-/* line 58, ../../Documents/GitHub/dedukh/sass/elements/_circled.sass */
-.circled__side-elem a::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 6.8rem;
-  height: 6.8rem;
-  top: 0;
-  right: 0;
-  z-index: 3;
-}
-
 /* line 1, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar {
   position: fixed;
@@ -2353,68 +2254,45 @@ h1, h2 {
 
 /* line 136, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim {
-  -webkit-animation: dropdown 1s;
-          animation: dropdown 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: dropdown 1s;
+  animation-fill-mode: forwards;
 }
 
 /* line 140, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(1) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 /* line 142, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 /* line 144, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.open-anim:nth-child(3) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /* line 147, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim {
-  -webkit-animation: dropup 0.3s;
-          animation: dropup 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: dropup 0.3s;
+  animation-fill-mode: forwards;
   opacity: 1;
 }
 
 /* line 151, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(1) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 /* line 153, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /* line 155, ../../Documents/GitHub/dedukh/sass/elements/_navbar.sass */
 .navbar__link.close-anim:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-@-webkit-keyframes dropdown {
-  0% {
-    transform: translateY(-700px);
-  }
-  45% {
-    opacity: 0;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+  animation-delay: 0.2s;
 }
 
 @keyframes dropdown {
@@ -2430,16 +2308,6 @@ h1, h2 {
   }
 }
 
-@-webkit-keyframes dropup {
-  50% {
-    opacity: 0;
-  }
-  to {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
 @keyframes dropup {
   50% {
     opacity: 0;
@@ -2450,12 +2318,14 @@ h1, h2 {
   }
 }
 
-/* line 101, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 100, ../../Documents/GitHub/dedukh/sass/style.sass */
 .mb-0 {
   margin-bottom: 0;
 }
 
-/* line 104, ../../Documents/GitHub/dedukh/sass/style.sass */
+/* line 103, ../../Documents/GitHub/dedukh/sass/style.sass */
 #rem {
   width: 1rem;
 }
+
+/*# sourceMappingURL=style.css.map */
