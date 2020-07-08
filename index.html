@@ -61,11 +61,11 @@
 					<div class="chat-sec__empt-chat"></div>
 					<div class="chat-sec__chat chat">
 						<div class="chat__header">
-							<p class="chat__title"></p>
-							<p class="chat__tip"></p>
+							<p class="chat__title">Get in touch</p>
+							<p class="chat__tip">Enter some information and click <strong>enter</strong></p>
 						</div>
 						<form action="" onsubmit="chatbarSend(); return false;">
-							<input type="text" class="chat__text-field">
+							<input type="text" class="chat__text-field" placeholder="">
 						</form>
 						<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
 					</div>
@@ -230,15 +230,18 @@
 			//--CHAT
 			var chat = document.getElementById("chat").getBoundingClientRect();
 			var chatTouchPoint = $(window).height() - $("#chat").height();
-			var staticChat = true;
-			if(chat.top <= chatTouchPoint){
-				if($("#chat").hasClass('static')){
-					$("#chat").removeClass("static");
+
+			if($(document).scrollTop() > 0){
+				if($('#chat').hasClass('hide') == false){
+					$('#chat').addClass('hide');
+				}
+				else if($('#chat').hasClass('normal')){
+					$('#chat').removeClass('normal');
 				}
 			}
-			else if(chat.top > chatTouchPoint){
-				if($("#chat").hasClass('static')==false){
-					$("#chat").addClass('static');
+			else if($(document).scrollTop() == 0){
+				if($('#chat').hasClass('hide')){
+					$('#chat').addClass('normal');
 				}
 			}
 
@@ -299,32 +302,20 @@
 
 			//CHATBAR open-close--------
 			//--open
-		  $("#chat .chat__open-btn-wrap").click(function(){
-			  	$(this).fadeOut();
-			  	$("#chat .chatbar__open-btn").fadeOut('fast');
-			  	$("#chat .chat__chatbar-wrap").addClass("show");
-			  	$("#chat .chat__chatbar.chatbar").delay(400).queue(function() {
-
-					$(this).addClass("open");
-
-					$(this).dequeue();
-  				});;
-  				$("#chat .chat__chatbar .chatbar__main-content").delay(1000).queue(function() {$(this).addClass("show"); $(this).dequeue();});
-
-		  	});
+		  $("#chat .chat-sec__open-btn").click(function(){
+		  	$("#chat .chat-sec__icons-bar").fadeOut();
+		  	$("#chat .chat-sec__chat.chat").removeClass('hide');
+		  	$("#chat .chat-sec__chat.chat").addClass('show');
+		  });
 		  //--close
-		  $("#chat .chat__close-btn").click(function(){
-		  	$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
-		  	$("#chat .chat__chatbar.chatbar").queue(function() {$(this).removeClass("open"); $(this).dequeue();});
-		  	$("#chat .chat__chatbar-wrap").delay(400).queue(function() {
-
-					$(this).removeClass("show");
-
-					$(this).dequeue();
-  			});;
-  			setTimeout(function(){
-  				$("#chat .chat__open-btn-wrap").fadeIn('fast');
-  			}, 800);
+		  $("#chat .chat__close-ic").click(function(){
+		  	if($("#chat .chat-sec__chat.chat").hasClass('show')){
+		  		$("#chat .chat-sec__chat.chat").removeClass('show');
+		  	}
+		  	$("#chat .chat-sec__chat.chat").addClass('hide');
+		  	setTimeout(function(){$("#chat .chat-sec__icons-bar").fadeIn()}, 1000);
+		  	//$("#chat .chat-sec__chat.chat").addClass('show');
+  			//setTimeout(function(){$("#chat .chat__open-btn-wrap").fadeIn('fast');}, 800);
 		  });
 
 
