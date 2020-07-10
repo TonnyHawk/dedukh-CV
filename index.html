@@ -60,14 +60,20 @@
 				<div class="wrap">
 					<div class="chat-sec__empt-chat"></div>
 					<div class="chat-sec__chat chat">
-						<div class="chat__header">
-							<p class="chat__title">Get in touch</p>
-							<p class="chat__tip">Enter some information and click <strong>enter</strong></p>
+						<div class="chat__main-content">
+							<div class="chat__header">
+								<p class="chat__title">Get in touch</p>
+								<p class="chat__tip">Enter some information and click <strong>enter</strong></p>
+							</div>
+							<form action="" onsubmit="chatbarSend(); return false;">
+								<input type="text" class="chat__text-field" placeholder="">
+							</form>
+							<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
 						</div>
-						<form action="" onsubmit="chatbarSend(); return false;">
-							<input type="text" class="chat__text-field" placeholder="">
-						</form>
-						<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
+						<div class="chat__feedback-content">
+							<p class="chat__title">THANK YOU!</p>
+							<p class="chat__tip">We will contact you shortly!</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -232,38 +238,33 @@
 			var chatTouchPoint = $(window).height() - $("#chat").height();
 
 			if($(document).scrollTop() > 0){
-				if($('#chat').hasClass('hide') == false){
-					$('#chat').addClass('hide');
-				}
-				else if($('#chat').hasClass('normal')){
-					$('#chat').removeClass('normal');
+				if($('#chat').hasClass('aside') == false){
+					$('#chat').addClass('aside');
 				}
 			}
 			else if($(document).scrollTop() == 0){
-				if($('#chat').hasClass('hide')){
-					$('#chat').addClass('normal');
-				}
+				$('#chat').removeClass('aside');
 			}
 
 			//--FOOTER
-			var footer = document.getElementById("footer").getBoundingClientRect();
-			var footerTouchPoint = $(window).height() - $("#chat").height();
-			var footerOnView = false;
-			if(footer.top <= footerTouchPoint){
-				if($("#footer.footer").hasClass('onview')==false){
-					$("#footer.footer").addClass('onview');
-					footerOnView = true;
-					$("#chat").addClass('hide');				
-				}
+			// var footer = document.getElementById("footer").getBoundingClientRect();
+			// var footerTouchPoint = $(window).height() - $("#chat").height();
+			// var footerOnView = false;
+			// if(footer.top <= footerTouchPoint){
+			// 	if($("#footer.footer").hasClass('onview')==false){
+			// 		$("#footer.footer").addClass('onview');
+			// 		footerOnView = true;
+			// 		$("#chat").addClass('hide');				
+			// 	}
 
-			}
-			else if(footer.top > footerTouchPoint){
-				if($("#footer.footer").hasClass('onview')){
-					$("#footer.footer").removeClass('onview');
-					footerOnView = false;
-					$("#chat").removeClass('hide');
-				}
-			}
+			// }
+			// else if(footer.top > footerTouchPoint){
+			// 	if($("#footer.footer").hasClass('onview')){
+			// 		$("#footer.footer").removeClass('onview');
+			// 		footerOnView = false;
+			// 		$("#chat").removeClass('hide');
+			// 	}
+			// }
 
 		});
 	</script>
@@ -303,19 +304,18 @@
 			//CHATBAR open-close--------
 			//--open
 		  $("#chat .chat-sec__open-btn").click(function(){
-		  	$("#chat .chat-sec__icons-bar").fadeOut();
-		  	$("#chat .chat-sec__chat.chat").removeClass('hide');
-		  	$("#chat .chat-sec__chat.chat").addClass('show');
+		  	$("#chat .chat-sec__icons-bar").css('bottom', '-100%');
+		  	$("#chat .chat-sec__empt-chat").fadeOut();
+		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
+		  	$("#chat .chat__main-content").toggleClass('show');
 		  });
 		  //--close
 		  $("#chat .chat__close-ic").click(function(){
-		  	if($("#chat .chat-sec__chat.chat").hasClass('show')){
-		  		$("#chat .chat-sec__chat.chat").removeClass('show');
-		  	}
-		  	$("#chat .chat-sec__chat.chat").addClass('hide');
+		  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
+		  	$("#chat .chat-sec__empt-chat").show();
+		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
+		  	$("#chat .chat__main-content").toggleClass('show');
 		  	setTimeout(function(){$("#chat .chat-sec__icons-bar").fadeIn()}, 1000);
-		  	//$("#chat .chat-sec__chat.chat").addClass('show');
-  			//setTimeout(function(){$("#chat .chat__open-btn-wrap").fadeIn('fast');}, 800);
 		  });
 
 
@@ -325,23 +325,22 @@
 	<script>
 		//chatbar form sending--------
 		function chatbarSend(){
-			$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
-			$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
-		  	// setTimeout(function(){
-		  	// 	$("#chat .chat__chatbar .chatbar__feedback-content").addClass("show");
-		  	// }, 510)
-		  	setTimeout(function(){
-		  		$("#chat .chat__chatbar.chatbar").removeClass("open");
-		  	}, 2800);
-		  	setTimeout(function(){
-		  		$("#chat .chat__chatbar-wrap").removeClass("show");
-		  		$("#chat .chat__chatbar .chatbar__main-content").removeClass("show");
-		  	}, 3000);
-  			$("#chat .chat__open-btn").show();
-		  	setTimeout(function(){
-		  		$("#chat .chat__chatbar .chatbar__feedback-content").removeClass("show");
-		  	}, 3600);
-
+			$("#chat .chat__main-content").removeClass('show');
+			//feddback-content anim
+			$("#chat .chat__feedback-content").addClass('anim');
+			setTimeout(function(){
+				$("#chat .chat-sec__chat.chat").removeClass('open');
+			  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
+			  	$("#chat .chat-sec__empt-chat").show();
+			}, 2500);
+			$("#chat .chat__feedback-content").addClass('anim');
+			setTimeout(function(){
+			  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
+			  	$("#chat .chat-sec__empt-chat").show();
+			}, 3000);
+			setTimeout(function(){
+				$("#chat .chat__feedback-content").removeClass('anim');
+			}, 5100);
 		}
 	</script>
 </body>

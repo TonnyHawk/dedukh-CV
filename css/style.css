@@ -509,9 +509,12 @@ h1, h2 {
   height: 100%;
   width: 100%;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-out;
 }
 
-/* line 19, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 22, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__open-btn {
   position: relative;
   width: 50%;
@@ -520,9 +523,10 @@ h1, h2 {
   align-items: center;
   padding-left: 8.5rem;
   cursor: pointer;
+  transition: 0.5s;
 }
 
-/* line 28, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 32, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__chat-ic {
   position: absolute;
   height: 2.2rem;
@@ -530,17 +534,17 @@ h1, h2 {
   transition: 1s;
 }
 
-/* line 33, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 37, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__chat-ic--white {
   opacity: 1;
 }
 
-/* line 35, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 39, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__chat-ic--blue {
   opacity: 0;
 }
 
-/* line 38, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 42, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__chat-bar {
   z-index: 2;
   position: absolute;
@@ -550,7 +554,7 @@ h1, h2 {
   height: 16.7rem;
 }
 
-/* line 46, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 50, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__empt-chat {
   position: absolute;
   right: 0;
@@ -562,7 +566,7 @@ h1, h2 {
   z-index: 1;
 }
 
-/* line 56, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 61, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat-sec__chat {
   position: absolute;
   bottom: -200%;
@@ -572,12 +576,13 @@ h1, h2 {
   background: #5162FF;
 }
 
-/* line 64, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 69, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat {
   overflow: hidden;
+  transition: bottom 1s;
 }
 
-/* line 66, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 72, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__header {
   display: flex;
   align-items: center;
@@ -587,9 +592,10 @@ h1, h2 {
   top: 100%;
   left: 0;
   width: 100%;
+  transition: top 1s 0.4s;
 }
 
-/* line 77, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 84, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__title {
   font-family: 'bold';
   color: white;
@@ -598,20 +604,20 @@ h1, h2 {
   line-height: 2.9rem;
 }
 
-/* line 84, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 91, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__tip {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.6rem;
   line-height: 4rem;
 }
 
-/* line 88, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 95, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__tip strong {
   font-family: 'bold';
   font-weight: bold;
 }
 
-/* line 92, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 99, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__text-field {
   position: absolute;
   bottom: -100%;
@@ -626,206 +632,84 @@ h1, h2 {
   background: transparent;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: bottom 1s 0.2s;
 }
 
-/* line 107, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 115, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__text-field:focus {
   outline: none;
 }
 
-/* line 110, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+/* line 118, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
 .chat__close-ic {
   position: absolute;
-  bottom: 100%;
+  bottom: -100%;
   left: 7.8rem;
   cursor: pointer;
-}
-
-/* line 117, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.hide {
-  animation: chat-hide 1s;
-  animation-fill-mode: forwards;
-}
-
-/* line 121, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.hide .chat__header {
-  animation: chat-header-hide-down 1s;
-  animation-fill-mode: forwards;
-}
-
-/* line 124, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.hide .chat__text-field {
-  animation: chat-text-hide-down 1s;
-  animation-fill-mode: forwards;
+  transition: bottom 0.5s;
 }
 
 /* line 127, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.hide .chat__close-ic {
-  animation: chat-close-hide-down 1s;
-  animation-fill-mode: forwards;
+.chat__feedback-content {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: left 0.5s 0.8s, top 1s 2.8s;
 }
 
-/* line 131, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.show {
-  animation: chat-show 1s;
-  animation-fill-mode: forwards;
+/* line 138, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat__feedback-content.anim {
+  left: 0;
+  top: 100%;
 }
 
-/* line 135, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.show .chat__header {
-  animation: chat-header-show-up 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.2s;
-}
-
-/* line 139, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.show .chat__text-field {
-  animation: chat-text-show-up 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.1s;
-}
-
-/* line 143, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat.show .chat__close-ic {
-  animation: chat-close-ic-show-up 1s;
-  animation-fill-mode: forwards;
-}
-
-/* line 149, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide .chat-sec__open-btn {
-  animation: chat-btn-minimize 1s;
-  animation-fill-mode: forwards;
-}
-
-/* line 153, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide .chat-sec__chat-ic--white {
-  opacity: 0;
-}
-
-/* line 155, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide .chat-sec__chat-ic--blue {
-  opacity: 1;
-}
-
-/* line 158, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide .chat-sec__empt-chat {
-  bottom: -100%;
-}
-
-/* line 164, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide.normal .chat-sec__open-btn {
-  animation: chat-btn-maximize 1s;
-  animation-fill-mode: both;
-}
-
-/* line 168, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide.normal .chat-sec__chat-ic--white {
-  opacity: 1;
-}
-
-/* line 170, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide.normal .chat-sec__chat-ic--blue {
-  opacity: 0;
-}
-
-/* line 173, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
-.chat-sec.hide.normal .chat-sec__empt-chat {
+/* line 146, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat.open {
   bottom: 0;
 }
 
-@keyframes chat-btn-minimize {
-  to {
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0;
-    margin-right: 8rem;
-  }
+/* line 151, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat__main-content.show .chat__header {
+  top: 0;
 }
 
-@keyframes chat-btn-maximize {
-  from {
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0;
-    margin-right: 8rem;
-  }
-  to {
-    width: 50%;
-    height: 100%;
-    padding-left: 8.5rem;
-  }
+/* line 153, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat__main-content.show .chat__text-field {
+  bottom: 14.1rem;
 }
 
-@keyframes chat-header-hide-down {
-  from {
-    top: 0;
-  }
-  to {
-    top: 100%;
-  }
+/* line 155, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat__main-content.show .chat__close-ic {
+  bottom: 6.5rem;
 }
 
-@keyframes chat-text-hide-down {
-  from {
-    bottom: 14.1rem;
-  }
-  to {
-    bottom: -100%;
-  }
+/* line 161, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat-sec.aside .chat-sec__open-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  margin-right: 8rem;
 }
 
-@keyframes chat-close-ic-hide-down {
-  from {
-    bottom: 6.5rem;
-  }
-  to {
-    bottom: -100%;
-  }
+/* line 167, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat-sec.aside .chat-sec__chat-ic--white {
+  opacity: 0;
 }
 
-@keyframes chat-header-show-up {
-  from {
-    top: 100%;
-  }
-  to {
-    top: 0;
-  }
+/* line 169, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat-sec.aside .chat-sec__chat-ic--blue {
+  opacity: 1;
 }
 
-@keyframes chat-text-show-up {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 14.1rem;
-  }
-}
-
-@keyframes chat-close-ic-show-up {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 6.5rem;
-  }
-}
-
-@keyframes chat-show {
-  from {
-    bottom: -200%;
-  }
-  to {
-    bottom: 0;
-  }
-}
-
-@keyframes chat-hide {
-  from {
-    bottom: 0;
-  }
-  to {
-    bottom: -200%;
-  }
+/* line 172, ../../Documents/GitHub/dedukh/sass/sections/_chat.sass */
+.chat-sec.aside .chat-sec__empt-chat {
+  bottom: -100%;
 }
 
 /* line 3, ../../Documents/GitHub/dedukh/sass/sections/_portfolio.sass */
