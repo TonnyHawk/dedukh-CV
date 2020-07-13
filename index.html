@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -53,7 +53,7 @@
 			<div class="chat-sec__icons-bar">
 				<div class="chat-sec__open-btn">
 					<img src="img/chatbar/chat-icon--white.svg" alt="" class="chat-sec__chat-ic chat-sec__chat-ic--white">
-					<img src="img/chatbar/chat-icon--blue.svg" alt="" class="chat-sec__chat-ic chat-sec__chat-ic--blue">
+					<img src="img/chatbar/chat-icon--black.svg" alt="" class="chat-sec__chat-ic chat-sec__chat-ic--blue">
 				</div>
 			</div>
 			<div class="chat-sec__chat-bar">
@@ -232,6 +232,23 @@
 	<script src="js/jquery.min.js"></script>
 
 	<script>
+	//changing chat for square screens and portrait mode
+$(document).ready(function(){
+	var doc_w = $(window).width();
+	var doc_h = $(window).height();
+	var prop = doc_w / doc_h;
+	var squareScrProp = 4 / 3;
+	var rectScrProp = 1.66 / 1;
+	if(squareScrProp <= prop && prop <= rectScrProp){
+		$("#chat").addClass('mobile');
+	}
+	else if(doc_h > doc_w){
+		$("#chat").addClass('mobile');
+	}
+});
+	</script>
+
+	<script>
 		window.addEventListener('scroll', function() {
 			//--CHAT
 			var chat = document.getElementById("chat").getBoundingClientRect();
@@ -245,27 +262,6 @@
 			else if($(document).scrollTop() == 0){
 				$('#chat').removeClass('aside');
 			}
-
-			//--FOOTER
-			// var footer = document.getElementById("footer").getBoundingClientRect();
-			// var footerTouchPoint = $(window).height() - $("#chat").height();
-			// var footerOnView = false;
-			// if(footer.top <= footerTouchPoint){
-			// 	if($("#footer.footer").hasClass('onview')==false){
-			// 		$("#footer.footer").addClass('onview');
-			// 		footerOnView = true;
-			// 		$("#chat").addClass('hide');				
-			// 	}
-
-			// }
-			// else if(footer.top > footerTouchPoint){
-			// 	if($("#footer.footer").hasClass('onview')){
-			// 		$("#footer.footer").removeClass('onview');
-			// 		footerOnView = false;
-			// 		$("#chat").removeClass('hide');
-			// 	}
-			// }
-
 		});
 	</script>
 
@@ -305,14 +301,14 @@
 			//--open
 		  $("#chat .chat-sec__open-btn").click(function(){
 		  	$("#chat .chat-sec__icons-bar").css('bottom', '-100%');
-		  	$("#chat .chat-sec__empt-chat").fadeOut();
+		  	$("#chat .chat-sec__empt-chat").css('bottom', '-100%');
 		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
 		  	$("#chat .chat__main-content").toggleClass('show');
 		  });
 		  //--close
 		  $("#chat .chat__close-ic").click(function(){
 		  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
-		  	$("#chat .chat-sec__empt-chat").show();
+		  	$("#chat .chat-sec__empt-chat").css('bottom', '0');
 		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
 		  	$("#chat .chat__main-content").toggleClass('show');
 		  	setTimeout(function(){$("#chat .chat-sec__icons-bar").fadeIn()}, 1000);
