@@ -6,6 +6,11 @@
 	bottom: 0
 	left: 0
 	z-index: 200
+	@media screen and (max-width: 66.56em)
+		height: 13.5rem
+	@media screen and (max-width: 49.06em)
+		height: 11.5rem
+
 	&__icons-bar
 		display: flex
 		justify-content: flex-end
@@ -27,6 +32,8 @@
 		padding-left: 8.5rem
 		cursor: pointer
 		transition: 0.5s
+		@media screen and (max-width: 49.06em)
+			padding-left: 6.5rem
 
 	&__chat-ic
 		position: absolute
@@ -60,7 +67,7 @@
 
 	&__chat
 		position: absolute
-		bottom: -200%
+		bottom: -500%
 		right: 0
 		height: 31.8rem
 		width: 50%
@@ -200,6 +207,8 @@
 			height: 2.2rem
 			padding: 0
 			margin-right: 8rem
+			@media screen and (max-width: 49.06em)
+				margin-right: 8%
 		&__chat-ic
 			&--white
 				opacity: 0
@@ -221,6 +230,8 @@
 				height: 2.2rem
 				padding: 0
 				margin-right: 8rem
+				@media screen and (max-width: 49.06em)
+					margin-right: 8%
 			&__chat-ic
 				&--white
 					opacity: 0
