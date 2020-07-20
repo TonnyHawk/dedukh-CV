@@ -300,16 +300,12 @@ $(document).ready(function(){
 			//CHATBAR open-close--------
 			//--open
 		  $("#chat .chat-sec__open-btn").click(function(){
-		  	$("#chat .chat-sec__icons-bar").css('bottom', '-100%');
-		  	$("#chat .chat-sec__empt-chat").css('bottom', '-100%');
-		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
+		  	$("#chat.chat-sec").toggleClass('open');
 		  	$("#chat .chat__main-content").toggleClass('show');
 		  });
 		  //--close
 		  $("#chat .chat__close-ic").click(function(){
-		  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
-		  	$("#chat .chat-sec__empt-chat").css('bottom', '0');
-		  	$("#chat .chat-sec__chat.chat").toggleClass('open');
+		  	$("#chat.chat-sec").toggleClass('open');
 		  	$("#chat .chat__main-content").toggleClass('show');
 		  	setTimeout(function(){$("#chat .chat-sec__icons-bar").fadeIn()}, 1000);
 		  });
@@ -325,18 +321,11 @@ $(document).ready(function(){
 			//feddback-content anim
 			$("#chat .chat__feedback-content").addClass('anim');
 			setTimeout(function(){
-				$("#chat .chat-sec__chat.chat").removeClass('open');
-			  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
-			  	$("#chat .chat-sec__empt-chat").show();
+				$("#chat.chat-sec").removeClass('open');
 			}, 2500);
-			$("#chat .chat__feedback-content").addClass('anim');
-			setTimeout(function(){
-			  	$("#chat .chat-sec__icons-bar").css('bottom', '0');
-			  	$("#chat .chat-sec__empt-chat").show();
-			}, 3000);
 			setTimeout(function(){
 				$("#chat .chat__feedback-content").removeClass('anim');
-			}, 5100);
+			}, 4000);
 		}
 	</script>
 </body>

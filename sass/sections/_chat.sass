@@ -157,7 +157,8 @@
 			left: 5.8rem
 		@media screen and (max-width: 28.125em)
 			left: 4.5rem
-
+	&__empt-chat
+		bottom: 0
 
 	&__feedback-content
 		position: absolute
@@ -179,8 +180,13 @@
 // chat shows up when clicking on chat icon
 // and hides down when clicking on close chat icon 
 
-.chat.open
-	bottom: 0
+.chat-sec.open 
+	.chat
+		bottom: 0
+	.chat-sec
+		&__empt-chat, &__icons-bar
+			bottom: -100%
+
 
 .chat__main-content.show
 	.chat
