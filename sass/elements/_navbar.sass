@@ -34,6 +34,7 @@
 			height: 30rem
 			height: 6rem
 			transition: 0.8s cubic-bezier(.49,.9,.56,.94)
+			transition-delay: 0.3s
 			@media screen and (min-width: 53.125em)
 				height: 30.6rem
 				height: 6.2rem
@@ -52,7 +53,6 @@
 
 	&__btn
 		position: absolute
-		cursor: pointer
 		&--menu-ic
 			opacity: 1
 		&--close-ic
@@ -85,7 +85,8 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		transition: 0.8s cubic-bezier(.51,.91,.44,.6)
+		transition: 0.4s
+		cursor: pointer
 		@media screen and (min-width: 53.125em)
 			width: 12.4rem
 		@media screen and (min-width: 81.25em)
@@ -134,7 +135,6 @@
 				top: 22.8rem
 
 		&.open-anim
-			opacity:
 			animation: dropdown 1s
 			animation-fill-mode: forwards
 			&:nth-child(1)
@@ -160,8 +160,6 @@
 			transform: translateY(-700px)
 		45%
 			opacity: 0
-		// 65%
-		// 	transform: translateY(15px)
 		100%
 			transform: none
 			opacity: 1
@@ -172,6 +170,18 @@
 		to 
 			transform: translateY(-50px)
 			opacity: 0
+
+	&.open
+		.navbar 
+			&__btns
+				border-left: 0.2rem solid transparent
+			&__btn--menu-ic, &__btn--open
+				opacity: 0
+			&__btn--close-ic, &__btn--back
+				opacity: 1
+			&__bar--menu
+				height: 30rem
+				transition-delay: none
 
 
 

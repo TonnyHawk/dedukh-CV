@@ -2085,6 +2085,7 @@ h1, h2 {
   height: 30rem;
   height: 6rem;
   transition: 0.8s cubic-bezier(0.49, 0.9, 0.56, 0.94);
+  transition-delay: 0.3s;
 }
 
 @media screen and (min-width: 53.125em) {
@@ -2118,7 +2119,6 @@ h1, h2 {
 
 .navbar__btn {
   position: absolute;
-  cursor: pointer;
 }
 
 .navbar__btn--menu-ic {
@@ -2173,7 +2173,8 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.8s cubic-bezier(0.51, 0.91, 0.44, 0.6);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 53.125em) {
@@ -2324,6 +2325,23 @@ h1, h2 {
     transform: translateY(-50px);
     opacity: 0;
   }
+}
+
+.navbar.open .navbar__btns {
+  border-left: 0.2rem solid transparent;
+}
+
+.navbar.open .navbar__btn--menu-ic, .navbar.open .navbar__btn--open {
+  opacity: 0;
+}
+
+.navbar.open .navbar__btn--close-ic, .navbar.open .navbar__btn--back {
+  opacity: 1;
+}
+
+.navbar.open .navbar__bar--menu {
+  height: 30rem;
+  transition-delay: none;
 }
 
 .mb-0 {
