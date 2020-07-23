@@ -120,7 +120,7 @@ h1, h2 {
   position: relative;
 }
 
-.spec-border:before, .spec-border-t1:before {
+.spec-border::before, .spec-border-t1::before {
   content: '';
   display: block;
   height: 2.2rem;
@@ -130,7 +130,7 @@ h1, h2 {
   position: absolute;
 }
 
-.spec-border:before {
+.spec-border::before {
   bottom: -3rem;
   right: -3rem;
 }
@@ -1012,7 +1012,7 @@ h1, h2 {
   text-decoration: none;
 }
 
-.project .circled__side-elem a:after {
+.project .circled__side-elem a::after {
   content: '';
   display: block;
   position: absolute;
@@ -1355,7 +1355,7 @@ h1, h2 {
   }
 }
 
-.skill-tags__tag-name:before, .skill-tags__tag-name.figma:after {
+.skill-tags__tag-name:before, .skill-tags__tag-name.figma::after {
   content: '';
   width: 1.393rem;
   height: 1.118rem;
@@ -1367,14 +1367,14 @@ h1, h2 {
 }
 
 @media screen and (min-width: 87.5em) {
-  .skill-tags__tag-name:before, .skill-tags__tag-name.figma:after {
+  .skill-tags__tag-name:before, .skill-tags__tag-name.figma::after {
     width: 3rem;
     height: 3rem;
     margin-right: 1.2rem;
   }
 }
 
-.skill-tags__tag-name.figma:after {
+.skill-tags__tag-name.figma::after {
   width: 0.918rem;
   height: 1.376rem;
   background: url("../../img/figma-ic.svg") center;
@@ -1384,14 +1384,14 @@ h1, h2 {
 }
 
 @media screen and (min-width: 87.5em) {
-  .skill-tags__tag-name.figma:after {
+  .skill-tags__tag-name.figma::after {
     width: 1.4rem;
     height: 2.1rem;
     margin-right: .9rem;
   }
 }
 
-.spec-border-t1:before {
+.spec-border-t1::before {
   height: 1.44rem;
   width: 1.44rem;
   background: url("../img/mouse-icon-1.svg");
@@ -1401,7 +1401,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 87.5em) {
-  .spec-border-t1:before {
+  .spec-border-t1::before {
     width: 2.2rem;
     height: 2.2rem;
   }
@@ -1433,7 +1433,7 @@ h1, h2 {
   background: white;
   border: 2px solid #000000;
   width: 25.5rem;
-  padding: 1.8rem 2.9rem;
+  padding: 1.8rem 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1664,7 +1664,7 @@ h1, h2 {
   }
 }
 
-#principles .section__title.ic:after {
+#principles .section__title.ic::after {
   content: '';
   display: block;
   width: 9.4rem;
@@ -1675,7 +1675,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 34.5em) {
-  #principles .section__title.ic:after {
+  #principles .section__title.ic::after {
     margin-left: 2rem;
     width: 7.4rem;
     height: 8.4rem;
@@ -1683,13 +1683,13 @@ h1, h2 {
 }
 
 @media screen and (min-width: 62.5em) {
-  #principles .section__title.ic:after {
+  #principles .section__title.ic::after {
     width: 8.4rem;
   }
 }
 
 @media screen and (min-width: 87.5em) {
-  #principles .section__title.ic:after {
+  #principles .section__title.ic::after {
     margin-left: 2.6rem;
     width: 12.4rem;
     height: 13.4rem;
