@@ -111,7 +111,7 @@ h1, h2 {
   border: 1rem solid transparent;
   border-image: url("../img/spec-border-square.svg") 30 round;
   border-image-outset: 0.6rem;
-  box-shadow: 0 0 0 2px #000000;
+  box-shadow: 0 0 0 1.4px #000000;
   position: relative;
 }
 
@@ -387,19 +387,18 @@ h1, h2 {
 #header .header__tip-target .tip {
   top: 0rem;
   left: 8rem;
+  transform: scale(0.75);
 }
 
 @media screen and (min-width: 28.125em) {
   #header .header__tip-target .tip {
-    transform: scale(1.15);
-    top: 1rem;
     left: 11rem;
   }
 }
 
 @media screen and (min-width: 73.12em) {
   #header .header__tip-target .tip {
-    transform: scale(1.36);
+    transform: none;
     top: 2rem;
     left: 16rem;
   }
@@ -1236,13 +1235,11 @@ h1, h2 {
 }
 
 .skill-tags {
-  padding: 1.1rem -2.5rem 5.2rem;
-  background: transparent;
   position: relative;
   transform: scale(1.06, 1.01);
   z-index: 2;
   max-width: 34.4rem;
-  height: 19.1rem;
+  height: max-content;
   width: 104%;
 }
 
@@ -1255,8 +1252,6 @@ h1, h2 {
 @media screen and (min-width: 87.5em) {
   .skill-tags {
     max-width: 52.5rem;
-    height: 28rem;
-    padding: 0.2rem 0.5rem 1.5rem;
   }
 }
 
@@ -1264,6 +1259,7 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   margin: -1rem;
+  height: max-content;
 }
 
 @media screen and (min-width: 23.75em) {
@@ -1302,7 +1298,7 @@ h1, h2 {
   justify-content: center;
   border: 2px solid #000000;
   background: white;
-  margin: 0.8rem;
+  margin: 0.6rem;
   flex: 1 0 auto;
   width: max-content;
   height: 3.6rem;
@@ -1320,7 +1316,7 @@ h1, h2 {
 }
 
 .skill-tags__tag:last-child {
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .skill-tags__tag-name {
@@ -1381,16 +1377,14 @@ h1, h2 {
   width: 1.44rem;
   background: url("../img/mouse-icon-1.svg");
   background-size: cover;
-  top: -3rem;
-  left: -0.5rem;
+  top: -2.7rem;
+  left: 0.5rem;
 }
 
 @media screen and (min-width: 87.5em) {
   .spec-border-t1::before {
     width: 2.2rem;
     height: 2.2rem;
-    top: -3.7rem;
-    left: 0.7rem;
   }
 }
 
@@ -1583,6 +1577,10 @@ h1, h2 {
   .skill-badge--language.skill-badge .skill-badge__skill-name {
     font-size: 2.4rem;
   }
+}
+
+.my-cv, .skill-badge {
+  border-radius: 2px;
 }
 
 #principles.section {
