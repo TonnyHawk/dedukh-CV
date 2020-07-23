@@ -1414,6 +1414,7 @@ h1, h2 {
   background: white;
   border: 2px solid #000000;
   width: 25.5rem;
+  background: red;
   display: flex;
   align-items: center;
   justify-content: flex-start;
