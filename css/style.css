@@ -1585,7 +1585,7 @@ h1, h2 {
 
 #principles.section {
   padding-bottom: 0;
-  padding-left: 3.4rem;
+  padding-left: 2.4rem;
   padding-right: 3.4rem;
 }
 
@@ -1648,7 +1648,7 @@ h1, h2 {
   display: block;
   width: 9.4rem;
   height: 8.4rem;
-  background: url("../../img/principles__title.png") center no-repeat;
+  background: url("../img/principles__title.png") center no-repeat;
   background-size: cover;
   margin-left: -2rem;
 }
