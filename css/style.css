@@ -2318,6 +2318,9 @@ h1, h2 {
 }
 
 @keyframes dropup {
+  from {
+    opacity: 1;
+  }
   50% {
     opacity: 0;
   }
