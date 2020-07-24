@@ -464,6 +464,7 @@ h1, h2 {
   bottom: 0;
   left: 0;
   z-index: 200;
+  transition: 1s;
 }
 
 @media screen and (min-width: 66.81em) {
@@ -777,6 +778,10 @@ h1, h2 {
 }
 
 .chat-sec.aside .chat-sec__empt-chat {
+  bottom: -100%;
+}
+
+#chat.hide {
   bottom: -100%;
 }
 

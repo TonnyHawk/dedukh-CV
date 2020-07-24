@@ -6,6 +6,7 @@
 	bottom: 0
 	left: 0
 	z-index: 200
+	transition: 1s
 	@media screen and (min-width: 66.81em)
 		height: 13rem
 	@media screen and (min-width: 72.87em)
@@ -227,7 +228,8 @@
 
 
 #chat 
-	//display: none
+	&.hide
+		bottom: -100%
 	&.mobile
 		.chat-sec
 			&__empt-chat
