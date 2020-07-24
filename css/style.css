@@ -312,8 +312,9 @@ h1, h2 {
 
 @media screen and (min-width: 84.37em) {
   #header .header__title {
+    border-bottom: 1rem solid #5162FF;
     font-size: 8rem;
-    line-height: 9.6rem;
+    line-height: 8rem;
     margin-bottom: 6.4rem;
     margin-top: 20.8rem;
   }
