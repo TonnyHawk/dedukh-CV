@@ -73,6 +73,8 @@ h1, h2
 	border-image-outset: 0.6rem
 	box-shadow: 0 0 0 1.4px $black
 	position: relative
+	@media screen and (min-width: 23.75em)
+		box-shadow: 0 0 0 1.5px $black
 	&::before
 		content: ''
 		display: block
@@ -81,6 +83,12 @@ h1, h2
 		background: url("../img/mouse-icon.svg")
 		background-size: cover
 		position: absolute
+
+.spec-border-t1
+	@media screen and (min-width: 87.5em)
+		border: 1.3rem solid transparent
+		border-image: url('../img/spec-border-square.svg') 30 round
+		border-image-outset: 0.6rem
 
 .spec-border
 	&::before

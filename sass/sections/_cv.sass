@@ -57,9 +57,6 @@
 				@media screen and (min-width: 87.5em)
 					transform: translateY(2rem) 
 
-			// &:nth-child(1), &:nth-child(2)
-			// 	@media screen and (min-width: 60em)
-			// 		flex: 1 0
 			&:last-child
 				margin-bottom: 0
 
@@ -126,16 +123,17 @@
 
 
 .skill-tags
-	// background: url('../img/spec-border.png') no-repeat center center
-	// background-size: 100% 100%
 	position: relative
 	transform: scale(1.06, 1.01)
 	z-index: 2
-	max-width: 34.4rem
+	max-width: 29.5rem
 	height: max-content
-	width: 104%
+	width: 102%
 	@media screen and (min-width: 23.75em)
 		width: auto
+		max-width: 31.5rem
+	@media screen and (min-width: 56.25em)
+		max-width: 34.4rem
 	@media screen and (min-width: 87.5em)
 		max-width: 52.5rem
 	&__body
@@ -143,9 +141,11 @@
 		flex-wrap: wrap
 		margin: -1rem
 		//border: 1px solid red
+		padding: 0.5rem 0.2rem
 		height: max-content
 		@media screen and (min-width: 23.75em)
 			margin: 0
+			padding: 0
 	&__lil-tip
 		display: none
 		@media screen and (min-width: 52em)
@@ -167,7 +167,7 @@
 		justify-content: center
 		border: 2px solid $black
 		background: white
-		margin: 0.6rem
+		margin: 0.7rem
 		flex: 1 0 auto
 		width: max-content
 		height: 3.6rem
@@ -176,7 +176,12 @@
 			margin: 1.2rem
 		&.rotated
 			transform: rotate(0.95deg)
-
+		&:nth-child(odd)
+			margin-left: 0.5rem
+		&:nth-child(even)
+			margin-right: 0.5rem
+		&:nth-child(1), &:nth-child(2)
+			margin-top: 0.7rem
 		&:last-child
 			margin-bottom: 1.2rem
 
@@ -226,10 +231,11 @@
 		background: url("../img/mouse-icon-1.svg")
 		background-size: cover
 		top: -2.7rem
-		left: 0.5rem
+		left: 0rem
 		@media screen and (min-width: 87.5em)
 			width: 2.2rem
 			height: 2.2rem
+			top: -3.7rem
 
 
 
