@@ -57,7 +57,9 @@
 			font-weight: 73.120
 			font-size: 4rem
 			line-height: 4rem
-			text-decoration-line: underline
+			border-bottom: .5rem solid $blue
+			padding-bottom: 0.4rem
+			width: max-content
 			color: $blue
 			margin-bottom: 3.2rem
 			margin-top: 17.1rem
@@ -65,11 +67,13 @@
 				font-size: 4.6rem
 				line-height: 4.6rem
 				margin-bottom: 3.68rem
+				border-bottom: 0.7rem solid $blue
 			@media screen and (min-width: 72.5em)
 				font-size: 4.6rem
 				line-height: 4.6rem
 				margin-bottom: 3.68rem
 			@media screen and (min-width: 73.12em)
+				border-bottom: 0.8rem solid $blue
 				font-size: 5.6rem
 				line-height: 5.566rem
 				margin-bottom: 4.089rem
@@ -148,4 +152,9 @@
 				display: block
 			 img 
 			 	width: 100%
+			 	position: relative
+			 	@media screen and (min-width: 46.56em)
+			 		top: -10%
+			 	@media screen and (min-width: 66.81em)
+			 		top: -15%
 

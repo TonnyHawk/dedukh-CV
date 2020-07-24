@@ -275,7 +275,9 @@ h1, h2 {
   font-weight: 73.120;
   font-size: 4rem;
   line-height: 4rem;
-  text-decoration-line: underline;
+  border-bottom: 0.5rem solid #5162FF;
+  padding-bottom: 0.4rem;
+  width: max-content;
   color: #5162FF;
   margin-bottom: 3.2rem;
   margin-top: 17.1rem;
@@ -286,6 +288,7 @@ h1, h2 {
     font-size: 4.6rem;
     line-height: 4.6rem;
     margin-bottom: 3.68rem;
+    border-bottom: 0.7rem solid #5162FF;
   }
 }
 
@@ -299,6 +302,7 @@ h1, h2 {
 
 @media screen and (min-width: 73.12em) {
   #header .header__title {
+    border-bottom: 0.8rem solid #5162FF;
     font-size: 5.6rem;
     line-height: 5.566rem;
     margin-bottom: 4.089rem;
@@ -436,27 +440,46 @@ h1, h2 {
   }
   #header .header__burger img {
     width: 100%;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 43.75em) and (min-width: 46.56em) {
+  #header .header__burger img {
+    top: -10%;
+  }
+}
+
+@media screen and (min-width: 43.75em) and (min-width: 66.81em) {
+  #header .header__burger img {
+    top: -15%;
   }
 }
 
 .chat-sec {
   width: 100%;
-  height: 16.7rem;
+  height: 12rem;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 200;
 }
 
-@media screen and (max-width: 66.56em) {
+@media screen and (min-width: 66.81em) {
   .chat-sec {
-    height: 13.5rem;
+    height: 13rem;
   }
 }
 
-@media screen and (max-width: 49.06em) {
+@media screen and (min-width: 72.87em) {
   .chat-sec {
-    height: 11.5rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (min-width: 81.25em) {
+  .chat-sec {
+    height: 14rem;
   }
 }
 
