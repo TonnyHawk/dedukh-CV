@@ -341,8 +341,10 @@ $(document).ready(function(){
 				$("#contact .chat__main-content").addClass('show');
 			});
 			$("#contact .chat__close-ic").click(function(){
-				$("#contact").removeClass('open');
 				$("#contact .chat__main-content").removeClass('show');
+				setTimeout(function(){
+					$("#contact").removeClass('open');
+				}, 1000);
 			});
 
 		});

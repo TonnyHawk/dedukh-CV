@@ -2030,6 +2030,16 @@ h1, h2 {
   opacity: 1;
 }
 
+#contact .chat__header {
+  padding-top: 10%;
+}
+
+@media (min-width: 31.25em) {
+  #contact .chat__header {
+    padding-top: 5%;
+  }
+}
+
 #contact .chat__text-field {
   max-width: none;
 }
