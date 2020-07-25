@@ -86,7 +86,7 @@
 			<div class="container__row">
 				<div class="container__item project">
 					<img src="img/projects/covers/litesoft.jpg" alt="" class="project__cover">
-					<div class="project__popup-layer"></div>
+					<div class="project__popup-layer layer"></div>
 					<div class="project__popup-cont">
 							
 						<div class="circled">
@@ -114,7 +114,7 @@
 				</div>
 				<div class="container__item project">
 					<img src="img/projects/covers/vw.jpg" alt="" class="project__cover">
-					<div class="project__popup-layer"></div>
+					<div class="project__popup-layer layer"></div>
 					<div class="project__popup-cont">
 							
 						<div class="circled">
@@ -214,9 +214,29 @@
 			</div>
 		</div>
 	</section>
-	<section id="lets-talk" class="section">
+	<section id="contact" class="section">
+		<div class="contact__layer layer"></div>
+		<div class="contact__open-btn"></div>
 		<h1 class="section__title spec-border">let’s talk?</h1>
-		<img src="img/lets-talk__chat-icon.svg" alt="" class="section__chat-ic">
+		<svg class="section__chat-ic" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+			<path d="M34 34V1.78299H27.4619V22.5421L4.741 0L0 4.70371L22.8835 27.4072H1.74151V34H34Z" fill="black"/>
+		</svg>
+		<div class="contact__chat chat">
+			<div class="chat__main-content">
+				<div class="chat__header">
+					<p class="chat__title">Get in touch</p>
+					<p class="chat__tip">Enter some information and click <strong>enter</strong></p>
+				</div>
+				<form action="" onsubmit="chatbarSend(); return false;">
+					<input type="text" class="chat__text-field" placeholder="">
+				</form>
+				<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
+			</div>
+			<div class="chat__feedback-content">
+				<p class="chat__title">THANK YOU!</p>
+				<p class="chat__tip">We will contact you shortly!</p>
+			</div>
+		</div>
 	</section>
 	<section id="footer" class="footer section">
 		<div class="footer__links-wrap">
@@ -267,7 +287,7 @@ $(document).ready(function(){
 			}
 
 			//--hide chat bar when 'lets-talk section' appears
-			var letsTalk = document.getElementById("lets-talk").getBoundingClientRect();
+			var letsTalk = document.getElementById("contact").getBoundingClientRect();
 			if(letsTalk.top < scrHeight){
 				if($('#chat').hasClass('hide')==false){
 					$('#chat').addClass('hide');
@@ -315,20 +335,33 @@ $(document).ready(function(){
 		  });
 
 
+			//CONTACT sect
+			$('#contact .contact__open-btn').click(function(){
+				$("#contact").addClass('open');
+				$("#contact .chat__main-content").addClass('show');
+			});
+			$("#contact .chat__close-ic").click(function(){
+				$("#contact").removeClass('open');
+				$("#contact .chat__main-content").removeClass('show');
+			});
+
 		});
 	</script>
 
 	<script>
 		//chatbar form sending--------
 		function chatbarSend(){
-			$("#chat .chat__main-content").removeClass('show');
+			$(".chat__main-content").removeClass('show');
 			//feddback-content anim
-			$("#chat .chat__feedback-content").addClass('anim');
+			$(".chat__feedback-content").addClass('anim');
 			setTimeout(function(){
 				$("#chat.chat-sec").removeClass('open');
 			}, 2500);
 			setTimeout(function(){
-				$("#chat .chat__feedback-content").removeClass('anim');
+				$("#contact").removeClass('open');
+			}, 3500);
+			setTimeout(function(){
+				$(".chat__feedback-content").removeClass('anim');
 			}, 4000);
 		}
 	</script>

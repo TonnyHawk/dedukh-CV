@@ -56,7 +56,7 @@ h1, h2
 		display: inline-flex
 		align-items: flex-end
 	&__chat-ic
-		position: absolute
+		height: 4rem
 
 .container
 	display: flex
@@ -95,6 +95,15 @@ h1, h2
 	&::before
 		bottom: -3rem
 		right: -3rem
+.layer
+	position: absolute
+	top: 0
+	right: 0
+	width: 0
+	height: 0
+	transition: 0.5s
+	background: $blue
+	z-index: 2
 
 @import 'sections/header'
 @import 'sections/chat'

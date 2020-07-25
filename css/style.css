@@ -95,7 +95,7 @@ h1, h2 {
 }
 
 .section__chat-ic {
-  position: absolute;
+  height: 4rem;
 }
 
 .container {
@@ -142,6 +142,17 @@ h1, h2 {
 .spec-border::before {
   bottom: -3rem;
   right: -3rem;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  background: #5162FF;
+  z-index: 2;
 }
 
 #header {
@@ -726,33 +737,39 @@ h1, h2 {
 
 .chat__main-content.show .chat__text-field {
   bottom: 14.1rem;
+  bottom: 35%;
 }
 
-@media screen and (max-width: 81.25em) {
+@media screen and (min-width: 28.125em) {
   .chat__main-content.show .chat__text-field {
-    bottom: 13.1rem;
+    bottom: 11.1rem;
+    bottom: 40%;
   }
 }
 
-@media screen and (max-width: 28.125em) {
+@media screen and (min-width: 81.25em) {
   .chat__main-content.show .chat__text-field {
-    bottom: 11.1rem;
+    bottom: 13.1rem;
+    bottom: 45%;
   }
 }
 
 .chat__main-content.show .chat__close-ic {
   bottom: 6.5rem;
+  bottom: 12%;
 }
 
-@media screen and (max-width: 81.25em) {
+@media screen and (min-width: 28.125em) {
   .chat__main-content.show .chat__close-ic {
-    bottom: 4.5rem;
+    bottom: 3.5rem;
+    bottom: 16%;
   }
 }
 
-@media screen and (max-width: 28.125em) {
+@media screen and (min-width: 81.25em) {
   .chat__main-content.show .chat__close-ic {
-    bottom: 3.5rem;
+    bottom: 4.5rem;
+    bottom: 20%;
   }
 }
 
@@ -907,17 +924,6 @@ h1, h2 {
   height: 100%;
   width: 100%;
   z-index: 1;
-}
-
-.project__popup-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  transition: 0.5s;
-  background: #5162FF;
-  z-index: 2;
 }
 
 .project__popup-cont {
@@ -1879,13 +1885,43 @@ h1, h2 {
   }
 }
 
-#lets-talk {
+.contact__open-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.contact__chat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+#contact {
   background: #FFC700;
-  padding-bottom: 15.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 58.75em) {
+  #contact {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 43em) {
-  #lets-talk {
+  #contact {
     padding-top: 11rem;
     padding-left: 6rem;
     padding-right: 12rem;
@@ -1894,7 +1930,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 58.75em) {
-  #lets-talk {
+  #contact {
     padding-top: 11.2rem;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1903,7 +1939,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 75.87em) {
-  #lets-talk {
+  #contact {
     padding-top: 13.4rem;
     padding-left: 10.7rem;
     padding-right: 12rem;
@@ -1912,19 +1948,20 @@ h1, h2 {
 }
 
 @media screen and (min-width: 87.5em) {
-  #lets-talk {
+  #contact {
     padding-left: 12.7rem;
   }
 }
 
-#lets-talk .section__title {
-  width: auto;
+#contact .section__title {
+  width: max-content;
   max-width: 24rem;
   padding-bottom: 3rem;
+  transition: 0.4s;
 }
 
 @media screen and (min-width: 43em) {
-  #lets-talk .section__title {
+  #contact .section__title {
     font-size: 8rem;
     max-width: 28rem;
     line-height: 10rem;
@@ -1932,7 +1969,7 @@ h1, h2 {
 }
 
 @media screen and (min-width: 75.87em) {
-  #lets-talk .section__title {
+  #contact .section__title {
     font-size: 10rem;
     line-height: 11rem;
     max-width: 34rem;
@@ -1940,39 +1977,61 @@ h1, h2 {
 }
 
 @media screen and (min-width: 87.5em) {
-  #lets-talk .section__title {
+  #contact .section__title {
     font-size: 12rem;
     line-height: 13rem;
     max-width: 38rem;
   }
 }
 
-#lets-talk .section__chat-ic {
-  bottom: 2.4rem;
-  right: 3.4rem;
+#contact .section__chat-ic {
+  margin-top: 8rem;
+  align-self: flex-end;
+}
+
+#contact .section__chat-ic path {
+  transition: 0.4s;
 }
 
 @media screen and (min-width: 43em) {
-  #lets-talk .section__chat-ic {
-    bottom: 3.4rem;
-    right: 4.4rem;
-    height: 12%;
+  #contact .section__chat-ic {
+    height: 7rem;
   }
 }
 
 @media screen and (min-width: 75.87em) {
-  #lets-talk .section__chat-ic {
-    height: 13%;
-    bottom: 5.4rem;
-    right: 9.4rem;
+  #contact .section__chat-ic {
+    height: 7rem;
   }
 }
 
 @media screen and (min-width: 87.5em) {
-  #lets-talk .section__chat-ic {
-    bottom: 5.5rem;
-    right: 11.5rem;
+  #contact .section__chat-ic {
+    height: 7rem;
   }
+}
+
+#contact:hover .section__title {
+  color: white;
+}
+
+#contact:hover .section__chat-ic path {
+  fill: white;
+}
+
+#contact.open .contact__layer {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+#contact.open .contact__chat {
+  visibility: visible;
+  opacity: 1;
+}
+
+#contact .chat__text-field {
+  max-width: none;
 }
 
 #footer {
