@@ -65,8 +65,9 @@
 								<p class="chat__title">Get in touch</p>
 								<p class="chat__tip">Enter some information and click <strong>enter</strong></p>
 							</div>
-							<form action="" onsubmit="chatbarSend(); return false;">
-								<input type="text" class="chat__text-field" placeholder="">
+							<form action="" method="post" onsubmit="chatbarSend(); return false;">
+								<input type="text" name="main-text" class="chat__text-field" placeholder="">
+								<input type="hidden" name="user-email">
 							</form>
 							<img src="img/chatbar/icon-close--white.svg" alt="" class="chat__close-ic">
 						</div>
