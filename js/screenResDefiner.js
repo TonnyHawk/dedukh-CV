@@ -1,6 +1,7 @@
 //changing chat icon for the square screens and portrait mode
 $(document).ready(function(){
 	var doc_w = $(window).width();
+	var doc_h = $(window).height();
 	var prop = doc_w / doc_h;
 	var squareScrProp = 4 / 3;
 	var rectScrProp = 1.66 / 1;
