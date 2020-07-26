@@ -1109,6 +1109,16 @@ h1, h2 {
   stroke-dashoffset: 371.028;
 }
 
+.project.active .project__popup-cont {
+  top: 0;
+  opacity: 1;
+}
+
+.project.active .project__popup-layer {
+  width: 100%;
+  height: 100%;
+}
+
 #cv {
   background: #5162FF;
 }
