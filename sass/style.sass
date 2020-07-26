@@ -105,6 +105,19 @@ h1, h2
 	background: $blue
 	z-index: 2
 
+.blinking
+	animation: blinking 1.25s
+	animation-iteration-count: infinite
+
+@keyframes blinking
+	from
+		opacity: 1
+	50%
+		opacity: 0
+	to
+		opacity: 1
+
+
 @import 'sections/header'
 @import 'sections/chat'
 @import 'sections/portfolio'

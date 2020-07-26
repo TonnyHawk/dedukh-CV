@@ -90,7 +90,7 @@
 					<div class="project__popup-cont">
 							
 						<div class="circled">
-							<div class="circled__side-elem"><a href="" class="popup-layer__proj-name">LITESOFT AGENCY\\01.</a></div>
+							<div class="circled__side-elem"><a href="https://www.behance.net/" class="popup-layer__proj-name">LITESOFT AGENCY\\01.</a></div>
 							<div class="circled__circle-area circle-area">
 							    <div class="circle-area__main-circle">
 							        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.7 74">
@@ -118,7 +118,7 @@
 					<div class="project__popup-cont">
 							
 						<div class="circled">
-							<div class="circled__side-elem"><a href="" class="popup-layer__proj-name">WV REDESIGN\\02.</a></div>
+							<div class="circled__side-elem"><a href="haha" class="popup-layer__proj-name">WV REDESIGN\\02.</a></div>
 							<div class="circled__circle-area circle-area">
 							    <div class="circle-area__main-circle">
 							        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.7 74">
@@ -250,28 +250,77 @@
 		</div>
 	</section>
 </div>
-
 	<script src="js/jquery.min.js"></script>
-
+	
 	<script>
-	//changing chat for square screens and portrait mode
-$(document).ready(function(){
-	var doc_w = $(window).width();
-	var doc_h = $(window).height();
-	var prop = doc_w / doc_h;
-	var squareScrProp = 4 / 3;
-	var rectScrProp = 1.66 / 1;
-	var ultraRect = 21 / 9;
-	if(squareScrProp <= prop && prop <= rectScrProp){
-		$("#chat").addClass('mobile');
-	}
-	else if(doc_h > doc_w){
-		$("#chat").addClass('mobile');
-	}
-	else if(prop > ultraRect){
-		$("#chat").addClass('mobile');
-	}
-});
+		//redirects to the project
+		//for project section on mobile phones
+
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+			var clicked = false;
+			$(".project").click(function(){
+				if(clicked == false){
+					clicked = true;
+					$(this).addClass('active');
+					var link = $(this).find("a");
+					var href = link.attr('href');
+					//setting fixed width to the link container
+					//to avoid sharp change of the link width
+					var linkContainer = $(this).find('div').filter('.circled__side-elem');
+					var linkWidth = linkContainer.css('width');
+					linkContainer.css({'width': linkWidth, 'justify-content': 'center'});
+					//
+					//changing link text to 'redirecting' with an animation
+					link.css('position', 'relative');
+					var projHeight = $(this).css('height'); //getting project block height to smoother animation coordinates
+					setTimeout(function(){
+						link.animate({top:projHeight, opacity:'0'}, 'slow')
+						.animate({top:'-'+projHeight}, 'fast')
+						.animate({top:'0', opacity:'1'}, 'slow');
+					}, 1000);
+					setTimeout(function(){
+						link.text('Redirecting...');
+					}, 2000);
+					//
+					//redirecting
+					setTimeout(function(){
+						window.location.href = href;
+					}, 4500);
+				}
+			});
+
+		}
+	</script>
+	<script>
+		//smooth scroling for the anchor links
+
+		var doc_h = $(window).height();
+		$('a[href^="#"]').click(function(){
+		//Сохраняем значение атрибута href в переменной:
+		var target = $(this).attr('href');
+		var scrollCoord = $(target).offset().top - 20*100/doc_h;
+		$('html, body').animate({scrollTop: scrollCoord}, 400);
+		return false;
+		});
+	</script>
+	<script>
+	//changing chat icon for the square screens and portrait mode
+		$(document).ready(function(){
+			var doc_w = $(window).width();
+			var prop = doc_w / doc_h;
+			var squareScrProp = 4 / 3;
+			var rectScrProp = 1.66 / 1;
+			var ultraRect = 21 / 9;
+			if(squareScrProp <= prop && prop <= rectScrProp){
+				$("#chat").addClass('mobile');
+			}
+			else if(doc_h > doc_w){
+				$("#chat").addClass('mobile');
+			}
+			else if(prop > ultraRect){
+				$("#chat").addClass('mobile');
+			}
+		});
 	</script>
 
 	<script>
@@ -339,7 +388,7 @@ $(document).ready(function(){
 		  });
 
 
-			//CONTACT sect
+			//CONTACT section open/close
 			$('#contact .contact__open-btn').click(function(){
 				$("#contact").addClass('open');
 				$("#contact .chat__main-content").addClass('show');
