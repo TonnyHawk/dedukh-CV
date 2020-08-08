@@ -1,6 +1,5 @@
 //NAVMENU open/close--------
 $(document).ready(function(){
-	var navbMenuState = 'close';
   $(".navbar__btns").click(function(){
   	if(navbMenuState == 'close'){
   		$('.navbar').toggleClass('open');
