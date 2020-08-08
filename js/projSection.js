@@ -17,7 +17,7 @@ $(document).ready(function(){
 				//
 				//changing link text to 'redirecting' with an animation
 				link.css('position', 'relative');
-				var projHeight = $(this).css('height'); //getting project block height to smoother animation coordinates
+				var projHeight = $(this).css('height'); //getting project block height for smoother animation coordinates
 				setTimeout(function(){
 					link.animate({top:projHeight, opacity:'0'}, 'slow')
 					.animate({top:'-'+projHeight}, 'fast')
