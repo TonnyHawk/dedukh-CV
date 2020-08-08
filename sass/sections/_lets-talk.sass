@@ -87,7 +87,13 @@
 				opacity: 1
 	.chat__header
 		padding-top: 10%
-		@media (min-width: 31.25em)
-			padding-top: 5%
+		@media (min-width: 34.0625em)
+			padding-top: 6%
 	.chat__text-field
-		max-width: none
+		width: calc(100% - 5.8rem - 8.6rem)
+		@media screen and (max-width: 81.25em)
+			width: calc(100% - 5.8rem - 6.6rem)
+		@media screen and (max-width: 76.5em)
+			width: calc(100% - 5.8rem - 4rem)
+		@media screen and (max-width: 34.0625em)
+			width: calc(100% - 4.5rem - 10%)

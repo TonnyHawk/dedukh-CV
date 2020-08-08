@@ -85,16 +85,18 @@ h1, h2
 		background-size: cover
 		position: absolute
 
-.spec-border-t1
+.spec-border-t1, .spec-border
 	@media screen and (min-width: 87.5em)
 		border: 1.3rem solid transparent
 		border-image: url('../img/spec-border-square.svg') 30 round
-		border-image-outset: 0.6rem
 
 .spec-border
+	border-image-outset: 0.6rem
+	@media screen and (min-width: 87.5em)
+		border-image-outset: 0.7rem
 	&::before
-		bottom: -3rem
-		right: -3rem
+		bottom: -3.3rem
+		right: -3.3rem
 .layer
 	position: absolute
 	top: 0

@@ -120,7 +120,9 @@
 				display: flex
 				justify-content: center
 				align-items: center
-				transition: 5s
+				transition: 1s
+				@media screen and (max-width: 56.25em)
+					transition: 5s
 				svg 
 					height: 100%
 					width: 100%
@@ -137,7 +139,9 @@
 					//stroke-dashoffset: 376.028
 					stroke-dashoffset: 1
 					stroke-dasharray: 0 400
-					transition: 4.5s
+					transition: 1.5s
+					@media screen and (max-width: 56.25em)
+						transition: 4.5s
 			&__upper-circle
 				display: none
 				z-index: 3
